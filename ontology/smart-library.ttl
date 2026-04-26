@@ -1,0 +1,331 @@
+@prefix : <https://example.org/smart-library-ontology#> .
+@prefix slo: <https://example.org/smart-library-ontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.org/smart-library-ontology>
+    a owl:Ontology ;
+    dc:title "Smart Library Loan Ontology"@en ;
+    dc:creator "210316051 Kemal Mert Ceyhan; 190316073 Ahmet Burak Güvercin; 210316078 Khaled ALISMAIL"@en ;
+    dcterms:created "2026-04-27"^^xsd:date ;
+    dcterms:description "A preliminary ontology for representing library members, resources, loans, reservations, branches, authors, and circulation status in a smart library environment."@en ;
+    owl:versionInfo "0.1.0 - Initial phase draft"@en .
+
+#################################################################
+# Classes
+#################################################################
+
+slo:LibraryEntity a owl:Class ;
+    rdfs:label "Library Entity"@en ;
+    rdfs:comment "Top-level class for entities represented in the smart library domain."@en .
+
+slo:Person a owl:Class ;
+    rdfs:subClassOf slo:LibraryEntity ;
+    rdfs:label "Person"@en ;
+    rdfs:comment "A human actor related to the library system."@en .
+
+slo:Member a owl:Class ;
+    rdfs:subClassOf slo:Person ;
+    rdfs:label "Member"@en ;
+    rdfs:comment "A registered user who can borrow and reserve library resources."@en .
+
+slo:Librarian a owl:Class ;
+    rdfs:subClassOf slo:Person ;
+    rdfs:label "Librarian"@en ;
+    rdfs:comment "A library staff member who manages loans, returns, and resources."@en .
+
+slo:Creator a owl:Class ;
+    rdfs:subClassOf slo:Person ;
+    rdfs:label "Creator"@en ;
+    rdfs:comment "A person who contributes to the creation of a library resource."@en .
+
+slo:Author a owl:Class ;
+    rdfs:subClassOf slo:Creator ;
+    rdfs:label "Author"@en ;
+    rdfs:comment "A creator who writes a book or article."@en .
+
+slo:Organization a owl:Class ;
+    rdfs:subClassOf slo:LibraryEntity ;
+    rdfs:label "Organization"@en .
+
+slo:Publisher a owl:Class ;
+    rdfs:subClassOf slo:Organization ;
+    rdfs:label "Publisher"@en ;
+    rdfs:comment "An organization that publishes a library resource."@en .
+
+slo:LibraryBranch a owl:Class ;
+    rdfs:subClassOf slo:Organization ;
+    rdfs:label "Library Branch"@en ;
+    rdfs:comment "A physical branch that stores library resources and serves members."@en .
+
+slo:LibraryResource a owl:Class ;
+    rdfs:subClassOf slo:LibraryEntity ;
+    rdfs:label "Library Resource"@en ;
+    rdfs:comment "A resource that can be catalogued, borrowed, or reserved."@en .
+
+slo:Book a owl:Class ;
+    rdfs:subClassOf slo:LibraryResource ;
+    rdfs:label "Book"@en .
+
+slo:PrintedBook a owl:Class ;
+    rdfs:subClassOf slo:Book ;
+    rdfs:label "Printed Book"@en ;
+    rdfs:comment "A physical book stored at a branch."@en .
+
+slo:EBook a owl:Class ;
+    rdfs:subClassOf slo:Book ;
+    rdfs:label "E-Book"@en ;
+    rdfs:comment "A digital book that can be accessed electronically."@en .
+
+slo:JournalArticle a owl:Class ;
+    rdfs:subClassOf slo:LibraryResource ;
+    rdfs:label "Journal Article"@en .
+
+slo:CirculationTransaction a owl:Class ;
+    rdfs:subClassOf slo:LibraryEntity ;
+    rdfs:label "Circulation Transaction"@en ;
+    rdfs:comment "An event-like entity representing a circulation action."@en .
+
+slo:Loan a owl:Class ;
+    rdfs:subClassOf slo:CirculationTransaction ;
+    rdfs:label "Loan"@en ;
+    rdfs:comment "A transaction in which a member borrows a resource for a defined period."@en .
+
+slo:Reservation a owl:Class ;
+    rdfs:subClassOf slo:CirculationTransaction ;
+    rdfs:label "Reservation"@en ;
+    rdfs:comment "A transaction in which a member requests a resource before borrowing it."@en .
+
+slo:ResourceStatus a owl:Class ;
+    rdfs:subClassOf slo:LibraryEntity ;
+    rdfs:label "Resource Status"@en ;
+    rdfs:comment "Controlled status values for library resources."@en .
+
+#################################################################
+# Object Properties
+#################################################################
+
+slo:hasLoan a owl:ObjectProperty ;
+    rdfs:domain slo:Member ;
+    rdfs:range slo:Loan ;
+    rdfs:label "has loan"@en ;
+    rdfs:comment "Links a member to a loan transaction."@en .
+
+slo:loanedTo a owl:ObjectProperty ;
+    rdfs:domain slo:Loan ;
+    rdfs:range slo:Member ;
+    owl:inverseOf slo:hasLoan ;
+    rdfs:label "loaned to"@en ;
+    rdfs:comment "Links a loan transaction to the member who borrowed the resource."@en .
+
+slo:loanedResource a owl:ObjectProperty ;
+    rdfs:domain slo:Loan ;
+    rdfs:range slo:LibraryResource ;
+    rdfs:label "loaned resource"@en ;
+    rdfs:comment "Links a loan transaction to the borrowed resource."@en .
+
+slo:reservedBy a owl:ObjectProperty ;
+    rdfs:domain slo:Reservation ;
+    rdfs:range slo:Member ;
+    rdfs:label "reserved by"@en .
+
+slo:reservedResource a owl:ObjectProperty ;
+    rdfs:domain slo:Reservation ;
+    rdfs:range slo:LibraryResource ;
+    rdfs:label "reserved resource"@en .
+
+slo:processedBy a owl:ObjectProperty ;
+    rdfs:domain slo:CirculationTransaction ;
+    rdfs:range slo:Librarian ;
+    rdfs:label "processed by"@en ;
+    rdfs:comment "Links a transaction to the librarian responsible for processing it."@en .
+
+slo:locatedAt a owl:ObjectProperty ;
+    rdfs:domain slo:LibraryResource ;
+    rdfs:range slo:LibraryBranch ;
+    rdfs:label "located at"@en ;
+    rdfs:comment "Links a physical resource to the branch where it is stored."@en .
+
+slo:writtenBy a owl:ObjectProperty ;
+    rdfs:domain slo:LibraryResource ;
+    rdfs:range slo:Author ;
+    rdfs:label "written by"@en .
+
+slo:publishedBy a owl:ObjectProperty ;
+    rdfs:domain slo:LibraryResource ;
+    rdfs:range slo:Publisher ;
+    rdfs:label "published by"@en .
+
+slo:hasStatus a owl:ObjectProperty ;
+    rdfs:domain slo:LibraryResource ;
+    rdfs:range slo:ResourceStatus ;
+    rdfs:label "has status"@en ;
+    rdfs:comment "Links a resource to its current availability status."@en .
+
+#################################################################
+# Data Properties
+#################################################################
+
+slo:identifier a owl:DatatypeProperty ;
+    rdfs:domain slo:LibraryEntity ;
+    rdfs:range xsd:string ;
+    rdfs:label "identifier"@en .
+
+slo:name a owl:DatatypeProperty ;
+    rdfs:domain slo:LibraryEntity ;
+    rdfs:range xsd:string ;
+    rdfs:label "name"@en .
+
+slo:title a owl:DatatypeProperty ;
+    rdfs:domain slo:LibraryResource ;
+    rdfs:range xsd:string ;
+    rdfs:label "title"@en .
+
+slo:isbn a owl:DatatypeProperty ;
+    rdfs:domain slo:Book ;
+    rdfs:range xsd:string ;
+    rdfs:label "ISBN"@en .
+
+slo:publicationYear a owl:DatatypeProperty ;
+    rdfs:domain slo:LibraryResource ;
+    rdfs:range xsd:gYear ;
+    rdfs:label "publication year"@en .
+
+slo:startDate a owl:DatatypeProperty ;
+    rdfs:domain slo:CirculationTransaction ;
+    rdfs:range xsd:date ;
+    rdfs:label "start date"@en .
+
+slo:dueDate a owl:DatatypeProperty ;
+    rdfs:domain slo:Loan ;
+    rdfs:range xsd:date ;
+    rdfs:label "due date"@en .
+
+slo:returnDate a owl:DatatypeProperty ;
+    rdfs:domain slo:Loan ;
+    rdfs:range xsd:date ;
+    rdfs:label "return date"@en .
+
+slo:email a owl:DatatypeProperty ;
+    rdfs:domain slo:Person ;
+    rdfs:range xsd:string ;
+    rdfs:label "email"@en .
+
+slo:branchAddress a owl:DatatypeProperty ;
+    rdfs:domain slo:LibraryBranch ;
+    rdfs:range xsd:string ;
+    rdfs:label "branch address"@en .
+
+slo:accessUrl a owl:DatatypeProperty ;
+    rdfs:domain slo:EBook ;
+    rdfs:range xsd:anyURI ;
+    rdfs:label "access URL"@en .
+
+#################################################################
+# Axioms and Constraints
+#################################################################
+
+slo:Loan rdfs:subClassOf
+    [ a owl:Restriction ;
+      owl:onProperty slo:loanedTo ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass slo:Member
+    ],
+    [ a owl:Restriction ;
+      owl:onProperty slo:loanedResource ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass slo:LibraryResource
+    ] .
+
+slo:Reservation rdfs:subClassOf
+    [ a owl:Restriction ;
+      owl:onProperty slo:reservedBy ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass slo:Member
+    ],
+    [ a owl:Restriction ;
+      owl:onProperty slo:reservedResource ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass slo:LibraryResource
+    ] .
+
+slo:Member owl:disjointWith slo:Librarian .
+slo:PrintedBook owl:disjointWith slo:EBook .
+
+#################################################################
+# Individuals
+#################################################################
+
+slo:Available a slo:ResourceStatus ;
+    rdfs:label "Available"@en ;
+    slo:name "Available" .
+
+slo:OnLoan a slo:ResourceStatus ;
+    rdfs:label "On Loan"@en ;
+    slo:name "On loan" .
+
+slo:Reserved a slo:ResourceStatus ;
+    rdfs:label "Reserved"@en ;
+    slo:name "Reserved" .
+
+slo:CentralBranch a slo:LibraryBranch ;
+    slo:identifier "BR-001" ;
+    slo:name "Central Library Branch" ;
+    slo:branchAddress "Main Campus, Library Building" .
+
+slo:Member_Aylin_Demir a slo:Member ;
+    slo:identifier "M-1001" ;
+    slo:name "Aylin Demir" ;
+    slo:email "aylin.demir@example.edu" .
+
+slo:Librarian_Emre_Kaya a slo:Librarian ;
+    slo:identifier "L-2001" ;
+    slo:name "Emre Kaya" ;
+    slo:email "emre.kaya@example.edu" .
+
+slo:Author_Tom_Gruber a slo:Author ;
+    slo:identifier "A-3001" ;
+    slo:name "Tom Gruber" .
+
+slo:Publisher_MITPress a slo:Publisher ;
+    slo:identifier "P-4001" ;
+    slo:name "MIT Press" .
+
+slo:Book_OntologyDesign a slo:PrintedBook ;
+    slo:identifier "B-5001" ;
+    slo:title "Ontology Design Principles" ;
+    slo:isbn "978-0-000-00001-1" ;
+    slo:publicationYear "2024"^^xsd:gYear ;
+    slo:writtenBy slo:Author_Tom_Gruber ;
+    slo:publishedBy slo:Publisher_MITPress ;
+    slo:locatedAt slo:CentralBranch ;
+    slo:hasStatus slo:OnLoan .
+
+slo:EBook_KnowledgeGraphs a slo:EBook ;
+    slo:identifier "EB-5002" ;
+    slo:title "Introduction to Knowledge Graphs" ;
+    slo:isbn "978-0-000-00002-8" ;
+    slo:publicationYear "2025"^^xsd:gYear ;
+    slo:publishedBy slo:Publisher_MITPress ;
+    slo:accessUrl "https://example.org/ebooks/knowledge-graphs"^^xsd:anyURI ;
+    slo:hasStatus slo:Available .
+
+slo:Loan_001 a slo:Loan ;
+    slo:identifier "LN-0001" ;
+    slo:startDate "2026-04-20"^^xsd:date ;
+    slo:dueDate "2026-05-04"^^xsd:date ;
+    slo:loanedTo slo:Member_Aylin_Demir ;
+    slo:loanedResource slo:Book_OntologyDesign ;
+    slo:processedBy slo:Librarian_Emre_Kaya .
+
+slo:Reservation_001 a slo:Reservation ;
+    slo:identifier "RS-0001" ;
+    slo:startDate "2026-04-25"^^xsd:date ;
+    slo:reservedBy slo:Member_Aylin_Demir ;
+    slo:reservedResource slo:EBook_KnowledgeGraphs ;
+    slo:processedBy slo:Librarian_Emre_Kaya .

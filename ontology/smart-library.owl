@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:slo="https://example.org/smart-library-ontology#"
+>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#isbn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#Book"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">ISBN</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#EBook_KnowledgeGraphs">
+    <rdf:type rdf:resource="https://example.org/smart-library-ontology#EBook"/>
+    <slo:identifier>EB-5002</slo:identifier>
+    <slo:title>Introduction to Knowledge Graphs</slo:title>
+    <slo:isbn>978-0-000-00002-8</slo:isbn>
+    <slo:publicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2025</slo:publicationYear>
+    <slo:publishedBy rdf:resource="https://example.org/smart-library-ontology#Publisher_MITPress"/>
+    <slo:accessUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/ebooks/knowledge-graphs</slo:accessUrl>
+    <slo:hasStatus rdf:resource="https://example.org/smart-library-ontology#Available"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#EBook">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://example.org/smart-library-ontology#Book"/>
+    <rdfs:label xml:lang="en">E-Book</rdfs:label>
+    <rdfs:comment xml:lang="en">A digital book that can be accessed electronically.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#locatedAt">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#LibraryResource"/>
+    <rdfs:range rdf:resource="https://example.org/smart-library-ontology#LibraryBranch"/>
+    <rdfs:label xml:lang="en">located at</rdfs:label>
+    <rdfs:comment xml:lang="en">Links a physical resource to the branch where it is stored.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#publicationYear">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#LibraryResource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
+    <rdfs:label xml:lang="en">publication year</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#Book">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://example.org/smart-library-ontology#LibraryResource"/>
+    <rdfs:label xml:lang="en">Book</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#Book_OntologyDesign">
+    <rdf:type rdf:resource="https://example.org/smart-library-ontology#PrintedBook"/>
+    <slo:identifier>B-5001</slo:identifier>
+    <slo:title>Ontology Design Principles</slo:title>
+    <slo:isbn>978-0-000-00001-1</slo:isbn>
+    <slo:publicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2024</slo:publicationYear>
+    <slo:writtenBy rdf:resource="https://example.org/smart-library-ontology#Author_Tom_Gruber"/>
+    <slo:publishedBy rdf:resource="https://example.org/smart-library-ontology#Publisher_MITPress"/>
+    <slo:locatedAt rdf:resource="https://example.org/smart-library-ontology#CentralBranch"/>
+    <slo:hasStatus rdf:resource="https://example.org/smart-library-ontology#OnLoan"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#reservedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#Reservation"/>
+    <rdfs:range rdf:resource="https://example.org/smart-library-ontology#Member"/>
+    <rdfs:label xml:lang="en">reserved by</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#Librarian">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://example.org/smart-library-ontology#Person"/>
+    <rdfs:label xml:lang="en">Librarian</rdfs:label>
+    <rdfs:comment xml:lang="en">A library staff member who manages loans, returns, and resources.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#Reserved">
+    <rdf:type rdf:resource="https://example.org/smart-library-ontology#ResourceStatus"/>
+    <rdfs:label xml:lang="en">Reserved</rdfs:label>
+    <slo:name>Reserved</slo:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#Member">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://example.org/smart-library-ontology#Person"/>
+    <rdfs:label xml:lang="en">Member</rdfs:label>
+    <rdfs:comment xml:lang="en">A registered user who can borrow and reserve library resources.</rdfs:comment>
+    <owl:disjointWith rdf:resource="https://example.org/smart-library-ontology#Librarian"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ne8ce2eb0db0c4e50bb621af3241f8defb3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://example.org/smart-library-ontology#reservedBy"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onClass rdf:resource="https://example.org/smart-library-ontology#Member"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#accessUrl">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#EBook"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdfs:label xml:lang="en">access URL</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#Creator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://example.org/smart-library-ontology#Person"/>
+    <rdfs:label xml:lang="en">Creator</rdfs:label>
+    <rdfs:comment xml:lang="en">A person who contributes to the creation of a library resource.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#PrintedBook">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://example.org/smart-library-ontology#Book"/>
+    <rdfs:label xml:lang="en">Printed Book</rdfs:label>
+    <rdfs:comment xml:lang="en">A physical book stored at a branch.</rdfs:comment>
+    <owl:disjointWith rdf:resource="https://example.org/smart-library-ontology#EBook"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#loanedTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#Loan"/>
+    <rdfs:range rdf:resource="https://example.org/smart-library-ontology#Member"/>
+    <owl:inverseOf rdf:resource="https://example.org/smart-library-ontology#hasLoan"/>
+    <rdfs:label xml:lang="en">loaned to</rdfs:label>
+    <rdfs:comment xml:lang="en">Links a loan transaction to the member who borrowed the resource.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#CentralBranch">
+    <rdf:type rdf:resource="https://example.org/smart-library-ontology#LibraryBranch"/>
+    <slo:identifier>BR-001</slo:identifier>
+    <slo:name>Central Library Branch</slo:name>
+    <slo:branchAddress>Main Campus, Library Building</slo:branchAddress>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#Publisher">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://example.org/smart-library-ontology#Organization"/>
+    <rdfs:label xml:lang="en">Publisher</rdfs:label>
+    <rdfs:comment xml:lang="en">An organization that publishes a library resource.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#JournalArticle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://example.org/smart-library-ontology#LibraryResource"/>
+    <rdfs:label xml:lang="en">Journal Article</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#Loan">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://example.org/smart-library-ontology#CirculationTransaction"/>
+    <rdfs:subClassOf rdf:nodeID="ne8ce2eb0db0c4e50bb621af3241f8defb1"/>
+    <rdfs:subClassOf rdf:nodeID="ne8ce2eb0db0c4e50bb621af3241f8defb2"/>
+    <rdfs:label xml:lang="en">Loan</rdfs:label>
+    <rdfs:comment xml:lang="en">A transaction in which a member borrows a resource for a defined period.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#Loan_001">
+    <rdf:type rdf:resource="https://example.org/smart-library-ontology#Loan"/>
+    <slo:identifier>LN-0001</slo:identifier>
+    <slo:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-20</slo:startDate>
+    <slo:dueDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-04</slo:dueDate>
+    <slo:loanedTo rdf:resource="https://example.org/smart-library-ontology#Member_Aylin_Demir"/>
+    <slo:loanedResource rdf:resource="https://example.org/smart-library-ontology#Book_OntologyDesign"/>
+    <slo:processedBy rdf:resource="https://example.org/smart-library-ontology#Librarian_Emre_Kaya"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#OnLoan">
+    <rdf:type rdf:resource="https://example.org/smart-library-ontology#ResourceStatus"/>
+    <rdfs:label xml:lang="en">On Loan</rdfs:label>
+    <slo:name>On loan</slo:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#hasStatus">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#LibraryResource"/>
+    <rdfs:range rdf:resource="https://example.org/smart-library-ontology#ResourceStatus"/>
+    <rdfs:label xml:lang="en">has status</rdfs:label>
+    <rdfs:comment xml:lang="en">Links a resource to its current availability status.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#ResourceStatus">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://example.org/smart-library-ontology#LibraryEntity"/>
+    <rdfs:label xml:lang="en">Resource Status</rdfs:label>
+    <rdfs:comment xml:lang="en">Controlled status values for library resources.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#LibraryResource">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://example.org/smart-library-ontology#LibraryEntity"/>
+    <rdfs:label xml:lang="en">Library Resource</rdfs:label>
+    <rdfs:comment xml:lang="en">A resource that can be catalogued, borrowed, or reserved.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ne8ce2eb0db0c4e50bb621af3241f8defb2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://example.org/smart-library-ontology#loanedResource"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onClass rdf:resource="https://example.org/smart-library-ontology#LibraryResource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#Reservation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://example.org/smart-library-ontology#CirculationTransaction"/>
+    <rdfs:subClassOf rdf:nodeID="ne8ce2eb0db0c4e50bb621af3241f8defb3"/>
+    <rdfs:subClassOf rdf:nodeID="ne8ce2eb0db0c4e50bb621af3241f8defb4"/>
+    <rdfs:label xml:lang="en">Reservation</rdfs:label>
+    <rdfs:comment xml:lang="en">A transaction in which a member requests a resource before borrowing it.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#startDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#CirculationTransaction"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:label xml:lang="en">start date</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#hasLoan">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#Member"/>
+    <rdfs:range rdf:resource="https://example.org/smart-library-ontology#Loan"/>
+    <rdfs:label xml:lang="en">has loan</rdfs:label>
+    <rdfs:comment xml:lang="en">Links a member to a loan transaction.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#loanedResource">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#Loan"/>
+    <rdfs:range rdf:resource="https://example.org/smart-library-ontology#LibraryResource"/>
+    <rdfs:label xml:lang="en">loaned resource</rdfs:label>
+    <rdfs:comment xml:lang="en">Links a loan transaction to the borrowed resource.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#processedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#CirculationTransaction"/>
+    <rdfs:range rdf:resource="https://example.org/smart-library-ontology#Librarian"/>
+    <rdfs:label xml:lang="en">processed by</rdfs:label>
+    <rdfs:comment xml:lang="en">Links a transaction to the librarian responsible for processing it.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#reservedResource">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#Reservation"/>
+    <rdfs:range rdf:resource="https://example.org/smart-library-ontology#LibraryResource"/>
+    <rdfs:label xml:lang="en">reserved resource</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#Librarian_Emre_Kaya">
+    <rdf:type rdf:resource="https://example.org/smart-library-ontology#Librarian"/>
+    <slo:identifier>L-2001</slo:identifier>
+    <slo:name>Emre Kaya</slo:name>
+    <slo:email>emre.kaya@example.edu</slo:email>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#Publisher_MITPress">
+    <rdf:type rdf:resource="https://example.org/smart-library-ontology#Publisher"/>
+    <slo:identifier>P-4001</slo:identifier>
+    <slo:name>MIT Press</slo:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#Reservation_001">
+    <rdf:type rdf:resource="https://example.org/smart-library-ontology#Reservation"/>
+    <slo:identifier>RS-0001</slo:identifier>
+    <slo:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-25</slo:startDate>
+    <slo:reservedBy rdf:resource="https://example.org/smart-library-ontology#Member_Aylin_Demir"/>
+    <slo:reservedResource rdf:resource="https://example.org/smart-library-ontology#EBook_KnowledgeGraphs"/>
+    <slo:processedBy rdf:resource="https://example.org/smart-library-ontology#Librarian_Emre_Kaya"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ne8ce2eb0db0c4e50bb621af3241f8defb4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://example.org/smart-library-ontology#reservedResource"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onClass rdf:resource="https://example.org/smart-library-ontology#LibraryResource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#writtenBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#LibraryResource"/>
+    <rdfs:range rdf:resource="https://example.org/smart-library-ontology#Author"/>
+    <rdfs:label xml:lang="en">written by</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ne8ce2eb0db0c4e50bb621af3241f8defb1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://example.org/smart-library-ontology#loanedTo"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onClass rdf:resource="https://example.org/smart-library-ontology#Member"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#Author">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://example.org/smart-library-ontology#Creator"/>
+    <rdfs:label xml:lang="en">Author</rdfs:label>
+    <rdfs:comment xml:lang="en">A creator who writes a book or article.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#Available">
+    <rdf:type rdf:resource="https://example.org/smart-library-ontology#ResourceStatus"/>
+    <rdfs:label xml:lang="en">Available</rdfs:label>
+    <slo:name>Available</slo:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#email">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#Person"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">email</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#LibraryEntity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Library Entity</rdfs:label>
+    <rdfs:comment xml:lang="en">Top-level class for entities represented in the smart library domain.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#Author_Tom_Gruber">
+    <rdf:type rdf:resource="https://example.org/smart-library-ontology#Author"/>
+    <slo:identifier>A-3001</slo:identifier>
+    <slo:name>Tom Gruber</slo:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#publishedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#LibraryResource"/>
+    <rdfs:range rdf:resource="https://example.org/smart-library-ontology#Publisher"/>
+    <rdfs:label xml:lang="en">published by</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#Member_Aylin_Demir">
+    <rdf:type rdf:resource="https://example.org/smart-library-ontology#Member"/>
+    <slo:identifier>M-1001</slo:identifier>
+    <slo:name>Aylin Demir</slo:name>
+    <slo:email>aylin.demir@example.edu</slo:email>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#name">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#LibraryEntity"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">name</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#identifier">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#LibraryEntity"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">identifier</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#Organization">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://example.org/smart-library-ontology#LibraryEntity"/>
+    <rdfs:label xml:lang="en">Organization</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#returnDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#Loan"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:label xml:lang="en">return date</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#title">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#LibraryResource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">title</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#branchAddress">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#LibraryBranch"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">branch address</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#Person">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://example.org/smart-library-ontology#LibraryEntity"/>
+    <rdfs:label xml:lang="en">Person</rdfs:label>
+    <rdfs:comment xml:lang="en">A human actor related to the library system.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#LibraryBranch">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://example.org/smart-library-ontology#Organization"/>
+    <rdfs:label xml:lang="en">Library Branch</rdfs:label>
+    <rdfs:comment xml:lang="en">A physical branch that stores library resources and serves members.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#dueDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#Loan"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:label xml:lang="en">due date</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <dc:title xml:lang="en">Smart Library Loan Ontology</dc:title>
+    <dc:creator xml:lang="en">210316051 Kemal Mert Ceyhan; 190316073 Ahmet Burak Güvercin; 210316078 Khaled ALISMAIL</dc:creator>
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-27</dcterms:created>
+    <dcterms:description xml:lang="en">A preliminary ontology for representing library members, resources, loans, reservations, branches, authors, and circulation status in a smart library environment.</dcterms:description>
+    <owl:versionInfo xml:lang="en">0.1.0 - Initial phase draft</owl:versionInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/smart-library-ontology#CirculationTransaction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://example.org/smart-library-ontology#LibraryEntity"/>
+    <rdfs:label xml:lang="en">Circulation Transaction</rdfs:label>
+    <rdfs:comment xml:lang="en">An event-like entity representing a circulation action.</rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>

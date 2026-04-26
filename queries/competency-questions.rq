@@ -1,0 +1,78 @@
+# Competency Question SPARQL Queries
+# Prefix used by all queries:
+PREFIX slo: <https://example.org/smart-library-ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+# CQ-01: Which resources are currently available?
+SELECT ?resource ?title WHERE {
+  ?resource a/rdfs:subClassOf* slo:LibraryResource ;
+            slo:title ?title ;
+            slo:hasStatus slo:Available .
+}
+
+# CQ-02: Which resources are currently on loan?
+SELECT ?resource ?title WHERE {
+  ?resource a/rdfs:subClassOf* slo:LibraryResource ;
+            slo:title ?title ;
+            slo:hasStatus slo:OnLoan .
+}
+
+# CQ-03: Which member borrowed a specific resource?
+SELECT ?member ?memberName ?resource ?title WHERE {
+  ?loan a slo:Loan ;
+        slo:loanedTo ?member ;
+        slo:loanedResource ?resource .
+  ?member slo:name ?memberName .
+  ?resource slo:title ?title .
+}
+
+# CQ-04: Which resource is linked to a specific loan?
+SELECT ?loan ?resource ?title WHERE {
+  ?loan a slo:Loan ;
+        slo:loanedResource ?resource .
+  ?resource slo:title ?title .
+}
+
+# CQ-05: Which librarian processed a specific loan or reservation?
+SELECT ?transaction ?librarian ?librarianName WHERE {
+  ?transaction slo:processedBy ?librarian .
+  ?librarian slo:name ?librarianName .
+}
+
+# CQ-06: Which branch stores a printed book?
+SELECT ?book ?title ?branch ?branchName WHERE {
+  ?book a slo:PrintedBook ;
+        slo:title ?title ;
+        slo:locatedAt ?branch .
+  ?branch slo:name ?branchName .
+}
+
+# CQ-07: Which author wrote a specific resource?
+SELECT ?resource ?title ?author ?authorName WHERE {
+  ?resource slo:title ?title ;
+            slo:writtenBy ?author .
+  ?author slo:name ?authorName .
+}
+
+# CQ-08: Which publisher published a specific resource?
+SELECT ?resource ?title ?publisher ?publisherName WHERE {
+  ?resource slo:title ?title ;
+            slo:publishedBy ?publisher .
+  ?publisher slo:name ?publisherName .
+}
+
+# CQ-09: Which resources are reserved by a specific member?
+SELECT ?memberName ?resource ?title WHERE {
+  ?reservation a slo:Reservation ;
+               slo:reservedBy ?member ;
+               slo:reservedResource ?resource .
+  ?member slo:name ?memberName .
+  ?resource slo:title ?title .
+}
+
+# CQ-10: What is the due date of a specific loan?
+SELECT ?loan ?dueDate WHERE {
+  ?loan a slo:Loan ;
+        slo:dueDate ?dueDate .
+}
