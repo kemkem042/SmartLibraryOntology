@@ -1,0 +1,8 @@
+.DS_Store
+*.xcuserstate
+xcuserdata/
+
+SmartLibraryDemo/
+SmartLibraryOntology_ShowcaseApp/DerivedData/
+SmartLibraryOntology_ShowcaseApp/DerivedDataDevice/
+SmartLibraryOntology_ShowcaseApp/LEGACY_SmartLibraryDemo_DO_NOT_OPEN.xcodeproj/

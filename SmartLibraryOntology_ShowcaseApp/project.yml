@@ -1,0 +1,27 @@
+name: SmartLibraryOntologyShowcase
+options:
+  bundleIdPrefix: com.kemalmertceyhan
+settings:
+  base:
+    SWIFT_VERSION: 5.0
+targets:
+  SmartLibraryOntologyShowcase:
+    type: application
+    platform: iOS
+    deploymentTarget: "16.0"
+    sources:
+      - SmartLibraryOntologyShowcaseApp
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.kemalmertceyhan.smartlibraryontologyshowcase
+        PRODUCT_NAME: SmartLibraryOntologyShowcase
+        DEVELOPMENT_TEAM: WN2H252TK5
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Library Showcase
+        INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: YES
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        TARGETED_DEVICE_FAMILY: "1"
+        SUPPORTS_MACCATALYST: NO
+        CODE_SIGN_STYLE: Automatic
+    scheme:
+      testTargets: []
