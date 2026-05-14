@@ -1,9 +1,9 @@
 # Knowledge Engineering and Ontologies Course Project Report
 
 ## Name & email
-- Kemal Mert Ceyhan - kemalmertceyhan@example.edu
-- Ahmet Burak Guvercin - ahmetburakguvercin@example.edu
-- Khaled ALISMAIL - khaledalismail@example.edu
+- Kemal Mert Ceyhan - kemal2002mert@gmail.com
+- Ahmet Burak Guvercin - to be confirmed by team
+- Khaled ALISMAIL - to be confirmed by team
 
 ## Executive Summary
 This project develops a Smart Library Loan Ontology for modeling circulation knowledge in a semantically structured way. The ontology represents members, librarians, resources, publishers, branches, loans, reservations, and resource statuses in OWL/RDF, and it is extended in Phase 2 with provenance-aware acquisition concepts, semantic topics, and lightweight personalization structures. The main objective is to move from a small conceptual ontology toward a more operational knowledge graph artifact that can support querying, validation, and future recommendation scenarios. The project uses Protégé-style ontology engineering principles, RDF modeling, SPARQL querying, and SHACL validation. Phase 2 additionally introduces a data acquisition perspective by documenting public API sources, local seed tables, preprocessing logic, and ontology population mappings. The project is also informed by recent research on ontology-driven automation and personalized semantic systems. The final outcome is an updated ontology version, supporting documentation, an expanded query set, SHACL shapes, and a report that explains how semantic modeling, data acquisition, and future LLM or predictive extensions can work together in a smart-library context.
