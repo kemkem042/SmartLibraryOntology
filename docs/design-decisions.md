@@ -33,3 +33,27 @@ The initial version includes simple OWL restrictions:
 
 ## 7. Initial Limitations
 This version is intentionally small. It does not yet model fines, renewals, detailed resource copies, advanced user roles, or recommendation features. These can be added in later iterations.
+
+## 8. Phase 2 Extension Strategy
+For Phase 2, the ontology was extended in a modular way rather than redesigning the whole schema. The original circulation module was kept stable, while new modules were added for:
+
+- data acquisition provenance
+- semantic topics
+- member-profile signals
+- recommendation-ready outputs
+
+This decision was made to preserve backward compatibility with the original competency questions while still satisfying the Phase 2 requirement for research integration and data acquisition documentation.
+
+## 9. Reuse of Existing Vocabularies
+The Phase 2 version uses lightweight vocabulary alignment instead of large imports. Dublin Core and Schema.org terms were reused to improve interoperability. This choice keeps the ontology understandable for a course project while still demonstrating ontology reuse and extension.
+
+## 10. Methodological Justification
+The extension follows a structured ontology-engineering style inspired by METHONTOLOGY:
+
+1. specification
+2. knowledge acquisition
+3. conceptualization
+4. implementation
+5. validation
+
+This was preferred because the project had to move from a small conceptual draft toward a documented knowledge graph artifact with provenance and query support.

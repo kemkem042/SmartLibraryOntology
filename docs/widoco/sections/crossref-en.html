@@ -1,0 +1,2444 @@
+<h2 id="crossreference" class="list">Cross-reference for Smart Library Loan Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Smart Library Loan Ontology.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#AcquisitionBatch" title="https://example.org/smart-library-ontology#AcquisitionBatch">Acquisition Batch</a></li>
+  <li><a href="#Author" title="https://example.org/smart-library-ontology#Author">Author</a></li>
+  <li><a href="#Book" title="https://example.org/smart-library-ontology#Book">Book</a></li>
+  <li><a href="#CirculationTransaction" title="https://example.org/smart-library-ontology#CirculationTransaction">Circulation Transaction</a></li>
+  <li><a href="#Creator" title="https://example.org/smart-library-ontology#Creator">Creator</a></li>
+  <li><a href="#DataSource" title="https://example.org/smart-library-ontology#DataSource">Data Source</a></li>
+  <li><a href="#EBook" title="https://example.org/smart-library-ontology#EBook">E-Book</a></li>
+  <li><a href="#InteractionEvent" title="https://example.org/smart-library-ontology#InteractionEvent">Interaction Event</a></li>
+  <li><a href="#JournalArticle" title="https://example.org/smart-library-ontology#JournalArticle">Journal Article</a></li>
+  <li><a href="#Librarian" title="https://example.org/smart-library-ontology#Librarian">Librarian</a></li>
+  <li><a href="#LibraryBranch" title="https://example.org/smart-library-ontology#LibraryBranch">Library Branch</a></li>
+  <li><a href="#LibraryEntity" title="https://example.org/smart-library-ontology#LibraryEntity">Library Entity</a></li>
+  <li><a href="#LibraryResource" title="https://example.org/smart-library-ontology#LibraryResource">Library Resource</a></li>
+  <li><a href="#Loan" title="https://example.org/smart-library-ontology#Loan">Loan</a></li>
+  <li><a href="#Member" title="https://example.org/smart-library-ontology#Member">Member</a></li>
+  <li><a href="#MemberProfile" title="https://example.org/smart-library-ontology#MemberProfile">Member Profile</a></li>
+  <li><a href="#MetadataRecord" title="https://example.org/smart-library-ontology#MetadataRecord">Metadata Record</a></li>
+  <li><a href="#Organization" title="https://example.org/smart-library-ontology#Organization">Organization</a></li>
+  <li><a href="#Person" title="https://example.org/smart-library-ontology#Person">Person</a></li>
+  <li><a href="#PrintedBook" title="https://example.org/smart-library-ontology#PrintedBook">Printed Book</a></li>
+  <li><a href="#Publisher" title="https://example.org/smart-library-ontology#Publisher">Publisher</a></li>
+  <li><a href="#Recommendation" title="https://example.org/smart-library-ontology#Recommendation">Recommendation</a></li>
+  <li><a href="#Reservation" title="https://example.org/smart-library-ontology#Reservation">Reservation</a></li>
+  <li><a href="#ResourceStatus" title="https://example.org/smart-library-ontology#ResourceStatus">Resource Status</a></li>
+  <li><a href="#Topic" title="https://example.org/smart-library-ontology#Topic">Topic</a></li>
+ </ul>
+ <div class="entity" id="AcquisitionBatch">
+  <h3>Acquisition Batch<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#AcquisitionBatch</p>
+  <div class="comment">
+   <span class="markdown">A bounded data collection and preprocessing run used to populate ontology instances.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#LibraryEntity" title="https://example.org/smart-library-ontology#LibraryEntity">Library Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#generatedInBatch" title="https://example.org/smart-library-ontology#generatedInBatch">generated in batch</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#AcquisitionBatch_2026_05_Phase2" title="https://example.org/smart-library-ontology#AcquisitionBatch_2026_05_Phase2">Acquisition Batch 2026 05 Phase2</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Author">
+  <h3>Author<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#Author</p>
+  <div class="comment">
+   <span class="markdown">A creator who writes a book or article.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Creator" title="https://example.org/smart-library-ontology#Creator">Creator</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#writtenBy" title="https://example.org/smart-library-ontology#writtenBy">written by</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#Author_Tom_Gruber" title="https://example.org/smart-library-ontology#Author_Tom_Gruber">Author Tom Gruber</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Book">
+  <h3>Book<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#Book</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://schema.org/Book" target="_blank" title="https://schema.org/Book">Book</a> <sup class="type-c" title="class">c</sup>, <a href="#LibraryResource" title="https://example.org/smart-library-ontology#LibraryResource">Library Resource</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#EBook" title="https://example.org/smart-library-ontology#EBook">E-Book</a> <sup class="type-c" title="class">c</sup>, <a href="#PrintedBook" title="https://example.org/smart-library-ontology#PrintedBook">Printed Book</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#isbn" title="https://example.org/smart-library-ontology#isbn">ISBN</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CirculationTransaction">
+  <h3>Circulation Transaction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#CirculationTransaction</p>
+  <div class="comment">
+   <span class="markdown">An event-like entity representing a circulation action.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#LibraryEntity" title="https://example.org/smart-library-ontology#LibraryEntity">Library Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Loan" title="https://example.org/smart-library-ontology#Loan">Loan</a> <sup class="type-c" title="class">c</sup>, <a href="#Reservation" title="https://example.org/smart-library-ontology#Reservation">Reservation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#processedBy" title="https://example.org/smart-library-ontology#processedBy">processed by</a> <sup class="type-op" title="object property">op</sup>, <a href="#startDate" title="https://example.org/smart-library-ontology#startDate">start date</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Creator">
+  <h3>Creator<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#Creator</p>
+  <div class="comment">
+   <span class="markdown">A person who contributes to the creation of a library resource.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Person" title="https://example.org/smart-library-ontology#Person">Person</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Author" title="https://example.org/smart-library-ontology#Author">Author</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DataSource">
+  <h3>Data Source<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#DataSource</p>
+  <div class="comment">
+   <span class="markdown">A source used during data acquisition, such as an API, catalog export, spreadsheet, or document collection.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#LibraryEntity" title="https://example.org/smart-library-ontology#LibraryEntity">Library Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#sourceUrl" title="https://example.org/smart-library-ontology#sourceUrl">source URL</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#retrievedFromSource" title="https://example.org/smart-library-ontology#retrievedFromSource">retrieved from source</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#DataSource_DepartmentSeedSheet" title="https://example.org/smart-library-ontology#DataSource_DepartmentSeedSheet">Data Source Department Seed Sheet</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#DataSource_GoogleBooksAPI" title="https://example.org/smart-library-ontology#DataSource_GoogleBooksAPI">Data Source Google Books A P I</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#DataSource_OpenLibraryAPI" title="https://example.org/smart-library-ontology#DataSource_OpenLibraryAPI">Data Source Open Library A P I</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="EBook">
+  <h3>E-Book<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#EBook</p>
+  <div class="comment">
+   <span class="markdown">A digital book that can be accessed electronically.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Book" title="https://example.org/smart-library-ontology#Book">Book</a> <sup class="type-c" title="class">c</sup>, <a href="https://schema.org/Book" target="_blank" title="https://schema.org/Book">Book</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#accessUrl" title="https://example.org/smart-library-ontology#accessUrl">access URL</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#EBook_KnowledgeGraphs" title="https://example.org/smart-library-ontology#EBook_KnowledgeGraphs">E Book Knowledge Graphs</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#PrintedBook" title="https://example.org/smart-library-ontology#PrintedBook">Printed Book</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="InteractionEvent">
+  <h3>Interaction Event<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#InteractionEvent</p>
+  <div class="comment">
+   <span class="markdown">An observed user interaction such as viewing, searching, bookmarking, or clicking a resource.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#LibraryEntity" title="https://example.org/smart-library-ontology#LibraryEntity">Library Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#interactedWithResource" title="https://example.org/smart-library-ontology#interactedWithResource">interacted with resource</a> <sup class="type-op" title="object property">op</sup>, <a href="#interactionType" title="https://example.org/smart-library-ontology#interactionType">interaction type</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#recordsMember" title="https://example.org/smart-library-ontology#recordsMember">records member</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#Interaction_Search_001" title="https://example.org/smart-library-ontology#Interaction_Search_001">Interaction Search 001</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Interaction_View_001" title="https://example.org/smart-library-ontology#Interaction_View_001">Interaction View 001</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="JournalArticle">
+  <h3>Journal Article<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#JournalArticle</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#LibraryResource" title="https://example.org/smart-library-ontology#LibraryResource">Library Resource</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Librarian">
+  <h3>Librarian<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#Librarian</p>
+  <div class="comment">
+   <span class="markdown">A library staff member who manages loans, returns, and resources.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Person" title="https://example.org/smart-library-ontology#Person">Person</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#processedBy" title="https://example.org/smart-library-ontology#processedBy">processed by</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#Librarian_Emre_Kaya" title="https://example.org/smart-library-ontology#Librarian_Emre_Kaya">Librarian Emre Kaya</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Member" title="https://example.org/smart-library-ontology#Member">Member</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="LibraryBranch">
+  <h3>Library Branch<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#LibraryBranch</p>
+  <div class="comment">
+   <span class="markdown">A physical branch that stores library resources and serves members.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Organization" title="https://example.org/smart-library-ontology#Organization">Organization</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#branchAddress" title="https://example.org/smart-library-ontology#branchAddress">branch address</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#locatedAt" title="https://example.org/smart-library-ontology#locatedAt">located at</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#CentralBranch" title="https://example.org/smart-library-ontology#CentralBranch">Central Branch</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="LibraryEntity">
+  <h3>Library Entity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#LibraryEntity</p>
+  <div class="comment">
+   <span class="markdown">Top-level class for entities represented in the smart library domain.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#AcquisitionBatch" title="https://example.org/smart-library-ontology#AcquisitionBatch">Acquisition Batch</a> <sup class="type-c" title="class">c</sup>, <a href="#CirculationTransaction" title="https://example.org/smart-library-ontology#CirculationTransaction">Circulation Transaction</a> <sup class="type-c" title="class">c</sup>, <a href="#DataSource" title="https://example.org/smart-library-ontology#DataSource">Data Source</a> <sup class="type-c" title="class">c</sup>, <a href="#InteractionEvent" title="https://example.org/smart-library-ontology#InteractionEvent">Interaction Event</a> <sup class="type-c" title="class">c</sup>, <a href="#LibraryResource" title="https://example.org/smart-library-ontology#LibraryResource">Library Resource</a> <sup class="type-c" title="class">c</sup>, <a href="#MemberProfile" title="https://example.org/smart-library-ontology#MemberProfile">Member Profile</a> <sup class="type-c" title="class">c</sup>, <a href="#MetadataRecord" title="https://example.org/smart-library-ontology#MetadataRecord">Metadata Record</a> <sup class="type-c" title="class">c</sup>, <a href="#Organization" title="https://example.org/smart-library-ontology#Organization">Organization</a> <sup class="type-c" title="class">c</sup>, <a href="#Person" title="https://example.org/smart-library-ontology#Person">Person</a> <sup class="type-c" title="class">c</sup>, <a href="#Recommendation" title="https://example.org/smart-library-ontology#Recommendation">Recommendation</a> <sup class="type-c" title="class">c</sup>, <a href="#ResourceStatus" title="https://example.org/smart-library-ontology#ResourceStatus">Resource Status</a> <sup class="type-c" title="class">c</sup>, <a href="#Topic" title="https://example.org/smart-library-ontology#Topic">Topic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#identifier" title="https://example.org/smart-library-ontology#identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#name" title="https://example.org/smart-library-ontology#name">name</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="LibraryResource">
+  <h3>Library Resource<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#LibraryResource</p>
+  <div class="comment">
+   <span class="markdown">A resource that can be catalogued, borrowed, reserved, or recommended.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://schema.org/CreativeWork" target="_blank" title="https://schema.org/CreativeWork">Creative Work</a> <sup class="type-c" title="class">c</sup>, <a href="#LibraryEntity" title="https://example.org/smart-library-ontology#LibraryEntity">Library Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Book" title="https://example.org/smart-library-ontology#Book">Book</a> <sup class="type-c" title="class">c</sup>, <a href="#JournalArticle" title="https://example.org/smart-library-ontology#JournalArticle">Journal Article</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#describedBy" title="https://example.org/smart-library-ontology#describedBy">described by</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasStatus" title="https://example.org/smart-library-ontology#hasStatus">has status</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTopic" title="https://example.org/smart-library-ontology#hasTopic">has topic</a> <sup class="type-op" title="object property">op</sup>, <a href="#locatedAt" title="https://example.org/smart-library-ontology#locatedAt">located at</a> <sup class="type-op" title="object property">op</sup>, <a href="#publicationYear" title="https://example.org/smart-library-ontology#publicationYear">publication year</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#publishedBy" title="https://example.org/smart-library-ontology#publishedBy">published by</a> <sup class="type-op" title="object property">op</sup>, <a href="#title" title="https://example.org/smart-library-ontology#title">title</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#writtenBy" title="https://example.org/smart-library-ontology#writtenBy">written by</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#describesResource" title="https://example.org/smart-library-ontology#describesResource">describes resource</a> <sup class="type-op" title="object property">op</sup>, <a href="#interactedWithResource" title="https://example.org/smart-library-ontology#interactedWithResource">interacted with resource</a> <sup class="type-op" title="object property">op</sup>, <a href="#loanedResource" title="https://example.org/smart-library-ontology#loanedResource">loaned resource</a> <sup class="type-op" title="object property">op</sup>, <a href="#recommendedResource" title="https://example.org/smart-library-ontology#recommendedResource">recommended resource</a> <sup class="type-op" title="object property">op</sup>, <a href="#reservedResource" title="https://example.org/smart-library-ontology#reservedResource">reserved resource</a> <sup class="type-op" title="object property">op</sup>, <a href="#topicOf" title="https://example.org/smart-library-ontology#topicOf">topic of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Loan">
+  <h3>Loan<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#Loan</p>
+  <div class="comment">
+   <span class="markdown">A transaction in which a member borrows a resource for a defined period.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CirculationTransaction" title="https://example.org/smart-library-ontology#CirculationTransaction">Circulation Transaction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#dueDate" title="https://example.org/smart-library-ontology#dueDate">due date</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#loanedResource" title="https://example.org/smart-library-ontology#loanedResource">loaned resource</a> <sup class="type-op" title="object property">op</sup>, <a href="#loanedTo" title="https://example.org/smart-library-ontology#loanedTo">loaned to</a> <sup class="type-op" title="object property">op</sup>, <a href="#returnDate" title="https://example.org/smart-library-ontology#returnDate">return date</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasLoan" title="https://example.org/smart-library-ontology#hasLoan">has loan</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#Loan_001" title="https://example.org/smart-library-ontology#Loan_001">Loan 001</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Member">
+  <h3>Member<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#Member</p>
+  <div class="comment">
+   <span class="markdown">A registered user who can borrow, reserve, and receive personalized recommendations for library resources.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Person" title="https://example.org/smart-library-ontology#Person">Person</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasLoan" title="https://example.org/smart-library-ontology#hasLoan">has loan</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasProfile" title="https://example.org/smart-library-ontology#hasProfile">has profile</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#loanedTo" title="https://example.org/smart-library-ontology#loanedTo">loaned to</a> <sup class="type-op" title="object property">op</sup>, <a href="#profileOf" title="https://example.org/smart-library-ontology#profileOf">profile of</a> <sup class="type-op" title="object property">op</sup>, <a href="#recommendedFor" title="https://example.org/smart-library-ontology#recommendedFor">recommended for</a> <sup class="type-op" title="object property">op</sup>, <a href="#recordsMember" title="https://example.org/smart-library-ontology#recordsMember">records member</a> <sup class="type-op" title="object property">op</sup>, <a href="#reservedBy" title="https://example.org/smart-library-ontology#reservedBy">reserved by</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#Member_Aylin_Demir" title="https://example.org/smart-library-ontology#Member_Aylin_Demir">Member Aylin Demir</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Librarian" title="https://example.org/smart-library-ontology#Librarian">Librarian</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MemberProfile">
+  <h3>Member Profile<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#MemberProfile</p>
+  <div class="comment">
+   <span class="markdown">A lightweight semantic profile that stores a member's interest topics for personalization and recommendation.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#LibraryEntity" title="https://example.org/smart-library-ontology#LibraryEntity">Library Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasInterestTopic" title="https://example.org/smart-library-ontology#hasInterestTopic">has interest topic</a> <sup class="type-op" title="object property">op</sup>, <a href="#profileOf" title="https://example.org/smart-library-ontology#profileOf">profile of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasProfile" title="https://example.org/smart-library-ontology#hasProfile">has profile</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#Profile_Aylin_Demir" title="https://example.org/smart-library-ontology#Profile_Aylin_Demir">Profile Aylin Demir</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MetadataRecord">
+  <h3>Metadata Record<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#MetadataRecord</p>
+  <div class="comment">
+   <span class="markdown">A structured metadata record that documents where and when a resource description was acquired.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#LibraryEntity" title="https://example.org/smart-library-ontology#LibraryEntity">Library Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#confidenceScore" title="https://example.org/smart-library-ontology#confidenceScore">confidence score</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#describesResource" title="https://example.org/smart-library-ontology#describesResource">describes resource</a> <sup class="type-op" title="object property">op</sup>, <a href="#generatedInBatch" title="https://example.org/smart-library-ontology#generatedInBatch">generated in batch</a> <sup class="type-op" title="object property">op</sup>, <a href="#retrievedAt" title="https://example.org/smart-library-ontology#retrievedAt">retrieved at</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#retrievedFromSource" title="https://example.org/smart-library-ontology#retrievedFromSource">retrieved from source</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#describedBy" title="https://example.org/smart-library-ontology#describedBy">described by</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#MetadataRecord_B5001" title="https://example.org/smart-library-ontology#MetadataRecord_B5001">Metadata Record B5001</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#MetadataRecord_EB5002" title="https://example.org/smart-library-ontology#MetadataRecord_EB5002">Metadata Record E B5002</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Organization">
+  <h3>Organization<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#Organization</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#LibraryEntity" title="https://example.org/smart-library-ontology#LibraryEntity">Library Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#LibraryBranch" title="https://example.org/smart-library-ontology#LibraryBranch">Library Branch</a> <sup class="type-c" title="class">c</sup>, <a href="#Publisher" title="https://example.org/smart-library-ontology#Publisher">Publisher</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Person">
+  <h3>Person<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#Person</p>
+  <div class="comment">
+   <span class="markdown">A human actor related to the library system.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#LibraryEntity" title="https://example.org/smart-library-ontology#LibraryEntity">Library Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Creator" title="https://example.org/smart-library-ontology#Creator">Creator</a> <sup class="type-c" title="class">c</sup>, <a href="#Librarian" title="https://example.org/smart-library-ontology#Librarian">Librarian</a> <sup class="type-c" title="class">c</sup>, <a href="#Member" title="https://example.org/smart-library-ontology#Member">Member</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#email" title="https://example.org/smart-library-ontology#email">email</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PrintedBook">
+  <h3>Printed Book<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#PrintedBook</p>
+  <div class="comment">
+   <span class="markdown">A physical book stored at a branch.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Book" title="https://example.org/smart-library-ontology#Book">Book</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#Book_OntologyDesign" title="https://example.org/smart-library-ontology#Book_OntologyDesign">Book Ontology Design</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#EBook" title="https://example.org/smart-library-ontology#EBook">E-Book</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Publisher">
+  <h3>Publisher<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#Publisher</p>
+  <div class="comment">
+   <span class="markdown">An organization that publishes a library resource.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Organization" title="https://example.org/smart-library-ontology#Organization">Organization</a> <sup class="type-c" title="class">c</sup>, <a href="https://schema.org/Organization" target="_blank" title="https://schema.org/Organization">Organization</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#publishedBy" title="https://example.org/smart-library-ontology#publishedBy">published by</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#Publisher_MITPress" title="https://example.org/smart-library-ontology#Publisher_MITPress">Publisher M I T Press</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Recommendation">
+  <h3>Recommendation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#Recommendation</p>
+  <div class="comment">
+   <span class="markdown">A recommendation candidate connecting a member to a resource using topical or behavioral evidence.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#LibraryEntity" title="https://example.org/smart-library-ontology#LibraryEntity">Library Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#profileScore" title="https://example.org/smart-library-ontology#profileScore">profile score</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#recommendedFor" title="https://example.org/smart-library-ontology#recommendedFor">recommended for</a> <sup class="type-op" title="object property">op</sup>, <a href="#recommendedResource" title="https://example.org/smart-library-ontology#recommendedResource">recommended resource</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#Recommendation_001" title="https://example.org/smart-library-ontology#Recommendation_001">Recommendation 001</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Reservation">
+  <h3>Reservation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#Reservation</p>
+  <div class="comment">
+   <span class="markdown">A transaction in which a member requests a resource before borrowing it.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CirculationTransaction" title="https://example.org/smart-library-ontology#CirculationTransaction">Circulation Transaction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#reservedBy" title="https://example.org/smart-library-ontology#reservedBy">reserved by</a> <sup class="type-op" title="object property">op</sup>, <a href="#reservedResource" title="https://example.org/smart-library-ontology#reservedResource">reserved resource</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#Reservation_001" title="https://example.org/smart-library-ontology#Reservation_001">Reservation 001</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ResourceStatus">
+  <h3>Resource Status<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#ResourceStatus</p>
+  <div class="comment">
+   <span class="markdown">Controlled status values for library resources.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#LibraryEntity" title="https://example.org/smart-library-ontology#LibraryEntity">Library Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasStatus" title="https://example.org/smart-library-ontology#hasStatus">has status</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#Available" title="https://example.org/smart-library-ontology#Available">Available</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#OnLoan" title="https://example.org/smart-library-ontology#OnLoan">On Loan</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Reserved" title="https://example.org/smart-library-ontology#Reserved">Reserved</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Topic">
+  <h3>Topic<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#Topic</p>
+  <div class="comment">
+   <span class="markdown">A semantic subject or keyword used to connect resources, user interests, and recommendations.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#LibraryEntity" title="https://example.org/smart-library-ontology#LibraryEntity">Library Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#topicOf" title="https://example.org/smart-library-ontology#topicOf">topic of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasInterestTopic" title="https://example.org/smart-library-ontology#hasInterestTopic">has interest topic</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTopic" title="https://example.org/smart-library-ontology#hasTopic">has topic</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#Topic_KnowledgeGraphs" title="https://example.org/smart-library-ontology#Topic_KnowledgeGraphs">Topic Knowledge Graphs</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Topic_OntologyEngineering" title="https://example.org/smart-library-ontology#Topic_OntologyEngineering">Topic Ontology Engineering</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Topic_SemanticWeb" title="https://example.org/smart-library-ontology#Topic_SemanticWeb">Topic Semantic Web</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#describedBy" title="https://example.org/smart-library-ontology#describedBy">described by</a></li>
+  <li><a href="#describesResource" title="https://example.org/smart-library-ontology#describesResource">describes resource</a></li>
+  <li><a href="#generatedInBatch" title="https://example.org/smart-library-ontology#generatedInBatch">generated in batch</a></li>
+  <li><a href="#hasInterestTopic" title="https://example.org/smart-library-ontology#hasInterestTopic">has interest topic</a></li>
+  <li><a href="#hasLoan" title="https://example.org/smart-library-ontology#hasLoan">has loan</a></li>
+  <li><a href="#hasProfile" title="https://example.org/smart-library-ontology#hasProfile">has profile</a></li>
+  <li><a href="#hasStatus" title="https://example.org/smart-library-ontology#hasStatus">has status</a></li>
+  <li><a href="#hasTopic" title="https://example.org/smart-library-ontology#hasTopic">has topic</a></li>
+  <li><a href="#interactedWithResource" title="https://example.org/smart-library-ontology#interactedWithResource">interacted with resource</a></li>
+  <li><a href="#loanedResource" title="https://example.org/smart-library-ontology#loanedResource">loaned resource</a></li>
+  <li><a href="#loanedTo" title="https://example.org/smart-library-ontology#loanedTo">loaned to</a></li>
+  <li><a href="#locatedAt" title="https://example.org/smart-library-ontology#locatedAt">located at</a></li>
+  <li><a href="#processedBy" title="https://example.org/smart-library-ontology#processedBy">processed by</a></li>
+  <li><a href="#profileOf" title="https://example.org/smart-library-ontology#profileOf">profile of</a></li>
+  <li><a href="#publishedBy" title="https://example.org/smart-library-ontology#publishedBy">published by</a></li>
+  <li><a href="#recommendedFor" title="https://example.org/smart-library-ontology#recommendedFor">recommended for</a></li>
+  <li><a href="#recommendedResource" title="https://example.org/smart-library-ontology#recommendedResource">recommended resource</a></li>
+  <li><a href="#recordsMember" title="https://example.org/smart-library-ontology#recordsMember">records member</a></li>
+  <li><a href="#reservedBy" title="https://example.org/smart-library-ontology#reservedBy">reserved by</a></li>
+  <li><a href="#reservedResource" title="https://example.org/smart-library-ontology#reservedResource">reserved resource</a></li>
+  <li><a href="#retrievedFromSource" title="https://example.org/smart-library-ontology#retrievedFromSource">retrieved from source</a></li>
+  <li><a href="#topicOf" title="https://example.org/smart-library-ontology#topicOf">topic of</a></li>
+  <li><a href="#writtenBy" title="https://example.org/smart-library-ontology#writtenBy">written by</a></li>
+ </ul>
+ <div class="entity" id="describedBy">
+  <h3>described by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#describedBy</p>
+  <div class="comment">
+   <span class="markdown">Links a resource to the metadata record from which it was populated or curated.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#LibraryResource" title="https://example.org/smart-library-ontology#LibraryResource">Library Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#MetadataRecord" title="https://example.org/smart-library-ontology#MetadataRecord">Metadata Record</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#describesResource" title="https://example.org/smart-library-ontology#describesResource">describes resource</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="describesResource">
+  <h3>describes resource<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#describesResource</p>
+  <div class="comment">
+   <span class="markdown">Links a metadata record to the resource it describes.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#MetadataRecord" title="https://example.org/smart-library-ontology#MetadataRecord">Metadata Record</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#LibraryResource" title="https://example.org/smart-library-ontology#LibraryResource">Library Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#describedBy" title="https://example.org/smart-library-ontology#describedBy">described by</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="generatedInBatch">
+  <h3>generated in batch<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#generatedInBatch</p>
+  <div class="comment">
+   <span class="markdown">Links a metadata record to the data acquisition batch that produced or refreshed it.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#MetadataRecord" title="https://example.org/smart-library-ontology#MetadataRecord">Metadata Record</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#AcquisitionBatch" title="https://example.org/smart-library-ontology#AcquisitionBatch">Acquisition Batch</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasInterestTopic">
+  <h3>has interest topic<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#hasInterestTopic</p>
+  <div class="comment">
+   <span class="markdown">Links a member profile to one or more topics representing inferred or observed interests.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#MemberProfile" title="https://example.org/smart-library-ontology#MemberProfile">Member Profile</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Topic" title="https://example.org/smart-library-ontology#Topic">Topic</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasLoan">
+  <h3>has loan<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#hasLoan</p>
+  <div class="comment">
+   <span class="markdown">Links a member to a loan transaction.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Member" title="https://example.org/smart-library-ontology#Member">Member</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Loan" title="https://example.org/smart-library-ontology#Loan">Loan</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#loanedTo" title="https://example.org/smart-library-ontology#loanedTo">loaned to</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasProfile">
+  <h3>has profile<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#hasProfile</p>
+  <div class="comment">
+   <span class="markdown">Links a member to a semantic interest profile.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Member" title="https://example.org/smart-library-ontology#Member">Member</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#MemberProfile" title="https://example.org/smart-library-ontology#MemberProfile">Member Profile</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#profileOf" title="https://example.org/smart-library-ontology#profileOf">profile of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasStatus">
+  <h3>has status<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#hasStatus</p>
+  <div class="comment">
+   <span class="markdown">Links a resource to its current availability status.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#LibraryResource" title="https://example.org/smart-library-ontology#LibraryResource">Library Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ResourceStatus" title="https://example.org/smart-library-ontology#ResourceStatus">Resource Status</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasTopic">
+  <h3>has topic<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#hasTopic</p>
+  <div class="comment">
+   <span class="markdown">Links a resource to a semantic topic used for retrieval and recommendation.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://purl.org/dc/terms/subject" target="_blank" title="http://purl.org/dc/terms/subject">subject</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#LibraryResource" title="https://example.org/smart-library-ontology#LibraryResource">Library Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Topic" title="https://example.org/smart-library-ontology#Topic">Topic</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#topicOf" title="https://example.org/smart-library-ontology#topicOf">topic of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="interactedWithResource">
+  <h3>interacted with resource<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#interactedWithResource</p>
+  <div class="comment">
+   <span class="markdown">Links an interaction event to the resource that was viewed or searched.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#InteractionEvent" title="https://example.org/smart-library-ontology#InteractionEvent">Interaction Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#LibraryResource" title="https://example.org/smart-library-ontology#LibraryResource">Library Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="loanedResource">
+  <h3>loaned resource<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#loanedResource</p>
+  <div class="comment">
+   <span class="markdown">Links a loan transaction to the borrowed resource.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Loan" title="https://example.org/smart-library-ontology#Loan">Loan</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#LibraryResource" title="https://example.org/smart-library-ontology#LibraryResource">Library Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="loanedTo">
+  <h3>loaned to<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#loanedTo</p>
+  <div class="comment">
+   <span class="markdown">Links a loan transaction to the member who borrowed the resource.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Loan" title="https://example.org/smart-library-ontology#Loan">Loan</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Member" title="https://example.org/smart-library-ontology#Member">Member</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#hasLoan" title="https://example.org/smart-library-ontology#hasLoan">has loan</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="locatedAt">
+  <h3>located at<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#locatedAt</p>
+  <div class="comment">
+   <span class="markdown">Links a physical resource to the branch where it is stored.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#LibraryResource" title="https://example.org/smart-library-ontology#LibraryResource">Library Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#LibraryBranch" title="https://example.org/smart-library-ontology#LibraryBranch">Library Branch</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="processedBy">
+  <h3>processed by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#processedBy</p>
+  <div class="comment">
+   <span class="markdown">Links a transaction to the librarian responsible for processing it.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#CirculationTransaction" title="https://example.org/smart-library-ontology#CirculationTransaction">Circulation Transaction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Librarian" title="https://example.org/smart-library-ontology#Librarian">Librarian</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="profileOf">
+  <h3>profile of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#profileOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#MemberProfile" title="https://example.org/smart-library-ontology#MemberProfile">Member Profile</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Member" title="https://example.org/smart-library-ontology#Member">Member</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#hasProfile" title="https://example.org/smart-library-ontology#hasProfile">has profile</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="publishedBy">
+  <h3>published by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#publishedBy</p>
+  <div class="comment">
+   <span class="markdown">Links a resource to its publisher.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#LibraryResource" title="https://example.org/smart-library-ontology#LibraryResource">Library Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Publisher" title="https://example.org/smart-library-ontology#Publisher">Publisher</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="recommendedFor">
+  <h3>recommended for<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#recommendedFor</p>
+  <div class="comment">
+   <span class="markdown">Links a recommendation candidate to the target member.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Recommendation" title="https://example.org/smart-library-ontology#Recommendation">Recommendation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Member" title="https://example.org/smart-library-ontology#Member">Member</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="recommendedResource">
+  <h3>recommended resource<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#recommendedResource</p>
+  <div class="comment">
+   <span class="markdown">Links a recommendation candidate to the resource proposed for the member.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Recommendation" title="https://example.org/smart-library-ontology#Recommendation">Recommendation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#LibraryResource" title="https://example.org/smart-library-ontology#LibraryResource">Library Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="recordsMember">
+  <h3>records member<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#recordsMember</p>
+  <div class="comment">
+   <span class="markdown">Links an interaction event to the member who performed it.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#InteractionEvent" title="https://example.org/smart-library-ontology#InteractionEvent">Interaction Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Member" title="https://example.org/smart-library-ontology#Member">Member</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="reservedBy">
+  <h3>reserved by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#reservedBy</p>
+  <div class="comment">
+   <span class="markdown">Links a reservation to the member who requested a resource.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Reservation" title="https://example.org/smart-library-ontology#Reservation">Reservation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Member" title="https://example.org/smart-library-ontology#Member">Member</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="reservedResource">
+  <h3>reserved resource<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#reservedResource</p>
+  <div class="comment">
+   <span class="markdown">Links a reservation to the requested resource.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Reservation" title="https://example.org/smart-library-ontology#Reservation">Reservation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#LibraryResource" title="https://example.org/smart-library-ontology#LibraryResource">Library Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="retrievedFromSource">
+  <h3>retrieved from source<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#retrievedFromSource</p>
+  <div class="comment">
+   <span class="markdown">Links a metadata record to the source from which the data were collected.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#MetadataRecord" title="https://example.org/smart-library-ontology#MetadataRecord">Metadata Record</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#DataSource" title="https://example.org/smart-library-ontology#DataSource">Data Source</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="topicOf">
+  <h3>topic of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#topicOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Topic" title="https://example.org/smart-library-ontology#Topic">Topic</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#LibraryResource" title="https://example.org/smart-library-ontology#LibraryResource">Library Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#hasTopic" title="https://example.org/smart-library-ontology#hasTopic">has topic</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="writtenBy">
+  <h3>written by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#writtenBy</p>
+  <div class="comment">
+   <span class="markdown">Links a resource to its author.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#LibraryResource" title="https://example.org/smart-library-ontology#LibraryResource">Library Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Author" title="https://example.org/smart-library-ontology#Author">Author</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#accessUrl" title="https://example.org/smart-library-ontology#accessUrl">access URL</a></li>
+  <li><a href="#branchAddress" title="https://example.org/smart-library-ontology#branchAddress">branch address</a></li>
+  <li><a href="#confidenceScore" title="https://example.org/smart-library-ontology#confidenceScore">confidence score</a></li>
+  <li><a href="#dueDate" title="https://example.org/smart-library-ontology#dueDate">due date</a></li>
+  <li><a href="#email" title="https://example.org/smart-library-ontology#email">email</a></li>
+  <li><a href="#identifier" title="https://example.org/smart-library-ontology#identifier">identifier</a></li>
+  <li><a href="#interactionType" title="https://example.org/smart-library-ontology#interactionType">interaction type</a></li>
+  <li><a href="#isbn" title="https://example.org/smart-library-ontology#isbn">ISBN</a></li>
+  <li><a href="#name" title="https://example.org/smart-library-ontology#name">name</a></li>
+  <li><a href="#profileScore" title="https://example.org/smart-library-ontology#profileScore">profile score</a></li>
+  <li><a href="#publicationYear" title="https://example.org/smart-library-ontology#publicationYear">publication year</a></li>
+  <li><a href="#retrievedAt" title="https://example.org/smart-library-ontology#retrievedAt">retrieved at</a></li>
+  <li><a href="#returnDate" title="https://example.org/smart-library-ontology#returnDate">return date</a></li>
+  <li><a href="#sourceUrl" title="https://example.org/smart-library-ontology#sourceUrl">source URL</a></li>
+  <li><a href="#startDate" title="https://example.org/smart-library-ontology#startDate">start date</a></li>
+  <li><a href="#title" title="https://example.org/smart-library-ontology#title">title</a></li>
+ </ul>
+ <div class="entity" id="accessUrl">
+  <h3>access URL<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#accessUrl</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="https://schema.org/url" target="_blank" title="https://schema.org/url">url</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#EBook" title="https://example.org/smart-library-ontology#EBook">E-Book</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#anyURI" target="_blank" title="http://www.w3.org/2001/XMLSchema#anyURI">any U R I</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="branchAddress">
+  <h3>branch address<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#branchAddress</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#LibraryBranch" title="https://example.org/smart-library-ontology#LibraryBranch">Library Branch</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="confidenceScore">
+  <h3>confidence score<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#confidenceScore</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#MetadataRecord" title="https://example.org/smart-library-ontology#MetadataRecord">Metadata Record</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="dueDate">
+  <h3>due date<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#dueDate</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Loan" title="https://example.org/smart-library-ontology#Loan">Loan</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="email">
+  <h3>email<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#email</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Person" title="https://example.org/smart-library-ontology#Person">Person</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="identifier">
+  <h3>identifier<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#identifier</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#LibraryEntity" title="https://example.org/smart-library-ontology#LibraryEntity">Library Entity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="interactionType">
+  <h3>interaction type<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#interactionType</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#InteractionEvent" title="https://example.org/smart-library-ontology#InteractionEvent">Interaction Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isbn">
+  <h3>ISBN<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#isbn</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Book" title="https://example.org/smart-library-ontology#Book">Book</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="name">
+  <h3>name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#name</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#LibraryEntity" title="https://example.org/smart-library-ontology#LibraryEntity">Library Entity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="profileScore">
+  <h3>profile score<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#profileScore</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Recommendation" title="https://example.org/smart-library-ontology#Recommendation">Recommendation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="publicationYear">
+  <h3>publication year<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#publicationYear</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#LibraryResource" title="https://example.org/smart-library-ontology#LibraryResource">Library Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#gYear" target="_blank" title="http://www.w3.org/2001/XMLSchema#gYear">g Year</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="retrievedAt">
+  <h3>retrieved at<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#retrievedAt</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#MetadataRecord" title="https://example.org/smart-library-ontology#MetadataRecord">Metadata Record</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="returnDate">
+  <h3>return date<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#returnDate</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Loan" title="https://example.org/smart-library-ontology#Loan">Loan</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="sourceUrl">
+  <h3>source URL<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#sourceUrl</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="https://schema.org/url" target="_blank" title="https://schema.org/url">url</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#DataSource" title="https://example.org/smart-library-ontology#DataSource">Data Source</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#anyURI" target="_blank" title="http://www.w3.org/2001/XMLSchema#anyURI">any U R I</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="startDate">
+  <h3>start date<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#startDate</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#CirculationTransaction" title="https://example.org/smart-library-ontology#CirculationTransaction">Circulation Transaction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="title">
+  <h3>title<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#title</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://purl.org/dc/elements/1.1/title" target="_blank" title="http://purl.org/dc/elements/1.1/title">title</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#LibraryResource" title="https://example.org/smart-library-ontology#LibraryResource">Library Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="annotationproperties">
+ <h3 id="annotationproperties" class="list">Annotation Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created"> <span>created</span> </a></li>
+  <li><a href="#http://purl.org/dc/elements/1.1/creator" title="http://purl.org/dc/elements/1.1/creator"> <span>creator</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description"> <span>description</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/modified" title="http://purl.org/dc/terms/modified"> <span>modified</span> </a></li>
+ </ul>
+ <div class="entity" id="http://purl.org/dc/terms/created">
+  <h3>created<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/created</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/elements/1.1/creator">
+  <h3>creator<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/creator</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/description">
+  <h3>description<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/description</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/modified">
+  <h3>modified<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/modified</p>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+ <h3 id="namedindividuals" class="list">Named Individuals</h3>
+ <ul class="hlist">
+  <li><a href="#AcquisitionBatch_2026_05_Phase2" title="https://example.org/smart-library-ontology#AcquisitionBatch_2026_05_Phase2"> <span>Acquisition Batch 2026 05 Phase2</span> </a></li>
+  <li><a href="#Author_Tom_Gruber" title="https://example.org/smart-library-ontology#Author_Tom_Gruber"> <span>Author Tom Gruber</span> </a></li>
+  <li><a href="#Available" title="https://example.org/smart-library-ontology#Available">Available</a></li>
+  <li><a href="#Book_OntologyDesign" title="https://example.org/smart-library-ontology#Book_OntologyDesign"> <span>Book Ontology Design</span> </a></li>
+  <li><a href="#CentralBranch" title="https://example.org/smart-library-ontology#CentralBranch"> <span>Central Branch</span> </a></li>
+  <li><a href="#DataSource_DepartmentSeedSheet" title="https://example.org/smart-library-ontology#DataSource_DepartmentSeedSheet"> <span>Data Source Department Seed Sheet</span> </a></li>
+  <li><a href="#DataSource_GoogleBooksAPI" title="https://example.org/smart-library-ontology#DataSource_GoogleBooksAPI"> <span>Data Source Google Books A P I</span> </a></li>
+  <li><a href="#DataSource_OpenLibraryAPI" title="https://example.org/smart-library-ontology#DataSource_OpenLibraryAPI"> <span>Data Source Open Library A P I</span> </a></li>
+  <li><a href="#EBook_KnowledgeGraphs" title="https://example.org/smart-library-ontology#EBook_KnowledgeGraphs"> <span>E Book Knowledge Graphs</span> </a></li>
+  <li><a href="#Interaction_Search_001" title="https://example.org/smart-library-ontology#Interaction_Search_001"> <span>Interaction Search 001</span> </a></li>
+  <li><a href="#Interaction_View_001" title="https://example.org/smart-library-ontology#Interaction_View_001"> <span>Interaction View 001</span> </a></li>
+  <li><a href="#Librarian_Emre_Kaya" title="https://example.org/smart-library-ontology#Librarian_Emre_Kaya"> <span>Librarian Emre Kaya</span> </a></li>
+  <li><a href="#Loan_001" title="https://example.org/smart-library-ontology#Loan_001"> <span>Loan 001</span> </a></li>
+  <li><a href="#Member_Aylin_Demir" title="https://example.org/smart-library-ontology#Member_Aylin_Demir"> <span>Member Aylin Demir</span> </a></li>
+  <li><a href="#MetadataRecord_B5001" title="https://example.org/smart-library-ontology#MetadataRecord_B5001"> <span>Metadata Record B5001</span> </a></li>
+  <li><a href="#MetadataRecord_EB5002" title="https://example.org/smart-library-ontology#MetadataRecord_EB5002"> <span>Metadata Record E B5002</span> </a></li>
+  <li><a href="#OnLoan" title="https://example.org/smart-library-ontology#OnLoan">On Loan</a></li>
+  <li><a href="#Profile_Aylin_Demir" title="https://example.org/smart-library-ontology#Profile_Aylin_Demir"> <span>Profile Aylin Demir</span> </a></li>
+  <li><a href="#Publisher_MITPress" title="https://example.org/smart-library-ontology#Publisher_MITPress"> <span>Publisher M I T Press</span> </a></li>
+  <li><a href="#Recommendation_001" title="https://example.org/smart-library-ontology#Recommendation_001"> <span>Recommendation 001</span> </a></li>
+  <li><a href="#Reservation_001" title="https://example.org/smart-library-ontology#Reservation_001"> <span>Reservation 001</span> </a></li>
+  <li><a href="#Reserved" title="https://example.org/smart-library-ontology#Reserved">Reserved</a></li>
+  <li><a href="#" title="https://example.org/smart-library-ontology"> <span>smart library ontology</span> </a></li>
+  <li><a href="#Topic_KnowledgeGraphs" title="https://example.org/smart-library-ontology#Topic_KnowledgeGraphs"> <span>Topic Knowledge Graphs</span> </a></li>
+  <li><a href="#Topic_OntologyEngineering" title="https://example.org/smart-library-ontology#Topic_OntologyEngineering"> <span>Topic Ontology Engineering</span> </a></li>
+  <li><a href="#Topic_SemanticWeb" title="https://example.org/smart-library-ontology#Topic_SemanticWeb"> <span>Topic Semantic Web</span> </a></li>
+ </ul>
+ <div class="entity" id="AcquisitionBatch_2026_05_Phase2">
+  <h3>Acquisition Batch 2026 05 Phase2<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#AcquisitionBatch_2026_05_Phase2</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#AcquisitionBatch" title="https://example.org/smart-library-ontology#AcquisitionBatch">Acquisition Batch</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#identifier" title="https://example.org/smart-library-ontology#identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"BATCH-2026-05-P2"</span>
+   </dd>
+   <dd>
+    <a href="#name" title="https://example.org/smart-library-ontology#name">name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Phase 2 metadata integration batch"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Author_Tom_Gruber">
+  <h3>Author Tom Gruber<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#Author_Tom_Gruber</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Author" title="https://example.org/smart-library-ontology#Author">Author</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#identifier" title="https://example.org/smart-library-ontology#identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"A-3001"</span>
+   </dd>
+   <dd>
+    <a href="#name" title="https://example.org/smart-library-ontology#name">name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Tom Gruber"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Available">
+  <h3>Available<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#Available</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#ResourceStatus" title="https://example.org/smart-library-ontology#ResourceStatus">Resource Status</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#name" title="https://example.org/smart-library-ontology#name">name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Available"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Book_OntologyDesign">
+  <h3>Book Ontology Design<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#Book_OntologyDesign</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#PrintedBook" title="https://example.org/smart-library-ontology#PrintedBook">Printed Book</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#describedBy" title="https://example.org/smart-library-ontology#describedBy">described by</a> <sup class="type-op" title="object property">op</sup> <a href="#MetadataRecord_B5001" title="https://example.org/smart-library-ontology#MetadataRecord_B5001">Metadata Record B5001</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasStatus" title="https://example.org/smart-library-ontology#hasStatus">has status</a> <sup class="type-op" title="object property">op</sup> <a href="#OnLoan" title="https://example.org/smart-library-ontology#OnLoan">On Loan</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasTopic" title="https://example.org/smart-library-ontology#hasTopic">has topic</a> <sup class="type-op" title="object property">op</sup> <a href="#Topic_OntologyEngineering" title="https://example.org/smart-library-ontology#Topic_OntologyEngineering">Topic Ontology Engineering</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasTopic" title="https://example.org/smart-library-ontology#hasTopic">has topic</a> <sup class="type-op" title="object property">op</sup> <a href="#Topic_SemanticWeb" title="https://example.org/smart-library-ontology#Topic_SemanticWeb">Topic Semantic Web</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#locatedAt" title="https://example.org/smart-library-ontology#locatedAt">located at</a> <sup class="type-op" title="object property">op</sup> <a href="#CentralBranch" title="https://example.org/smart-library-ontology#CentralBranch">Central Branch</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#publishedBy" title="https://example.org/smart-library-ontology#publishedBy">published by</a> <sup class="type-op" title="object property">op</sup> <a href="#Publisher_MITPress" title="https://example.org/smart-library-ontology#Publisher_MITPress">Publisher M I T Press</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#writtenBy" title="https://example.org/smart-library-ontology#writtenBy">written by</a> <sup class="type-op" title="object property">op</sup> <a href="#Author_Tom_Gruber" title="https://example.org/smart-library-ontology#Author_Tom_Gruber">Author Tom Gruber</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#identifier" title="https://example.org/smart-library-ontology#identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"B-5001"</span>
+   </dd>
+   <dd>
+    <a href="#isbn" title="https://example.org/smart-library-ontology#isbn">ISBN</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"978-0-000-00001-1"</span>
+   </dd>
+   <dd>
+    <a href="#publicationYear" title="https://example.org/smart-library-ontology#publicationYear">publication year</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2024"^^<a href="http://www.w3.org/2001/XMLSchema#gYear" target="_blank" title="http://www.w3.org/2001/XMLSchema#gYear">g Year</a> </span>
+   </dd>
+   <dd>
+    <a href="#title" title="https://example.org/smart-library-ontology#title">title</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Ontology Design Principles"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CentralBranch">
+  <h3>Central Branch<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#CentralBranch</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#LibraryBranch" title="https://example.org/smart-library-ontology#LibraryBranch">Library Branch</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#branchAddress" title="https://example.org/smart-library-ontology#branchAddress">branch address</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Main Campus, Library Building"</span>
+   </dd>
+   <dd>
+    <a href="#identifier" title="https://example.org/smart-library-ontology#identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"BR-001"</span>
+   </dd>
+   <dd>
+    <a href="#name" title="https://example.org/smart-library-ontology#name">name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Central Library Branch"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DataSource_DepartmentSeedSheet">
+  <h3>Data Source Department Seed Sheet<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#DataSource_DepartmentSeedSheet</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#DataSource" title="https://example.org/smart-library-ontology#DataSource">Data Source</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#identifier" title="https://example.org/smart-library-ontology#identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"SRC-003"</span>
+   </dd>
+   <dd>
+    <a href="#name" title="https://example.org/smart-library-ontology#name">name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Department Seed Spreadsheet"</span>
+   </dd>
+   <dd>
+    <a href="#sourceUrl" title="https://example.org/smart-library-ontology#sourceUrl">source URL</a> <sup class="type-dp" title="data property">dp</sup> <a href="https://example.org/internal/seed-sheet" target="_blank">https://example.org/internal/seed-sheet</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DataSource_GoogleBooksAPI">
+  <h3>Data Source Google Books A P I<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#DataSource_GoogleBooksAPI</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#DataSource" title="https://example.org/smart-library-ontology#DataSource">Data Source</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#identifier" title="https://example.org/smart-library-ontology#identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"SRC-002"</span>
+   </dd>
+   <dd>
+    <a href="#name" title="https://example.org/smart-library-ontology#name">name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Google Books API"</span>
+   </dd>
+   <dd>
+    <a href="#sourceUrl" title="https://example.org/smart-library-ontology#sourceUrl">source URL</a> <sup class="type-dp" title="data property">dp</sup> <a href="https://developers.google.com/books" target="_blank">https://developers.google.com/books</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DataSource_OpenLibraryAPI">
+  <h3>Data Source Open Library A P I<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#DataSource_OpenLibraryAPI</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#DataSource" title="https://example.org/smart-library-ontology#DataSource">Data Source</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#identifier" title="https://example.org/smart-library-ontology#identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"SRC-001"</span>
+   </dd>
+   <dd>
+    <a href="#name" title="https://example.org/smart-library-ontology#name">name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Open Library API"</span>
+   </dd>
+   <dd>
+    <a href="#sourceUrl" title="https://example.org/smart-library-ontology#sourceUrl">source URL</a> <sup class="type-dp" title="data property">dp</sup> <a href="https://openlibrary.org/developers/api" target="_blank">https://openlibrary.org/developers/api</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="EBook_KnowledgeGraphs">
+  <h3>E Book Knowledge Graphs<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#EBook_KnowledgeGraphs</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#EBook" title="https://example.org/smart-library-ontology#EBook">E-Book</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#describedBy" title="https://example.org/smart-library-ontology#describedBy">described by</a> <sup class="type-op" title="object property">op</sup> <a href="#MetadataRecord_EB5002" title="https://example.org/smart-library-ontology#MetadataRecord_EB5002">Metadata Record E B5002</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasStatus" title="https://example.org/smart-library-ontology#hasStatus">has status</a> <sup class="type-op" title="object property">op</sup> <a href="#Available" title="https://example.org/smart-library-ontology#Available">Available</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasTopic" title="https://example.org/smart-library-ontology#hasTopic">has topic</a> <sup class="type-op" title="object property">op</sup> <a href="#Topic_KnowledgeGraphs" title="https://example.org/smart-library-ontology#Topic_KnowledgeGraphs">Topic Knowledge Graphs</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasTopic" title="https://example.org/smart-library-ontology#hasTopic">has topic</a> <sup class="type-op" title="object property">op</sup> <a href="#Topic_SemanticWeb" title="https://example.org/smart-library-ontology#Topic_SemanticWeb">Topic Semantic Web</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#publishedBy" title="https://example.org/smart-library-ontology#publishedBy">published by</a> <sup class="type-op" title="object property">op</sup> <a href="#Publisher_MITPress" title="https://example.org/smart-library-ontology#Publisher_MITPress">Publisher M I T Press</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#accessUrl" title="https://example.org/smart-library-ontology#accessUrl">access URL</a> <sup class="type-dp" title="data property">dp</sup> <a href="https://example.org/ebooks/knowledge-graphs" target="_blank">https://example.org/ebooks/knowledge-graphs</a>
+   </dd>
+   <dd>
+    <a href="#identifier" title="https://example.org/smart-library-ontology#identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"EB-5002"</span>
+   </dd>
+   <dd>
+    <a href="#isbn" title="https://example.org/smart-library-ontology#isbn">ISBN</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"978-0-000-00002-8"</span>
+   </dd>
+   <dd>
+    <a href="#publicationYear" title="https://example.org/smart-library-ontology#publicationYear">publication year</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2025"^^<a href="http://www.w3.org/2001/XMLSchema#gYear" target="_blank" title="http://www.w3.org/2001/XMLSchema#gYear">g Year</a> </span>
+   </dd>
+   <dd>
+    <a href="#title" title="https://example.org/smart-library-ontology#title">title</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Introduction to Knowledge Graphs"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Interaction_Search_001">
+  <h3>Interaction Search 001<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#Interaction_Search_001</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#InteractionEvent" title="https://example.org/smart-library-ontology#InteractionEvent">Interaction Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#interactedWithResource" title="https://example.org/smart-library-ontology#interactedWithResource">interacted with resource</a> <sup class="type-op" title="object property">op</sup> <a href="#Book_OntologyDesign" title="https://example.org/smart-library-ontology#Book_OntologyDesign">Book Ontology Design</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#recordsMember" title="https://example.org/smart-library-ontology#recordsMember">records member</a> <sup class="type-op" title="object property">op</sup> <a href="#Member_Aylin_Demir" title="https://example.org/smart-library-ontology#Member_Aylin_Demir">Member Aylin Demir</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#identifier" title="https://example.org/smart-library-ontology#identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"INT-002"</span>
+   </dd>
+   <dd>
+    <a href="#interactionType" title="https://example.org/smart-library-ontology#interactionType">interaction type</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"search"</span>
+   </dd>
+   <dd>
+    <a href="#name" title="https://example.org/smart-library-ontology#name">name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Semantic web topic search"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Interaction_View_001">
+  <h3>Interaction View 001<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#Interaction_View_001</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#InteractionEvent" title="https://example.org/smart-library-ontology#InteractionEvent">Interaction Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#interactedWithResource" title="https://example.org/smart-library-ontology#interactedWithResource">interacted with resource</a> <sup class="type-op" title="object property">op</sup> <a href="#EBook_KnowledgeGraphs" title="https://example.org/smart-library-ontology#EBook_KnowledgeGraphs">E Book Knowledge Graphs</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#recordsMember" title="https://example.org/smart-library-ontology#recordsMember">records member</a> <sup class="type-op" title="object property">op</sup> <a href="#Member_Aylin_Demir" title="https://example.org/smart-library-ontology#Member_Aylin_Demir">Member Aylin Demir</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#identifier" title="https://example.org/smart-library-ontology#identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"INT-001"</span>
+   </dd>
+   <dd>
+    <a href="#interactionType" title="https://example.org/smart-library-ontology#interactionType">interaction type</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"view"</span>
+   </dd>
+   <dd>
+    <a href="#name" title="https://example.org/smart-library-ontology#name">name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"E-book detail view"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Librarian_Emre_Kaya">
+  <h3>Librarian Emre Kaya<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#Librarian_Emre_Kaya</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Librarian" title="https://example.org/smart-library-ontology#Librarian">Librarian</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#email" title="https://example.org/smart-library-ontology#email">email</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"emre.kaya@example.edu"</span>
+   </dd>
+   <dd>
+    <a href="#identifier" title="https://example.org/smart-library-ontology#identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"L-2001"</span>
+   </dd>
+   <dd>
+    <a href="#name" title="https://example.org/smart-library-ontology#name">name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Emre Kaya"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Loan_001">
+  <h3>Loan 001<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#Loan_001</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Loan" title="https://example.org/smart-library-ontology#Loan">Loan</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#loanedResource" title="https://example.org/smart-library-ontology#loanedResource">loaned resource</a> <sup class="type-op" title="object property">op</sup> <a href="#Book_OntologyDesign" title="https://example.org/smart-library-ontology#Book_OntologyDesign">Book Ontology Design</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#loanedTo" title="https://example.org/smart-library-ontology#loanedTo">loaned to</a> <sup class="type-op" title="object property">op</sup> <a href="#Member_Aylin_Demir" title="https://example.org/smart-library-ontology#Member_Aylin_Demir">Member Aylin Demir</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#processedBy" title="https://example.org/smart-library-ontology#processedBy">processed by</a> <sup class="type-op" title="object property">op</sup> <a href="#Librarian_Emre_Kaya" title="https://example.org/smart-library-ontology#Librarian_Emre_Kaya">Librarian Emre Kaya</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#dueDate" title="https://example.org/smart-library-ontology#dueDate">due date</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2026-05-04"^^<a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a> </span>
+   </dd>
+   <dd>
+    <a href="#identifier" title="https://example.org/smart-library-ontology#identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"LN-0001"</span>
+   </dd>
+   <dd>
+    <a href="#startDate" title="https://example.org/smart-library-ontology#startDate">start date</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2026-04-20"^^<a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Member_Aylin_Demir">
+  <h3>Member Aylin Demir<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#Member_Aylin_Demir</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Member" title="https://example.org/smart-library-ontology#Member">Member</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#hasProfile" title="https://example.org/smart-library-ontology#hasProfile">has profile</a> <sup class="type-op" title="object property">op</sup> <a href="#Profile_Aylin_Demir" title="https://example.org/smart-library-ontology#Profile_Aylin_Demir">Profile Aylin Demir</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#email" title="https://example.org/smart-library-ontology#email">email</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"aylin.demir@example.edu"</span>
+   </dd>
+   <dd>
+    <a href="#identifier" title="https://example.org/smart-library-ontology#identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"M-1001"</span>
+   </dd>
+   <dd>
+    <a href="#name" title="https://example.org/smart-library-ontology#name">name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Aylin Demir"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MetadataRecord_B5001">
+  <h3>Metadata Record B5001<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#MetadataRecord_B5001</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#MetadataRecord" title="https://example.org/smart-library-ontology#MetadataRecord">Metadata Record</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#describesResource" title="https://example.org/smart-library-ontology#describesResource">describes resource</a> <sup class="type-op" title="object property">op</sup> <a href="#Book_OntologyDesign" title="https://example.org/smart-library-ontology#Book_OntologyDesign">Book Ontology Design</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#generatedInBatch" title="https://example.org/smart-library-ontology#generatedInBatch">generated in batch</a> <sup class="type-op" title="object property">op</sup> <a href="#AcquisitionBatch_2026_05_Phase2" title="https://example.org/smart-library-ontology#AcquisitionBatch_2026_05_Phase2">Acquisition Batch 2026 05 Phase2</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#retrievedFromSource" title="https://example.org/smart-library-ontology#retrievedFromSource">retrieved from source</a> <sup class="type-op" title="object property">op</sup> <a href="#DataSource_DepartmentSeedSheet" title="https://example.org/smart-library-ontology#DataSource_DepartmentSeedSheet">Data Source Department Seed Sheet</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#retrievedFromSource" title="https://example.org/smart-library-ontology#retrievedFromSource">retrieved from source</a> <sup class="type-op" title="object property">op</sup> <a href="#DataSource_OpenLibraryAPI" title="https://example.org/smart-library-ontology#DataSource_OpenLibraryAPI">Data Source Open Library A P I</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#confidenceScore" title="https://example.org/smart-library-ontology#confidenceScore">confidence score</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"0.95"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#identifier" title="https://example.org/smart-library-ontology#identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"MR-5001"</span>
+   </dd>
+   <dd>
+    <a href="#name" title="https://example.org/smart-library-ontology#name">name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Metadata record for Ontology Design Principles"</span>
+   </dd>
+   <dd>
+    <a href="#retrievedAt" title="https://example.org/smart-library-ontology#retrievedAt">retrieved at</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2026-05-10T10:00:00"^^<a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MetadataRecord_EB5002">
+  <h3>Metadata Record E B5002<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#MetadataRecord_EB5002</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#MetadataRecord" title="https://example.org/smart-library-ontology#MetadataRecord">Metadata Record</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#describesResource" title="https://example.org/smart-library-ontology#describesResource">describes resource</a> <sup class="type-op" title="object property">op</sup> <a href="#EBook_KnowledgeGraphs" title="https://example.org/smart-library-ontology#EBook_KnowledgeGraphs">E Book Knowledge Graphs</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#generatedInBatch" title="https://example.org/smart-library-ontology#generatedInBatch">generated in batch</a> <sup class="type-op" title="object property">op</sup> <a href="#AcquisitionBatch_2026_05_Phase2" title="https://example.org/smart-library-ontology#AcquisitionBatch_2026_05_Phase2">Acquisition Batch 2026 05 Phase2</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#retrievedFromSource" title="https://example.org/smart-library-ontology#retrievedFromSource">retrieved from source</a> <sup class="type-op" title="object property">op</sup> <a href="#DataSource_DepartmentSeedSheet" title="https://example.org/smart-library-ontology#DataSource_DepartmentSeedSheet">Data Source Department Seed Sheet</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#retrievedFromSource" title="https://example.org/smart-library-ontology#retrievedFromSource">retrieved from source</a> <sup class="type-op" title="object property">op</sup> <a href="#DataSource_GoogleBooksAPI" title="https://example.org/smart-library-ontology#DataSource_GoogleBooksAPI">Data Source Google Books A P I</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#confidenceScore" title="https://example.org/smart-library-ontology#confidenceScore">confidence score</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"0.92"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#identifier" title="https://example.org/smart-library-ontology#identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"MR-5002"</span>
+   </dd>
+   <dd>
+    <a href="#name" title="https://example.org/smart-library-ontology#name">name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Metadata record for Introduction to Knowledge Graphs"</span>
+   </dd>
+   <dd>
+    <a href="#retrievedAt" title="https://example.org/smart-library-ontology#retrievedAt">retrieved at</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2026-05-10T10:15:00"^^<a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="OnLoan">
+  <h3>On Loan<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#OnLoan</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#ResourceStatus" title="https://example.org/smart-library-ontology#ResourceStatus">Resource Status</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#name" title="https://example.org/smart-library-ontology#name">name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"On loan"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Profile_Aylin_Demir">
+  <h3>Profile Aylin Demir<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#Profile_Aylin_Demir</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#MemberProfile" title="https://example.org/smart-library-ontology#MemberProfile">Member Profile</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#hasInterestTopic" title="https://example.org/smart-library-ontology#hasInterestTopic">has interest topic</a> <sup class="type-op" title="object property">op</sup> <a href="#Topic_KnowledgeGraphs" title="https://example.org/smart-library-ontology#Topic_KnowledgeGraphs">Topic Knowledge Graphs</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasInterestTopic" title="https://example.org/smart-library-ontology#hasInterestTopic">has interest topic</a> <sup class="type-op" title="object property">op</sup> <a href="#Topic_SemanticWeb" title="https://example.org/smart-library-ontology#Topic_SemanticWeb">Topic Semantic Web</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#profileOf" title="https://example.org/smart-library-ontology#profileOf">profile of</a> <sup class="type-op" title="object property">op</sup> <a href="#Member_Aylin_Demir" title="https://example.org/smart-library-ontology#Member_Aylin_Demir">Member Aylin Demir</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#identifier" title="https://example.org/smart-library-ontology#identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"PRO-1001"</span>
+   </dd>
+   <dd>
+    <a href="#name" title="https://example.org/smart-library-ontology#name">name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Aylin Demir semantic interest profile"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Publisher_MITPress">
+  <h3>Publisher M I T Press<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#Publisher_MITPress</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Publisher" title="https://example.org/smart-library-ontology#Publisher">Publisher</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#identifier" title="https://example.org/smart-library-ontology#identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"P-4001"</span>
+   </dd>
+   <dd>
+    <a href="#name" title="https://example.org/smart-library-ontology#name">name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"MIT Press"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Recommendation_001">
+  <h3>Recommendation 001<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#Recommendation_001</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Recommendation" title="https://example.org/smart-library-ontology#Recommendation">Recommendation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#recommendedFor" title="https://example.org/smart-library-ontology#recommendedFor">recommended for</a> <sup class="type-op" title="object property">op</sup> <a href="#Member_Aylin_Demir" title="https://example.org/smart-library-ontology#Member_Aylin_Demir">Member Aylin Demir</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#recommendedResource" title="https://example.org/smart-library-ontology#recommendedResource">recommended resource</a> <sup class="type-op" title="object property">op</sup> <a href="#EBook_KnowledgeGraphs" title="https://example.org/smart-library-ontology#EBook_KnowledgeGraphs">E Book Knowledge Graphs</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#identifier" title="https://example.org/smart-library-ontology#identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"REC-0001"</span>
+   </dd>
+   <dd>
+    <a href="#name" title="https://example.org/smart-library-ontology#name">name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Knowledge graph recommendation for Aylin"</span>
+   </dd>
+   <dd>
+    <a href="#profileScore" title="https://example.org/smart-library-ontology#profileScore">profile score</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"0.93"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Reservation_001">
+  <h3>Reservation 001<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#Reservation_001</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Reservation" title="https://example.org/smart-library-ontology#Reservation">Reservation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#processedBy" title="https://example.org/smart-library-ontology#processedBy">processed by</a> <sup class="type-op" title="object property">op</sup> <a href="#Librarian_Emre_Kaya" title="https://example.org/smart-library-ontology#Librarian_Emre_Kaya">Librarian Emre Kaya</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#reservedBy" title="https://example.org/smart-library-ontology#reservedBy">reserved by</a> <sup class="type-op" title="object property">op</sup> <a href="#Member_Aylin_Demir" title="https://example.org/smart-library-ontology#Member_Aylin_Demir">Member Aylin Demir</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#reservedResource" title="https://example.org/smart-library-ontology#reservedResource">reserved resource</a> <sup class="type-op" title="object property">op</sup> <a href="#EBook_KnowledgeGraphs" title="https://example.org/smart-library-ontology#EBook_KnowledgeGraphs">E Book Knowledge Graphs</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#identifier" title="https://example.org/smart-library-ontology#identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"RS-0001"</span>
+   </dd>
+   <dd>
+    <a href="#startDate" title="https://example.org/smart-library-ontology#startDate">start date</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2026-04-25"^^<a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Reserved">
+  <h3>Reserved<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#Reserved</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#ResourceStatus" title="https://example.org/smart-library-ontology#ResourceStatus">Resource Status</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#name" title="https://example.org/smart-library-ontology#name">name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Reserved"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="">
+  <h3>smart library ontology<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology</p>
+  <dl class="description"></dl>
+ </div>
+ <div class="entity" id="Topic_KnowledgeGraphs">
+  <h3>Topic Knowledge Graphs<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#Topic_KnowledgeGraphs</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Topic" title="https://example.org/smart-library-ontology#Topic">Topic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#identifier" title="https://example.org/smart-library-ontology#identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"TOP-002"</span>
+   </dd>
+   <dd>
+    <a href="#name" title="https://example.org/smart-library-ontology#name">name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Knowledge Graphs"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Topic_OntologyEngineering">
+  <h3>Topic Ontology Engineering<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#Topic_OntologyEngineering</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Topic" title="https://example.org/smart-library-ontology#Topic">Topic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#identifier" title="https://example.org/smart-library-ontology#identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"TOP-001"</span>
+   </dd>
+   <dd>
+    <a href="#name" title="https://example.org/smart-library-ontology#name">name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Ontology Engineering"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Topic_SemanticWeb">
+  <h3>Topic Semantic Web<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://example.org/smart-library-ontology#Topic_SemanticWeb</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Topic" title="https://example.org/smart-library-ontology#Topic">Topic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#identifier" title="https://example.org/smart-library-ontology#identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"TOP-003"</span>
+   </dd>
+   <dd>
+    <a href="#name" title="https://example.org/smart-library-ontology#name">name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Semantic Web"</span>
+   </dd>
+  </dl>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
+</div>
+</div>

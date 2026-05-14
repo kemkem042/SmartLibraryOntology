@@ -1,0 +1,438 @@
+<h2 id="overv" class="list">Smart Library Loan Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#AcquisitionBatch"
+         title="https://example.org/smart-library-ontology#AcquisitionBatch">Acquisition Batch</a>
+   </li>
+   <li>
+      <a href="#Author"
+         title="https://example.org/smart-library-ontology#Author">Author</a>
+   </li>
+   <li>
+      <a href="#Book" title="https://example.org/smart-library-ontology#Book">Book</a>
+   </li>
+   <li>
+      <a href="#CirculationTransaction"
+         title="https://example.org/smart-library-ontology#CirculationTransaction">Circulation Transaction</a>
+   </li>
+   <li>
+      <a href="#Creator"
+         title="https://example.org/smart-library-ontology#Creator">Creator</a>
+   </li>
+   <li>
+      <a href="#DataSource"
+         title="https://example.org/smart-library-ontology#DataSource">Data Source</a>
+   </li>
+   <li>
+      <a href="#EBook" title="https://example.org/smart-library-ontology#EBook">E-Book</a>
+   </li>
+   <li>
+      <a href="#InteractionEvent"
+         title="https://example.org/smart-library-ontology#InteractionEvent">Interaction Event</a>
+   </li>
+   <li>
+      <a href="#JournalArticle"
+         title="https://example.org/smart-library-ontology#JournalArticle">Journal Article</a>
+   </li>
+   <li>
+      <a href="#Librarian"
+         title="https://example.org/smart-library-ontology#Librarian">Librarian</a>
+   </li>
+   <li>
+      <a href="#LibraryBranch"
+         title="https://example.org/smart-library-ontology#LibraryBranch">Library Branch</a>
+   </li>
+   <li>
+      <a href="#LibraryEntity"
+         title="https://example.org/smart-library-ontology#LibraryEntity">Library Entity</a>
+   </li>
+   <li>
+      <a href="#LibraryResource"
+         title="https://example.org/smart-library-ontology#LibraryResource">Library Resource</a>
+   </li>
+   <li>
+      <a href="#Loan" title="https://example.org/smart-library-ontology#Loan">Loan</a>
+   </li>
+   <li>
+      <a href="#Member"
+         title="https://example.org/smart-library-ontology#Member">Member</a>
+   </li>
+   <li>
+      <a href="#MemberProfile"
+         title="https://example.org/smart-library-ontology#MemberProfile">Member Profile</a>
+   </li>
+   <li>
+      <a href="#MetadataRecord"
+         title="https://example.org/smart-library-ontology#MetadataRecord">Metadata Record</a>
+   </li>
+   <li>
+      <a href="#Organization"
+         title="https://example.org/smart-library-ontology#Organization">Organization</a>
+   </li>
+   <li>
+      <a href="#Person"
+         title="https://example.org/smart-library-ontology#Person">Person</a>
+   </li>
+   <li>
+      <a href="#PrintedBook"
+         title="https://example.org/smart-library-ontology#PrintedBook">Printed Book</a>
+   </li>
+   <li>
+      <a href="#Publisher"
+         title="https://example.org/smart-library-ontology#Publisher">Publisher</a>
+   </li>
+   <li>
+      <a href="#Recommendation"
+         title="https://example.org/smart-library-ontology#Recommendation">Recommendation</a>
+   </li>
+   <li>
+      <a href="#Reservation"
+         title="https://example.org/smart-library-ontology#Reservation">Reservation</a>
+   </li>
+   <li>
+      <a href="#ResourceStatus"
+         title="https://example.org/smart-library-ontology#ResourceStatus">Resource Status</a>
+   </li>
+   <li>
+      <a href="#Topic"
+         title="https://example.org/smart-library-ontology#Topic">Topic</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#describedBy"
+         title="https://example.org/smart-library-ontology#describedBy">described by</a>
+   </li>
+   <li>
+      <a href="#describesResource"
+         title="https://example.org/smart-library-ontology#describesResource">describes resource</a>
+   </li>
+   <li>
+      <a href="#generatedInBatch"
+         title="https://example.org/smart-library-ontology#generatedInBatch">generated in batch</a>
+   </li>
+   <li>
+      <a href="#hasInterestTopic"
+         title="https://example.org/smart-library-ontology#hasInterestTopic">has interest topic</a>
+   </li>
+   <li>
+      <a href="#hasLoan"
+         title="https://example.org/smart-library-ontology#hasLoan">has loan</a>
+   </li>
+   <li>
+      <a href="#hasProfile"
+         title="https://example.org/smart-library-ontology#hasProfile">has profile</a>
+   </li>
+   <li>
+      <a href="#hasStatus"
+         title="https://example.org/smart-library-ontology#hasStatus">has status</a>
+   </li>
+   <li>
+      <a href="#hasTopic"
+         title="https://example.org/smart-library-ontology#hasTopic">has topic</a>
+   </li>
+   <li>
+      <a href="#interactedWithResource"
+         title="https://example.org/smart-library-ontology#interactedWithResource">interacted with resource</a>
+   </li>
+   <li>
+      <a href="#loanedResource"
+         title="https://example.org/smart-library-ontology#loanedResource">loaned resource</a>
+   </li>
+   <li>
+      <a href="#loanedTo"
+         title="https://example.org/smart-library-ontology#loanedTo">loaned to</a>
+   </li>
+   <li>
+      <a href="#locatedAt"
+         title="https://example.org/smart-library-ontology#locatedAt">located at</a>
+   </li>
+   <li>
+      <a href="#processedBy"
+         title="https://example.org/smart-library-ontology#processedBy">processed by</a>
+   </li>
+   <li>
+      <a href="#profileOf"
+         title="https://example.org/smart-library-ontology#profileOf">profile of</a>
+   </li>
+   <li>
+      <a href="#publishedBy"
+         title="https://example.org/smart-library-ontology#publishedBy">published by</a>
+   </li>
+   <li>
+      <a href="#recommendedFor"
+         title="https://example.org/smart-library-ontology#recommendedFor">recommended for</a>
+   </li>
+   <li>
+      <a href="#recommendedResource"
+         title="https://example.org/smart-library-ontology#recommendedResource">recommended resource</a>
+   </li>
+   <li>
+      <a href="#recordsMember"
+         title="https://example.org/smart-library-ontology#recordsMember">records member</a>
+   </li>
+   <li>
+      <a href="#reservedBy"
+         title="https://example.org/smart-library-ontology#reservedBy">reserved by</a>
+   </li>
+   <li>
+      <a href="#reservedResource"
+         title="https://example.org/smart-library-ontology#reservedResource">reserved resource</a>
+   </li>
+   <li>
+      <a href="#retrievedFromSource"
+         title="https://example.org/smart-library-ontology#retrievedFromSource">retrieved from source</a>
+   </li>
+   <li>
+      <a href="#topicOf"
+         title="https://example.org/smart-library-ontology#topicOf">topic of</a>
+   </li>
+   <li>
+      <a href="#writtenBy"
+         title="https://example.org/smart-library-ontology#writtenBy">written by</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#accessUrl"
+         title="https://example.org/smart-library-ontology#accessUrl">access URL</a>
+   </li>
+   <li>
+      <a href="#branchAddress"
+         title="https://example.org/smart-library-ontology#branchAddress">branch address</a>
+   </li>
+   <li>
+      <a href="#confidenceScore"
+         title="https://example.org/smart-library-ontology#confidenceScore">confidence score</a>
+   </li>
+   <li>
+      <a href="#dueDate"
+         title="https://example.org/smart-library-ontology#dueDate">due date</a>
+   </li>
+   <li>
+      <a href="#email" title="https://example.org/smart-library-ontology#email">email</a>
+   </li>
+   <li>
+      <a href="#identifier"
+         title="https://example.org/smart-library-ontology#identifier">identifier</a>
+   </li>
+   <li>
+      <a href="#interactionType"
+         title="https://example.org/smart-library-ontology#interactionType">interaction type</a>
+   </li>
+   <li>
+      <a href="#isbn" title="https://example.org/smart-library-ontology#isbn">ISBN</a>
+   </li>
+   <li>
+      <a href="#name" title="https://example.org/smart-library-ontology#name">name</a>
+   </li>
+   <li>
+      <a href="#profileScore"
+         title="https://example.org/smart-library-ontology#profileScore">profile score</a>
+   </li>
+   <li>
+      <a href="#publicationYear"
+         title="https://example.org/smart-library-ontology#publicationYear">publication year</a>
+   </li>
+   <li>
+      <a href="#retrievedAt"
+         title="https://example.org/smart-library-ontology#retrievedAt">retrieved at</a>
+   </li>
+   <li>
+      <a href="#returnDate"
+         title="https://example.org/smart-library-ontology#returnDate">return date</a>
+   </li>
+   <li>
+      <a href="#sourceUrl"
+         title="https://example.org/smart-library-ontology#sourceUrl">source URL</a>
+   </li>
+   <li>
+      <a href="#startDate"
+         title="https://example.org/smart-library-ontology#startDate">start date</a>
+   </li>
+   <li>
+      <a href="#title" title="https://example.org/smart-library-ontology#title">title</a>
+   </li>
+</ul><h4>Annotation Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created">
+         <span>created</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/elements/1.1/creator" title="http://purl.org/dc/elements/1.1/creator">
+         <span>creator</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
+         <span>description</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/modified" title="http://purl.org/dc/terms/modified">
+         <span>modified</span>
+      </a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#AcquisitionBatch_2026_05_Phase2"
+         title="https://example.org/smart-library-ontology#AcquisitionBatch_2026_05_Phase2">
+         <span>Acquisition Batch 2026 05 Phase2</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Author_Tom_Gruber"
+         title="https://example.org/smart-library-ontology#Author_Tom_Gruber">
+         <span>Author Tom Gruber</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Available"
+         title="https://example.org/smart-library-ontology#Available">Available</a>
+   </li>
+   <li>
+      <a href="#Book_OntologyDesign"
+         title="https://example.org/smart-library-ontology#Book_OntologyDesign">
+         <span>Book Ontology Design</span>
+      </a>
+   </li>
+   <li>
+      <a href="#CentralBranch"
+         title="https://example.org/smart-library-ontology#CentralBranch">
+         <span>Central Branch</span>
+      </a>
+   </li>
+   <li>
+      <a href="#DataSource_DepartmentSeedSheet"
+         title="https://example.org/smart-library-ontology#DataSource_DepartmentSeedSheet">
+         <span>Data Source Department Seed Sheet</span>
+      </a>
+   </li>
+   <li>
+      <a href="#DataSource_GoogleBooksAPI"
+         title="https://example.org/smart-library-ontology#DataSource_GoogleBooksAPI">
+         <span>Data Source Google Books A P I</span>
+      </a>
+   </li>
+   <li>
+      <a href="#DataSource_OpenLibraryAPI"
+         title="https://example.org/smart-library-ontology#DataSource_OpenLibraryAPI">
+         <span>Data Source Open Library A P I</span>
+      </a>
+   </li>
+   <li>
+      <a href="#EBook_KnowledgeGraphs"
+         title="https://example.org/smart-library-ontology#EBook_KnowledgeGraphs">
+         <span>E Book Knowledge Graphs</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Interaction_Search_001"
+         title="https://example.org/smart-library-ontology#Interaction_Search_001">
+         <span>Interaction Search 001</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Interaction_View_001"
+         title="https://example.org/smart-library-ontology#Interaction_View_001">
+         <span>Interaction View 001</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Librarian_Emre_Kaya"
+         title="https://example.org/smart-library-ontology#Librarian_Emre_Kaya">
+         <span>Librarian Emre Kaya</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Loan_001"
+         title="https://example.org/smart-library-ontology#Loan_001">
+         <span>Loan 001</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Member_Aylin_Demir"
+         title="https://example.org/smart-library-ontology#Member_Aylin_Demir">
+         <span>Member Aylin Demir</span>
+      </a>
+   </li>
+   <li>
+      <a href="#MetadataRecord_B5001"
+         title="https://example.org/smart-library-ontology#MetadataRecord_B5001">
+         <span>Metadata Record B5001</span>
+      </a>
+   </li>
+   <li>
+      <a href="#MetadataRecord_EB5002"
+         title="https://example.org/smart-library-ontology#MetadataRecord_EB5002">
+         <span>Metadata Record E B5002</span>
+      </a>
+   </li>
+   <li>
+      <a href="#OnLoan"
+         title="https://example.org/smart-library-ontology#OnLoan">On Loan</a>
+   </li>
+   <li>
+      <a href="#Profile_Aylin_Demir"
+         title="https://example.org/smart-library-ontology#Profile_Aylin_Demir">
+         <span>Profile Aylin Demir</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Publisher_MITPress"
+         title="https://example.org/smart-library-ontology#Publisher_MITPress">
+         <span>Publisher M I T Press</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Recommendation_001"
+         title="https://example.org/smart-library-ontology#Recommendation_001">
+         <span>Recommendation 001</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Reservation_001"
+         title="https://example.org/smart-library-ontology#Reservation_001">
+         <span>Reservation 001</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Reserved"
+         title="https://example.org/smart-library-ontology#Reserved">Reserved</a>
+   </li>
+   <li>
+      <a href="#" title="https://example.org/smart-library-ontology">
+         <span>smart library ontology</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Topic_KnowledgeGraphs"
+         title="https://example.org/smart-library-ontology#Topic_KnowledgeGraphs">
+         <span>Topic Knowledge Graphs</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Topic_OntologyEngineering"
+         title="https://example.org/smart-library-ontology#Topic_OntologyEngineering">
+         <span>Topic Ontology Engineering</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Topic_SemanticWeb"
+         title="https://example.org/smart-library-ontology#Topic_SemanticWeb">
+         <span>Topic Semantic Web</span>
+      </a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 

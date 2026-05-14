@@ -1,0 +1,111 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix slo: <https://example.org/smart-library-ontology#> .
+
+slo:LoanShape
+    a sh:NodeShape ;
+    sh:targetClass slo:Loan ;
+    sh:property [
+        sh:path slo:loanedTo ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class slo:Member ;
+    ] ;
+    sh:property [
+        sh:path slo:loanedResource ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class slo:LibraryResource ;
+    ] ;
+    sh:property [
+        sh:path slo:processedBy ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class slo:Librarian ;
+    ] ;
+    sh:property [
+        sh:path slo:dueDate ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:date ;
+    ] .
+
+slo:ReservationShape
+    a sh:NodeShape ;
+    sh:targetClass slo:Reservation ;
+    sh:property [
+        sh:path slo:reservedBy ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class slo:Member ;
+    ] ;
+    sh:property [
+        sh:path slo:reservedResource ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class slo:LibraryResource ;
+    ] .
+
+slo:LibraryResourceShape
+    a sh:NodeShape ;
+    sh:targetClass slo:LibraryResource ;
+    sh:property [
+        sh:path slo:title ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path slo:hasStatus ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class slo:ResourceStatus ;
+    ] ;
+    sh:property [
+        sh:path slo:publishedBy ;
+        sh:minCount 1 ;
+        sh:class slo:Publisher ;
+    ] .
+
+slo:MetadataRecordShape
+    a sh:NodeShape ;
+    sh:targetClass slo:MetadataRecord ;
+    sh:property [
+        sh:path slo:describesResource ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class slo:LibraryResource ;
+    ] ;
+    sh:property [
+        sh:path slo:retrievedFromSource ;
+        sh:minCount 1 ;
+        sh:class slo:DataSource ;
+    ] ;
+    sh:property [
+        sh:path slo:confidenceScore ;
+        sh:minInclusive 0 ;
+        sh:maxInclusive 1 ;
+        sh:datatype xsd:decimal ;
+    ] .
+
+slo:RecommendationShape
+    a sh:NodeShape ;
+    sh:targetClass slo:Recommendation ;
+    sh:property [
+        sh:path slo:recommendedFor ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class slo:Member ;
+    ] ;
+    sh:property [
+        sh:path slo:recommendedResource ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class slo:LibraryResource ;
+    ] ;
+    sh:property [
+        sh:path slo:profileScore ;
+        sh:minInclusive 0 ;
+        sh:maxInclusive 1 ;
+        sh:datatype xsd:decimal ;
+    ] .

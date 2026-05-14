@@ -1,0 +1,1655 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://example.org/smart-library-ontology#LibraryResource"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://example.org/smart-library-ontology#loanedResource"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://example.org/smart-library-ontology#LibraryResource"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://example.org/smart-library-ontology#reservedResource"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Member"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://example.org/smart-library-ontology#loanedTo"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Librarian"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://example.org/smart-library-ontology#processedBy"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://example.org/smart-library-ontology#DataSource"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://example.org/smart-library-ontology#retrievedFromSource"
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://example.org/smart-library-ontology#LibraryResource"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://example.org/smart-library-ontology#describesResource"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Member"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://example.org/smart-library-ontology#recommendedFor"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://example.org/smart-library-ontology#LibraryResource"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://example.org/smart-library-ontology#recommendedResource"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Librarian"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://example.org/smart-library-ontology#processedBy"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Member"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://example.org/smart-library-ontology#reservedBy"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/modified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/subject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#date",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#gYear",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@language" : "en",
+    "@value" : "210316051 Kemal Mert Ceyhan; 190316073 Ahmet Burak Guvercin; 210316078 Khaled ALISMAIL"
+  } ],
+  "http://purl.org/dc/elements/1.1/title" : [ {
+    "@language" : "en",
+    "@value" : "Smart Library Loan Ontology"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2026-04-27"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Version 0.2.0 of the Smart Library Loan Ontology. This phase extends the original circulation model with data acquisition provenance, topical enrichment, member profile signals, and recommendation-ready analytics for a smart library environment."
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2026-05-14"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@language" : "en",
+    "@value" : "0.2.0 - Phase 2 extension with acquisition and personalization modules"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#AcquisitionBatch",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A bounded data collection and preprocessing run used to populate ontology instances."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Acquisition Batch"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://example.org/smart-library-ontology#LibraryEntity"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#AcquisitionBatch_2026_05_Phase2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://example.org/smart-library-ontology#AcquisitionBatch"
+  } ],
+  "https://example.org/smart-library-ontology#identifier" : [ {
+    "@value" : "BATCH-2026-05-P2"
+  } ],
+  "https://example.org/smart-library-ontology#name" : [ {
+    "@value" : "Phase 2 metadata integration batch"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#Author",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A creator who writes a book or article."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Author"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Creator"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#Author_Tom_Gruber",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Author"
+  } ],
+  "https://example.org/smart-library-ontology#identifier" : [ {
+    "@value" : "A-3001"
+  } ],
+  "https://example.org/smart-library-ontology#name" : [ {
+    "@value" : "Tom Gruber"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#Available",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://example.org/smart-library-ontology#ResourceStatus"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Available"
+  } ],
+  "https://example.org/smart-library-ontology#name" : [ {
+    "@value" : "Available"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#Book",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Book"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://example.org/smart-library-ontology#LibraryResource"
+  }, {
+    "@id" : "https://schema.org/Book"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#Book_OntologyDesign",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://example.org/smart-library-ontology#PrintedBook"
+  } ],
+  "https://example.org/smart-library-ontology#describedBy" : [ {
+    "@id" : "https://example.org/smart-library-ontology#MetadataRecord_B5001"
+  } ],
+  "https://example.org/smart-library-ontology#hasStatus" : [ {
+    "@id" : "https://example.org/smart-library-ontology#OnLoan"
+  } ],
+  "https://example.org/smart-library-ontology#hasTopic" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Topic_OntologyEngineering"
+  }, {
+    "@id" : "https://example.org/smart-library-ontology#Topic_SemanticWeb"
+  } ],
+  "https://example.org/smart-library-ontology#identifier" : [ {
+    "@value" : "B-5001"
+  } ],
+  "https://example.org/smart-library-ontology#isbn" : [ {
+    "@value" : "978-0-000-00001-1"
+  } ],
+  "https://example.org/smart-library-ontology#locatedAt" : [ {
+    "@id" : "https://example.org/smart-library-ontology#CentralBranch"
+  } ],
+  "https://example.org/smart-library-ontology#publicationYear" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#gYear",
+    "@value" : "2024"
+  } ],
+  "https://example.org/smart-library-ontology#publishedBy" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Publisher_MITPress"
+  } ],
+  "https://example.org/smart-library-ontology#title" : [ {
+    "@value" : "Ontology Design Principles"
+  } ],
+  "https://example.org/smart-library-ontology#writtenBy" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Author_Tom_Gruber"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#CentralBranch",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://example.org/smart-library-ontology#LibraryBranch"
+  } ],
+  "https://example.org/smart-library-ontology#branchAddress" : [ {
+    "@value" : "Main Campus, Library Building"
+  } ],
+  "https://example.org/smart-library-ontology#identifier" : [ {
+    "@value" : "BR-001"
+  } ],
+  "https://example.org/smart-library-ontology#name" : [ {
+    "@value" : "Central Library Branch"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#CirculationTransaction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An event-like entity representing a circulation action."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Circulation Transaction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://example.org/smart-library-ontology#LibraryEntity"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#Creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A person who contributes to the creation of a library resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Creator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Person"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#DataSource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A source used during data acquisition, such as an API, catalog export, spreadsheet, or document collection."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Data Source"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://example.org/smart-library-ontology#LibraryEntity"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#DataSource_DepartmentSeedSheet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://example.org/smart-library-ontology#DataSource"
+  } ],
+  "https://example.org/smart-library-ontology#identifier" : [ {
+    "@value" : "SRC-003"
+  } ],
+  "https://example.org/smart-library-ontology#name" : [ {
+    "@value" : "Department Seed Spreadsheet"
+  } ],
+  "https://example.org/smart-library-ontology#sourceUrl" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "https://example.org/internal/seed-sheet"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#DataSource_GoogleBooksAPI",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://example.org/smart-library-ontology#DataSource"
+  } ],
+  "https://example.org/smart-library-ontology#identifier" : [ {
+    "@value" : "SRC-002"
+  } ],
+  "https://example.org/smart-library-ontology#name" : [ {
+    "@value" : "Google Books API"
+  } ],
+  "https://example.org/smart-library-ontology#sourceUrl" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "https://developers.google.com/books"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#DataSource_OpenLibraryAPI",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://example.org/smart-library-ontology#DataSource"
+  } ],
+  "https://example.org/smart-library-ontology#identifier" : [ {
+    "@value" : "SRC-001"
+  } ],
+  "https://example.org/smart-library-ontology#name" : [ {
+    "@value" : "Open Library API"
+  } ],
+  "https://example.org/smart-library-ontology#sourceUrl" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "https://openlibrary.org/developers/api"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#EBook",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A digital book that can be accessed electronically."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "E-Book"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Book"
+  }, {
+    "@id" : "https://schema.org/Book"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://example.org/smart-library-ontology#PrintedBook"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#EBook_KnowledgeGraphs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://example.org/smart-library-ontology#EBook"
+  } ],
+  "https://example.org/smart-library-ontology#accessUrl" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "https://example.org/ebooks/knowledge-graphs"
+  } ],
+  "https://example.org/smart-library-ontology#describedBy" : [ {
+    "@id" : "https://example.org/smart-library-ontology#MetadataRecord_EB5002"
+  } ],
+  "https://example.org/smart-library-ontology#hasStatus" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Available"
+  } ],
+  "https://example.org/smart-library-ontology#hasTopic" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Topic_KnowledgeGraphs"
+  }, {
+    "@id" : "https://example.org/smart-library-ontology#Topic_SemanticWeb"
+  } ],
+  "https://example.org/smart-library-ontology#identifier" : [ {
+    "@value" : "EB-5002"
+  } ],
+  "https://example.org/smart-library-ontology#isbn" : [ {
+    "@value" : "978-0-000-00002-8"
+  } ],
+  "https://example.org/smart-library-ontology#publicationYear" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#gYear",
+    "@value" : "2025"
+  } ],
+  "https://example.org/smart-library-ontology#publishedBy" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Publisher_MITPress"
+  } ],
+  "https://example.org/smart-library-ontology#title" : [ {
+    "@value" : "Introduction to Knowledge Graphs"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#InteractionEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An observed user interaction such as viewing, searching, bookmarking, or clicking a resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Interaction Event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://example.org/smart-library-ontology#LibraryEntity"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#Interaction_Search_001",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://example.org/smart-library-ontology#InteractionEvent"
+  } ],
+  "https://example.org/smart-library-ontology#identifier" : [ {
+    "@value" : "INT-002"
+  } ],
+  "https://example.org/smart-library-ontology#interactedWithResource" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Book_OntologyDesign"
+  } ],
+  "https://example.org/smart-library-ontology#interactionType" : [ {
+    "@value" : "search"
+  } ],
+  "https://example.org/smart-library-ontology#name" : [ {
+    "@value" : "Semantic web topic search"
+  } ],
+  "https://example.org/smart-library-ontology#recordsMember" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Member_Aylin_Demir"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#Interaction_View_001",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://example.org/smart-library-ontology#InteractionEvent"
+  } ],
+  "https://example.org/smart-library-ontology#identifier" : [ {
+    "@value" : "INT-001"
+  } ],
+  "https://example.org/smart-library-ontology#interactedWithResource" : [ {
+    "@id" : "https://example.org/smart-library-ontology#EBook_KnowledgeGraphs"
+  } ],
+  "https://example.org/smart-library-ontology#interactionType" : [ {
+    "@value" : "view"
+  } ],
+  "https://example.org/smart-library-ontology#name" : [ {
+    "@value" : "E-book detail view"
+  } ],
+  "https://example.org/smart-library-ontology#recordsMember" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Member_Aylin_Demir"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#JournalArticle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Journal Article"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://example.org/smart-library-ontology#LibraryResource"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#Librarian",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A library staff member who manages loans, returns, and resources."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Librarian"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Person"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Member"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#Librarian_Emre_Kaya",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Librarian"
+  } ],
+  "https://example.org/smart-library-ontology#email" : [ {
+    "@value" : "emre.kaya@example.edu"
+  } ],
+  "https://example.org/smart-library-ontology#identifier" : [ {
+    "@value" : "L-2001"
+  } ],
+  "https://example.org/smart-library-ontology#name" : [ {
+    "@value" : "Emre Kaya"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#LibraryBranch",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A physical branch that stores library resources and serves members."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Library Branch"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Organization"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#LibraryEntity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Top-level class for entities represented in the smart library domain."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Library Entity"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#LibraryResource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A resource that can be catalogued, borrowed, reserved, or recommended."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Library Resource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://example.org/smart-library-ontology#LibraryEntity"
+  }, {
+    "@id" : "https://schema.org/CreativeWork"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#Loan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A transaction in which a member borrows a resource for a defined period."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Loan"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://example.org/smart-library-ontology#CirculationTransaction"
+  }, {
+    "@id" : "_:genid1"
+  }, {
+    "@id" : "_:genid2"
+  }, {
+    "@id" : "_:genid3"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#Loan_001",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Loan"
+  } ],
+  "https://example.org/smart-library-ontology#dueDate" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2026-05-04"
+  } ],
+  "https://example.org/smart-library-ontology#identifier" : [ {
+    "@value" : "LN-0001"
+  } ],
+  "https://example.org/smart-library-ontology#loanedResource" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Book_OntologyDesign"
+  } ],
+  "https://example.org/smart-library-ontology#loanedTo" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Member_Aylin_Demir"
+  } ],
+  "https://example.org/smart-library-ontology#processedBy" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Librarian_Emre_Kaya"
+  } ],
+  "https://example.org/smart-library-ontology#startDate" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2026-04-20"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#Member",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A registered user who can borrow, reserve, and receive personalized recommendations for library resources."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Member"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Person"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#MemberProfile",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A lightweight semantic profile that stores a member's interest topics for personalization and recommendation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Member Profile"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://example.org/smart-library-ontology#LibraryEntity"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#Member_Aylin_Demir",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Member"
+  } ],
+  "https://example.org/smart-library-ontology#email" : [ {
+    "@value" : "aylin.demir@example.edu"
+  } ],
+  "https://example.org/smart-library-ontology#hasProfile" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Profile_Aylin_Demir"
+  } ],
+  "https://example.org/smart-library-ontology#identifier" : [ {
+    "@value" : "M-1001"
+  } ],
+  "https://example.org/smart-library-ontology#name" : [ {
+    "@value" : "Aylin Demir"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#MetadataRecord",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A structured metadata record that documents where and when a resource description was acquired."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Metadata Record"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://example.org/smart-library-ontology#LibraryEntity"
+  }, {
+    "@id" : "_:genid4"
+  }, {
+    "@id" : "_:genid5"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#MetadataRecord_B5001",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://example.org/smart-library-ontology#MetadataRecord"
+  } ],
+  "https://example.org/smart-library-ontology#confidenceScore" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.95"
+  } ],
+  "https://example.org/smart-library-ontology#describesResource" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Book_OntologyDesign"
+  } ],
+  "https://example.org/smart-library-ontology#generatedInBatch" : [ {
+    "@id" : "https://example.org/smart-library-ontology#AcquisitionBatch_2026_05_Phase2"
+  } ],
+  "https://example.org/smart-library-ontology#identifier" : [ {
+    "@value" : "MR-5001"
+  } ],
+  "https://example.org/smart-library-ontology#name" : [ {
+    "@value" : "Metadata record for Ontology Design Principles"
+  } ],
+  "https://example.org/smart-library-ontology#retrievedAt" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-05-10T10:00:00"
+  } ],
+  "https://example.org/smart-library-ontology#retrievedFromSource" : [ {
+    "@id" : "https://example.org/smart-library-ontology#DataSource_DepartmentSeedSheet"
+  }, {
+    "@id" : "https://example.org/smart-library-ontology#DataSource_OpenLibraryAPI"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#MetadataRecord_EB5002",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://example.org/smart-library-ontology#MetadataRecord"
+  } ],
+  "https://example.org/smart-library-ontology#confidenceScore" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.92"
+  } ],
+  "https://example.org/smart-library-ontology#describesResource" : [ {
+    "@id" : "https://example.org/smart-library-ontology#EBook_KnowledgeGraphs"
+  } ],
+  "https://example.org/smart-library-ontology#generatedInBatch" : [ {
+    "@id" : "https://example.org/smart-library-ontology#AcquisitionBatch_2026_05_Phase2"
+  } ],
+  "https://example.org/smart-library-ontology#identifier" : [ {
+    "@value" : "MR-5002"
+  } ],
+  "https://example.org/smart-library-ontology#name" : [ {
+    "@value" : "Metadata record for Introduction to Knowledge Graphs"
+  } ],
+  "https://example.org/smart-library-ontology#retrievedAt" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-05-10T10:15:00"
+  } ],
+  "https://example.org/smart-library-ontology#retrievedFromSource" : [ {
+    "@id" : "https://example.org/smart-library-ontology#DataSource_DepartmentSeedSheet"
+  }, {
+    "@id" : "https://example.org/smart-library-ontology#DataSource_GoogleBooksAPI"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#OnLoan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://example.org/smart-library-ontology#ResourceStatus"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "On Loan"
+  } ],
+  "https://example.org/smart-library-ontology#name" : [ {
+    "@value" : "On loan"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#Organization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Organization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://example.org/smart-library-ontology#LibraryEntity"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#Person",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A human actor related to the library system."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://example.org/smart-library-ontology#LibraryEntity"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#PrintedBook",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A physical book stored at a branch."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Printed Book"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Book"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#Profile_Aylin_Demir",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://example.org/smart-library-ontology#MemberProfile"
+  } ],
+  "https://example.org/smart-library-ontology#hasInterestTopic" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Topic_KnowledgeGraphs"
+  }, {
+    "@id" : "https://example.org/smart-library-ontology#Topic_SemanticWeb"
+  } ],
+  "https://example.org/smart-library-ontology#identifier" : [ {
+    "@value" : "PRO-1001"
+  } ],
+  "https://example.org/smart-library-ontology#name" : [ {
+    "@value" : "Aylin Demir semantic interest profile"
+  } ],
+  "https://example.org/smart-library-ontology#profileOf" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Member_Aylin_Demir"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#Publisher",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An organization that publishes a library resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Publisher"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Organization"
+  }, {
+    "@id" : "https://schema.org/Organization"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#Publisher_MITPress",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Publisher"
+  } ],
+  "https://example.org/smart-library-ontology#identifier" : [ {
+    "@value" : "P-4001"
+  } ],
+  "https://example.org/smart-library-ontology#name" : [ {
+    "@value" : "MIT Press"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#Recommendation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A recommendation candidate connecting a member to a resource using topical or behavioral evidence."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Recommendation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://example.org/smart-library-ontology#LibraryEntity"
+  }, {
+    "@id" : "_:genid6"
+  }, {
+    "@id" : "_:genid7"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#Recommendation_001",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Recommendation"
+  } ],
+  "https://example.org/smart-library-ontology#identifier" : [ {
+    "@value" : "REC-0001"
+  } ],
+  "https://example.org/smart-library-ontology#name" : [ {
+    "@value" : "Knowledge graph recommendation for Aylin"
+  } ],
+  "https://example.org/smart-library-ontology#profileScore" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.93"
+  } ],
+  "https://example.org/smart-library-ontology#recommendedFor" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Member_Aylin_Demir"
+  } ],
+  "https://example.org/smart-library-ontology#recommendedResource" : [ {
+    "@id" : "https://example.org/smart-library-ontology#EBook_KnowledgeGraphs"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#Reservation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A transaction in which a member requests a resource before borrowing it."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Reservation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://example.org/smart-library-ontology#CirculationTransaction"
+  }, {
+    "@id" : "_:genid8"
+  }, {
+    "@id" : "_:genid9"
+  }, {
+    "@id" : "_:genid10"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#Reservation_001",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Reservation"
+  } ],
+  "https://example.org/smart-library-ontology#identifier" : [ {
+    "@value" : "RS-0001"
+  } ],
+  "https://example.org/smart-library-ontology#processedBy" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Librarian_Emre_Kaya"
+  } ],
+  "https://example.org/smart-library-ontology#reservedBy" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Member_Aylin_Demir"
+  } ],
+  "https://example.org/smart-library-ontology#reservedResource" : [ {
+    "@id" : "https://example.org/smart-library-ontology#EBook_KnowledgeGraphs"
+  } ],
+  "https://example.org/smart-library-ontology#startDate" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2026-04-25"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#Reserved",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://example.org/smart-library-ontology#ResourceStatus"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Reserved"
+  } ],
+  "https://example.org/smart-library-ontology#name" : [ {
+    "@value" : "Reserved"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#ResourceStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Controlled status values for library resources."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Resource Status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://example.org/smart-library-ontology#LibraryEntity"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#Topic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A semantic subject or keyword used to connect resources, user interests, and recommendations."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Topic"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://example.org/smart-library-ontology#LibraryEntity"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#Topic_KnowledgeGraphs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Topic"
+  } ],
+  "https://example.org/smart-library-ontology#identifier" : [ {
+    "@value" : "TOP-002"
+  } ],
+  "https://example.org/smart-library-ontology#name" : [ {
+    "@value" : "Knowledge Graphs"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#Topic_OntologyEngineering",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Topic"
+  } ],
+  "https://example.org/smart-library-ontology#identifier" : [ {
+    "@value" : "TOP-001"
+  } ],
+  "https://example.org/smart-library-ontology#name" : [ {
+    "@value" : "Ontology Engineering"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#Topic_SemanticWeb",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Topic"
+  } ],
+  "https://example.org/smart-library-ontology#identifier" : [ {
+    "@value" : "TOP-003"
+  } ],
+  "https://example.org/smart-library-ontology#name" : [ {
+    "@value" : "Semantic Web"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#accessUrl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://example.org/smart-library-ontology#EBook"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "access URL"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://schema.org/url"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#branchAddress",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://example.org/smart-library-ontology#LibraryBranch"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "branch address"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#confidenceScore",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://example.org/smart-library-ontology#MetadataRecord"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "confidence score"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#describedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a resource to the metadata record from which it was populated or curated."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://example.org/smart-library-ontology#LibraryResource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "described by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://example.org/smart-library-ontology#MetadataRecord"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://example.org/smart-library-ontology#describesResource"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#describesResource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a metadata record to the resource it describes."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://example.org/smart-library-ontology#MetadataRecord"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "describes resource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://example.org/smart-library-ontology#LibraryResource"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#dueDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Loan"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "due date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#email",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "email"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#generatedInBatch",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a metadata record to the data acquisition batch that produced or refreshed it."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://example.org/smart-library-ontology#MetadataRecord"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "generated in batch"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://example.org/smart-library-ontology#AcquisitionBatch"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#hasInterestTopic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a member profile to one or more topics representing inferred or observed interests."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://example.org/smart-library-ontology#MemberProfile"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has interest topic"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Topic"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#hasLoan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a member to a loan transaction."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Member"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has loan"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Loan"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#hasProfile",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a member to a semantic interest profile."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Member"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has profile"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://example.org/smart-library-ontology#MemberProfile"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://example.org/smart-library-ontology#profileOf"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#hasStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a resource to its current availability status."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://example.org/smart-library-ontology#LibraryResource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://example.org/smart-library-ontology#ResourceStatus"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#hasTopic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a resource to a semantic topic used for retrieval and recommendation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://example.org/smart-library-ontology#LibraryResource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has topic"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Topic"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/dc/terms/subject"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://example.org/smart-library-ontology#topicOf"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#identifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://example.org/smart-library-ontology#LibraryEntity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "identifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#interactedWithResource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links an interaction event to the resource that was viewed or searched."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://example.org/smart-library-ontology#InteractionEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "interacted with resource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://example.org/smart-library-ontology#LibraryResource"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#interactionType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://example.org/smart-library-ontology#InteractionEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "interaction type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#isbn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Book"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ISBN"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#loanedResource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a loan transaction to the borrowed resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Loan"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "loaned resource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://example.org/smart-library-ontology#LibraryResource"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#loanedTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a loan transaction to the member who borrowed the resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Loan"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "loaned to"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Member"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://example.org/smart-library-ontology#hasLoan"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#locatedAt",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a physical resource to the branch where it is stored."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://example.org/smart-library-ontology#LibraryResource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "located at"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://example.org/smart-library-ontology#LibraryBranch"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://example.org/smart-library-ontology#LibraryEntity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#processedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a transaction to the librarian responsible for processing it."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://example.org/smart-library-ontology#CirculationTransaction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "processed by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Librarian"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#profileOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://example.org/smart-library-ontology#MemberProfile"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "profile of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Member"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#profileScore",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Recommendation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "profile score"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#publicationYear",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://example.org/smart-library-ontology#LibraryResource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "publication year"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#gYear"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#publishedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a resource to its publisher."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://example.org/smart-library-ontology#LibraryResource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "published by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Publisher"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#recommendedFor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a recommendation candidate to the target member."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Recommendation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "recommended for"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Member"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#recommendedResource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a recommendation candidate to the resource proposed for the member."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Recommendation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "recommended resource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://example.org/smart-library-ontology#LibraryResource"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#recordsMember",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links an interaction event to the member who performed it."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://example.org/smart-library-ontology#InteractionEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "records member"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Member"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#reservedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a reservation to the member who requested a resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Reservation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "reserved by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Member"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#reservedResource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a reservation to the requested resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Reservation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "reserved resource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://example.org/smart-library-ontology#LibraryResource"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#retrievedAt",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://example.org/smart-library-ontology#MetadataRecord"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "retrieved at"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#retrievedFromSource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a metadata record to the source from which the data were collected."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://example.org/smart-library-ontology#MetadataRecord"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "retrieved from source"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://example.org/smart-library-ontology#DataSource"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#returnDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Loan"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "return date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#sourceUrl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://example.org/smart-library-ontology#DataSource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "source URL"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://schema.org/url"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#startDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://example.org/smart-library-ontology#CirculationTransaction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "start date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://example.org/smart-library-ontology#LibraryResource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "title"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/dc/elements/1.1/title"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#topicOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Topic"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "topic of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://example.org/smart-library-ontology#LibraryResource"
+  } ]
+}, {
+  "@id" : "https://example.org/smart-library-ontology#writtenBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a resource to its author."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://example.org/smart-library-ontology#LibraryResource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "written by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://example.org/smart-library-ontology#Author"
+  } ]
+}, {
+  "@id" : "https://schema.org/Book",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://schema.org/CreativeWork",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://schema.org/Organization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://schema.org/url",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+} ]

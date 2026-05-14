@@ -1,8 +1,12 @@
-# Competency Question SPARQL Queries
-# Prefix used by all queries:
+# Smart Library Loan Ontology - Phase 2 SPARQL Queries
+# Prefixes used by all queries:
 PREFIX slo: <https://example.org/smart-library-ontology#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+########################################################################
+# Basic retrieval queries
+########################################################################
 
 # CQ-01: Which resources are currently available?
 SELECT ?resource ?title WHERE {
@@ -19,7 +23,7 @@ SELECT ?resource ?title WHERE {
 }
 
 # CQ-03: Which member borrowed a specific resource?
-SELECT ?member ?memberName ?resource ?title WHERE {
+SELECT ?memberName ?title WHERE {
   ?loan a slo:Loan ;
         slo:loanedTo ?member ;
         slo:loanedResource ?resource .
@@ -27,52 +31,101 @@ SELECT ?member ?memberName ?resource ?title WHERE {
   ?resource slo:title ?title .
 }
 
-# CQ-04: Which resource is linked to a specific loan?
-SELECT ?loan ?resource ?title WHERE {
-  ?loan a slo:Loan ;
-        slo:loanedResource ?resource .
-  ?resource slo:title ?title .
-}
-
-# CQ-05: Which librarian processed a specific loan or reservation?
-SELECT ?transaction ?librarian ?librarianName WHERE {
-  ?transaction slo:processedBy ?librarian .
-  ?librarian slo:name ?librarianName .
-}
-
-# CQ-06: Which branch stores a printed book?
-SELECT ?book ?title ?branch ?branchName WHERE {
+# CQ-04: Which branch stores a printed book?
+SELECT ?book ?title ?branchName WHERE {
   ?book a slo:PrintedBook ;
         slo:title ?title ;
         slo:locatedAt ?branch .
   ?branch slo:name ?branchName .
 }
 
-# CQ-07: Which author wrote a specific resource?
-SELECT ?resource ?title ?author ?authorName WHERE {
+# CQ-05: Which topics are linked to each resource?
+SELECT ?title ?topicName WHERE {
+  ?resource a/rdfs:subClassOf* slo:LibraryResource ;
+            slo:title ?title ;
+            slo:hasTopic ?topic .
+  ?topic slo:name ?topicName .
+}
+ORDER BY ?title ?topicName
+
+########################################################################
+# Data acquisition and provenance queries
+########################################################################
+
+# CQ-06: Which data sources were used to populate each resource?
+SELECT ?title ?sourceName ?retrievedAt WHERE {
   ?resource slo:title ?title ;
-            slo:writtenBy ?author .
-  ?author slo:name ?authorName .
+            slo:describedBy ?record .
+  ?record slo:retrievedFromSource ?source ;
+          slo:retrievedAt ?retrievedAt .
+  ?source slo:name ?sourceName .
+}
+ORDER BY ?title ?sourceName
+
+# CQ-07: Which metadata records were generated in the phase 2 acquisition batch?
+SELECT ?recordName ?resourceTitle WHERE {
+  ?record a slo:MetadataRecord ;
+          slo:name ?recordName ;
+          slo:generatedInBatch slo:AcquisitionBatch_2026_05_Phase2 ;
+          slo:describesResource ?resource .
+  ?resource slo:title ?resourceTitle .
 }
 
-# CQ-08: Which publisher published a specific resource?
-SELECT ?resource ?title ?publisher ?publisherName WHERE {
-  ?resource slo:title ?title ;
-            slo:publishedBy ?publisher .
-  ?publisher slo:name ?publisherName .
-}
+########################################################################
+# Reasoning/personalization-oriented queries
+########################################################################
 
-# CQ-09: Which resources are reserved by a specific member?
-SELECT ?memberName ?resource ?title WHERE {
-  ?reservation a slo:Reservation ;
-               slo:reservedBy ?member ;
-               slo:reservedResource ?resource .
+# CQ-08: Which resources match the topical interests of a member profile?
+SELECT DISTINCT ?memberName ?title ?topicName WHERE {
+  ?member a slo:Member ;
+          slo:name ?memberName ;
+          slo:hasProfile ?profile .
+  ?profile slo:hasInterestTopic ?topic .
+  ?topic slo:name ?topicName .
+  ?resource a/rdfs:subClassOf* slo:LibraryResource ;
+            slo:title ?title ;
+            slo:hasTopic ?topic .
+}
+ORDER BY ?memberName ?title
+
+# CQ-09: Which recommendation candidates are available for a member?
+SELECT ?memberName ?title ?score WHERE {
+  ?recommendation a slo:Recommendation ;
+                  slo:recommendedFor ?member ;
+                  slo:recommendedResource ?resource ;
+                  slo:profileScore ?score .
   ?member slo:name ?memberName .
   ?resource slo:title ?title .
 }
+ORDER BY DESC(?score)
 
-# CQ-10: What is the due date of a specific loan?
-SELECT ?loan ?dueDate WHERE {
-  ?loan a slo:Loan ;
-        slo:dueDate ?dueDate .
+########################################################################
+# Aggregation queries
+########################################################################
+
+# CQ-10: How many resources belong to each availability status?
+SELECT ?statusName (COUNT(?resource) AS ?resourceCount) WHERE {
+  ?resource a/rdfs:subClassOf* slo:LibraryResource ;
+            slo:hasStatus ?status .
+  ?status slo:name ?statusName .
 }
+GROUP BY ?statusName
+ORDER BY DESC(?resourceCount)
+
+# CQ-11: How many resources were acquired from each source?
+SELECT ?sourceName (COUNT(DISTINCT ?resource) AS ?resourceCount) WHERE {
+  ?record a slo:MetadataRecord ;
+          slo:retrievedFromSource ?source ;
+          slo:describesResource ?resource .
+  ?source slo:name ?sourceName .
+}
+GROUP BY ?sourceName
+ORDER BY DESC(?resourceCount)
+
+# CQ-12: How many interaction events were recorded per interaction type?
+SELECT ?type (COUNT(?event) AS ?eventCount) WHERE {
+  ?event a slo:InteractionEvent ;
+         slo:interactionType ?type .
+}
+GROUP BY ?type
+ORDER BY DESC(?eventCount)

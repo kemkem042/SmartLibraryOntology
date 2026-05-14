@@ -1,0 +1,1734 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "https://example.org/smart-library-ontology", "http://www.w3.org/2000/01/rdf-schema", "https://schema.org", "http://purl.org/dc/terms", "http://www.w3.org/2001/XMLSchema", "http://purl.org/dc/elements/1.1" ],
+    "iri" : "https://example.org/smart-library-ontology",
+    "version" : "0.2.0 - Phase 2 extension with acquisition and personalization modules",
+    "author" : [ "210316051 Kemal Mert Ceyhan; 190316073 Ahmet Burak Guvercin; 210316078 Khaled ALISMAIL" ],
+    "description" : {
+      "en" : "Version 0.2.0 of the Smart Library Loan Ontology. This phase extends the original circulation model with data acquisition provenance, topical enrichment, member profile signals, and recommendation-ready analytics for a smart library environment."
+    },
+    "other" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "210316051 Kemal Mert Ceyhan; 190316073 Ahmet Burak Guvercin; 210316078 Khaled ALISMAIL",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2026-04-27",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2026-05-14",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "en",
+        "value" : "0.2.0 - Phase 2 extension with acquisition and personalization modules",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "owl:Class"
+  }, {
+    "id" : "45",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "51",
+    "type" : "owl:Class"
+  }, {
+    "id" : "52",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "18",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "53",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "28",
+    "type" : "owl:Class"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "50",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "55",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "56",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "57",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "58",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "62",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "71",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "98",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "60",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "108",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "87",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "67",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "96",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "64",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://example.org/smart-library-ontology#Loan",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Loan",
+      "en" : "Loan"
+    },
+    "individuals" : [ {
+      "iri" : "https://example.org/smart-library-ontology#Loan_001",
+      "baseIri" : "https://example.org/smart-library-ontology",
+      "labels" : {
+        "IRI-based" : "Loan_001"
+      }
+    } ],
+    "comment" : {
+      "en" : "A transaction in which a member borrows a resource for a defined period."
+    },
+    "id" : "14",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#ResourceStatus",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ResourceStatus",
+      "en" : "Resource Status"
+    },
+    "individuals" : [ {
+      "iri" : "https://example.org/smart-library-ontology#Available",
+      "baseIri" : "https://example.org/smart-library-ontology",
+      "labels" : {
+        "IRI-based" : "Available",
+        "en" : "Available"
+      }
+    }, {
+      "iri" : "https://example.org/smart-library-ontology#Reserved",
+      "baseIri" : "https://example.org/smart-library-ontology",
+      "labels" : {
+        "IRI-based" : "Reserved",
+        "en" : "Reserved"
+      }
+    }, {
+      "iri" : "https://example.org/smart-library-ontology#OnLoan",
+      "baseIri" : "https://example.org/smart-library-ontology",
+      "labels" : {
+        "IRI-based" : "OnLoan",
+        "en" : "On Loan"
+      }
+    } ],
+    "comment" : {
+      "en" : "Controlled status values for library resources."
+    },
+    "id" : "19",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#LibraryBranch",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LibraryBranch",
+      "en" : "Library Branch"
+    },
+    "individuals" : [ {
+      "iri" : "https://example.org/smart-library-ontology#CentralBranch",
+      "baseIri" : "https://example.org/smart-library-ontology",
+      "labels" : {
+        "IRI-based" : "CentralBranch"
+      }
+    } ],
+    "comment" : {
+      "en" : "A physical branch that stores library resources and serves members."
+    },
+    "id" : "21",
+    "superClasses" : [ "22" ]
+  }, {
+    "iri" : "https://schema.org/Book",
+    "baseIri" : "https://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Book"
+    },
+    "subClasses" : [ "26", "30" ],
+    "attributes" : [ "external" ],
+    "id" : "31"
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#DataSource",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataSource",
+      "en" : "Data Source"
+    },
+    "individuals" : [ {
+      "iri" : "https://example.org/smart-library-ontology#DataSource_DepartmentSeedSheet",
+      "baseIri" : "https://example.org/smart-library-ontology",
+      "labels" : {
+        "IRI-based" : "DataSource_DepartmentSeedSheet"
+      }
+    }, {
+      "iri" : "https://example.org/smart-library-ontology#DataSource_GoogleBooksAPI",
+      "baseIri" : "https://example.org/smart-library-ontology",
+      "labels" : {
+        "IRI-based" : "DataSource_GoogleBooksAPI"
+      }
+    }, {
+      "iri" : "https://example.org/smart-library-ontology#DataSource_OpenLibraryAPI",
+      "baseIri" : "https://example.org/smart-library-ontology",
+      "labels" : {
+        "IRI-based" : "DataSource_OpenLibraryAPI"
+      }
+    } ],
+    "comment" : {
+      "en" : "A source used during data acquisition, such as an API, catalog export, spreadsheet, or document collection."
+    },
+    "id" : "32",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#Book",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Book",
+      "en" : "Book"
+    },
+    "subClasses" : [ "39", "30" ],
+    "id" : "26",
+    "superClasses" : [ "5", "31" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "40",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#Librarian",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Librarian",
+      "en" : "Librarian"
+    },
+    "individuals" : [ {
+      "iri" : "https://example.org/smart-library-ontology#Librarian_Emre_Kaya",
+      "baseIri" : "https://example.org/smart-library-ontology",
+      "labels" : {
+        "IRI-based" : "Librarian_Emre_Kaya"
+      }
+    } ],
+    "comment" : {
+      "en" : "A library staff member who manages loans, returns, and resources."
+    },
+    "id" : "1",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#JournalArticle",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "JournalArticle",
+      "en" : "Journal Article"
+    },
+    "id" : "34",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#Author",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Author",
+      "en" : "Author"
+    },
+    "individuals" : [ {
+      "iri" : "https://example.org/smart-library-ontology#Author_Tom_Gruber",
+      "baseIri" : "https://example.org/smart-library-ontology",
+      "labels" : {
+        "IRI-based" : "Author_Tom_Gruber"
+      }
+    } ],
+    "comment" : {
+      "en" : "A creator who writes a book or article."
+    },
+    "id" : "45",
+    "superClasses" : [ "24" ]
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#EBook",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EBook",
+      "en" : "E-Book"
+    },
+    "individuals" : [ {
+      "iri" : "https://example.org/smart-library-ontology#EBook_KnowledgeGraphs",
+      "baseIri" : "https://example.org/smart-library-ontology",
+      "labels" : {
+        "IRI-based" : "EBook_KnowledgeGraphs"
+      }
+    } ],
+    "comment" : {
+      "en" : "A digital book that can be accessed electronically."
+    },
+    "id" : "30",
+    "superClasses" : [ "31", "26" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "17",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#Recommendation",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Recommendation",
+      "en" : "Recommendation"
+    },
+    "individuals" : [ {
+      "iri" : "https://example.org/smart-library-ontology#Recommendation_001",
+      "baseIri" : "https://example.org/smart-library-ontology",
+      "labels" : {
+        "IRI-based" : "Recommendation_001"
+      }
+    } ],
+    "comment" : {
+      "en" : "A recommendation candidate connecting a member to a resource using topical or behavioral evidence."
+    },
+    "id" : "51",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "52",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "18",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "53",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "https://schema.org/CreativeWork",
+    "baseIri" : "https://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CreativeWork"
+    },
+    "subClasses" : [ "5" ],
+    "attributes" : [ "external" ],
+    "id" : "28"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "54",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "50",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "55",
+    "label" : {
+      "IRI-based" : "anyURI"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "56",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#gYear",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "47",
+    "label" : {
+      "IRI-based" : "gYear"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "57",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#AcquisitionBatch",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AcquisitionBatch",
+      "en" : "Acquisition Batch"
+    },
+    "individuals" : [ {
+      "iri" : "https://example.org/smart-library-ontology#AcquisitionBatch_2026_05_Phase2",
+      "baseIri" : "https://example.org/smart-library-ontology",
+      "labels" : {
+        "IRI-based" : "AcquisitionBatch_2026_05_Phase2"
+      }
+    } ],
+    "comment" : {
+      "en" : "A bounded data collection and preprocessing run used to populate ontology instances."
+    },
+    "id" : "58",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#Topic",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Topic",
+      "en" : "Topic"
+    },
+    "individuals" : [ {
+      "iri" : "https://example.org/smart-library-ontology#Topic_OntologyEngineering",
+      "baseIri" : "https://example.org/smart-library-ontology",
+      "labels" : {
+        "IRI-based" : "Topic_OntologyEngineering"
+      }
+    }, {
+      "iri" : "https://example.org/smart-library-ontology#Topic_SemanticWeb",
+      "baseIri" : "https://example.org/smart-library-ontology",
+      "labels" : {
+        "IRI-based" : "Topic_SemanticWeb"
+      }
+    }, {
+      "iri" : "https://example.org/smart-library-ontology#Topic_KnowledgeGraphs",
+      "baseIri" : "https://example.org/smart-library-ontology",
+      "labels" : {
+        "IRI-based" : "Topic_KnowledgeGraphs"
+      }
+    } ],
+    "comment" : {
+      "en" : "A semantic subject or keyword used to connect resources, user interests, and recommendations."
+    },
+    "id" : "7",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#InteractionEvent",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InteractionEvent",
+      "en" : "Interaction Event"
+    },
+    "individuals" : [ {
+      "iri" : "https://example.org/smart-library-ontology#Interaction_Search_001",
+      "baseIri" : "https://example.org/smart-library-ontology",
+      "labels" : {
+        "IRI-based" : "Interaction_Search_001"
+      }
+    }, {
+      "iri" : "https://example.org/smart-library-ontology#Interaction_View_001",
+      "baseIri" : "https://example.org/smart-library-ontology",
+      "labels" : {
+        "IRI-based" : "Interaction_View_001"
+      }
+    } ],
+    "comment" : {
+      "en" : "An observed user interaction such as viewing, searching, bookmarking, or clicking a resource."
+    },
+    "id" : "62",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#MetadataRecord",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MetadataRecord",
+      "en" : "Metadata Record"
+    },
+    "individuals" : [ {
+      "iri" : "https://example.org/smart-library-ontology#MetadataRecord_EB5002",
+      "baseIri" : "https://example.org/smart-library-ontology",
+      "labels" : {
+        "IRI-based" : "MetadataRecord_EB5002"
+      }
+    }, {
+      "iri" : "https://example.org/smart-library-ontology#MetadataRecord_B5001",
+      "baseIri" : "https://example.org/smart-library-ontology",
+      "labels" : {
+        "IRI-based" : "MetadataRecord_B5001"
+      }
+    } ],
+    "comment" : {
+      "en" : "A structured metadata record that documents where and when a resource description was acquired."
+    },
+    "id" : "4",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#Reservation",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Reservation",
+      "en" : "Reservation"
+    },
+    "individuals" : [ {
+      "iri" : "https://example.org/smart-library-ontology#Reservation_001",
+      "baseIri" : "https://example.org/smart-library-ontology",
+      "labels" : {
+        "IRI-based" : "Reservation_001"
+      }
+    } ],
+    "comment" : {
+      "en" : "A transaction in which a member requests a resource before borrowing it."
+    },
+    "id" : "71",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "https://schema.org/Organization",
+    "baseIri" : "https://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Organization"
+    },
+    "subClasses" : [ "36" ],
+    "attributes" : [ "external" ],
+    "id" : "37"
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#Member",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Member",
+      "en" : "Member"
+    },
+    "individuals" : [ {
+      "iri" : "https://example.org/smart-library-ontology#Member_Aylin_Demir",
+      "baseIri" : "https://example.org/smart-library-ontology",
+      "labels" : {
+        "IRI-based" : "Member_Aylin_Demir"
+      }
+    } ],
+    "comment" : {
+      "en" : "A registered user who can borrow, reserve, and receive personalized recommendations for library resources."
+    },
+    "id" : "11",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#PrintedBook",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PrintedBook",
+      "en" : "Printed Book"
+    },
+    "individuals" : [ {
+      "iri" : "https://example.org/smart-library-ontology#Book_OntologyDesign",
+      "baseIri" : "https://example.org/smart-library-ontology",
+      "labels" : {
+        "IRI-based" : "Book_OntologyDesign"
+      }
+    } ],
+    "comment" : {
+      "en" : "A physical book stored at a branch."
+    },
+    "id" : "39",
+    "superClasses" : [ "26" ]
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#LibraryResource",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LibraryResource",
+      "en" : "Library Resource"
+    },
+    "subClasses" : [ "34", "26" ],
+    "comment" : {
+      "en" : "A resource that can be catalogued, borrowed, reserved, or recommended."
+    },
+    "id" : "5",
+    "superClasses" : [ "28", "20" ]
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#Person",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Person",
+      "en" : "Person"
+    },
+    "subClasses" : [ "24", "1", "11" ],
+    "comment" : {
+      "en" : "A human actor related to the library system."
+    },
+    "id" : "2",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "98",
+    "label" : {
+      "IRI-based" : "anyURI"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "60",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "108",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "87",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "44",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "67",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "96",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "64",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#Organization",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Organization",
+      "en" : "Organization"
+    },
+    "subClasses" : [ "36", "21" ],
+    "id" : "22",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#LibraryEntity",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LibraryEntity",
+      "en" : "Library Entity"
+    },
+    "subClasses" : [ "12", "4", "58", "15", "62", "51", "5", "22", "7", "2", "32", "19" ],
+    "comment" : {
+      "en" : "Top-level class for entities represented in the smart library domain."
+    },
+    "id" : "20"
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#CirculationTransaction",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CirculationTransaction",
+      "en" : "Circulation Transaction"
+    },
+    "subClasses" : [ "71", "14" ],
+    "comment" : {
+      "en" : "An event-like entity representing a circulation action."
+    },
+    "id" : "15",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#Publisher",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Publisher",
+      "en" : "Publisher"
+    },
+    "individuals" : [ {
+      "iri" : "https://example.org/smart-library-ontology#Publisher_MITPress",
+      "baseIri" : "https://example.org/smart-library-ontology",
+      "labels" : {
+        "IRI-based" : "Publisher_MITPress"
+      }
+    } ],
+    "comment" : {
+      "en" : "An organization that publishes a library resource."
+    },
+    "id" : "36",
+    "superClasses" : [ "37", "22" ]
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#Creator",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Creator",
+      "en" : "Creator"
+    },
+    "subClasses" : [ "45" ],
+    "comment" : {
+      "en" : "A person who contributes to the creation of a library resource."
+    },
+    "id" : "24",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#MemberProfile",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MemberProfile",
+      "en" : "Member Profile"
+    },
+    "individuals" : [ {
+      "iri" : "https://example.org/smart-library-ontology#Profile_Aylin_Demir",
+      "baseIri" : "https://example.org/smart-library-ontology",
+      "labels" : {
+        "IRI-based" : "Profile_Aylin_Demir"
+      }
+    } ],
+    "comment" : {
+      "en" : "A lightweight semantic profile that stores a member's interest topics for personalization and recommendation."
+    },
+    "id" : "12",
+    "superClasses" : [ "20" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "3",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "6",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "10",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "16",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "23",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "25",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "9",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "43",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "46",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "48",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "49",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "59",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "61",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "63",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "65",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "66",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "68",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "69",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "70",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "72",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "74",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "75",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "76",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "77",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "78",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "79",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "80",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "81",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "82",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "83",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "84",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "85",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "86",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "88",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "89",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "90",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "91",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "92",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "93",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "94",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "95",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "97",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "99",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "100",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "101",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "102",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "103",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "104",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "105",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "106",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "107",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "109",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "110",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "111",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "112",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "113",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "114",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "115",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "116",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "13",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "8",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "117",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "118",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "2",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "0"
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#describesResource",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "describesResource",
+      "en" : "describes resource"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Links a metadata record to the resource it describes."
+    },
+    "attributes" : [ "object" ],
+    "id" : "3"
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#hasTopic",
+    "inverse" : "8",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "hasTopic",
+      "en" : "has topic"
+    },
+    "superproperty" : [ "9" ],
+    "domain" : "5",
+    "comment" : {
+      "en" : "Links a resource to a semantic topic used for retrieval and recommendation."
+    },
+    "attributes" : [ "object" ],
+    "id" : "6"
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#hasProfile",
+    "inverse" : "13",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "hasProfile",
+      "en" : "has profile"
+    },
+    "domain" : "11",
+    "comment" : {
+      "en" : "Links a member to a semantic interest profile."
+    },
+    "attributes" : [ "object" ],
+    "id" : "10"
+  }, {
+    "iri" : "http://purl.org/dc/elements/1.1/title",
+    "baseIri" : "http://purl.org/dc/elements/1.1",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "title"
+    },
+    "domain" : "17",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "16"
+  }, {
+    "range" : "2",
+    "domain" : "24",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "23"
+  }, {
+    "range" : "5",
+    "domain" : "26",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "25"
+  }, {
+    "iri" : "http://purl.org/dc/terms/subject",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "subject"
+    },
+    "domain" : "17",
+    "subproperty" : [ "6" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "9"
+  }, {
+    "range" : "28",
+    "domain" : "5",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "27"
+  }, {
+    "range" : "26",
+    "domain" : "30",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "29"
+  }, {
+    "range" : "5",
+    "domain" : "34",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "33"
+  }, {
+    "range" : "37",
+    "domain" : "36",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "35"
+  }, {
+    "range" : "31",
+    "domain" : "26",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "38"
+  }, {
+    "range" : "26",
+    "domain" : "39",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "41"
+  }, {
+    "range" : "31",
+    "domain" : "30",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "42"
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#email",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "range" : "44",
+    "label" : {
+      "IRI-based" : "email",
+      "en" : "email"
+    },
+    "domain" : "2",
+    "attributes" : [ "datatype" ],
+    "id" : "43"
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#publicationYear",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "range" : "47",
+    "label" : {
+      "IRI-based" : "publicationYear",
+      "en" : "publication year"
+    },
+    "domain" : "5",
+    "attributes" : [ "datatype" ],
+    "id" : "46"
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#writtenBy",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "range" : "45",
+    "label" : {
+      "IRI-based" : "writtenBy",
+      "en" : "written by"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "Links a resource to its author."
+    },
+    "attributes" : [ "object" ],
+    "id" : "48"
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#startDate",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "range" : "50",
+    "label" : {
+      "IRI-based" : "startDate",
+      "en" : "start date"
+    },
+    "domain" : "15",
+    "attributes" : [ "datatype" ],
+    "id" : "49"
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#branchAddress",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "range" : "60",
+    "label" : {
+      "IRI-based" : "branchAddress",
+      "en" : "branch address"
+    },
+    "domain" : "21",
+    "attributes" : [ "datatype" ],
+    "id" : "59"
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#recordsMember",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "recordsMember",
+      "en" : "records member"
+    },
+    "domain" : "62",
+    "comment" : {
+      "en" : "Links an interaction event to the member who performed it."
+    },
+    "attributes" : [ "object" ],
+    "id" : "61"
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#isbn",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "range" : "64",
+    "label" : {
+      "IRI-based" : "isbn",
+      "en" : "ISBN"
+    },
+    "domain" : "26",
+    "attributes" : [ "datatype" ],
+    "id" : "63"
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#title",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "range" : "52",
+    "label" : {
+      "IRI-based" : "title",
+      "en" : "title"
+    },
+    "domain" : "5",
+    "attributes" : [ "datatype" ],
+    "id" : "65"
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#identifier",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "range" : "67",
+    "label" : {
+      "IRI-based" : "identifier",
+      "en" : "identifier"
+    },
+    "domain" : "20",
+    "attributes" : [ "datatype" ],
+    "id" : "66"
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#hasLoan",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "hasLoan",
+      "en" : "has loan"
+    },
+    "domain" : "11",
+    "comment" : {
+      "en" : "Links a member to a loan transaction."
+    },
+    "attributes" : [ "object" ],
+    "id" : "68"
+  }, {
+    "range" : "15",
+    "domain" : "14",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "69"
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#reservedResource",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "reservedResource",
+      "en" : "reserved resource"
+    },
+    "domain" : "71",
+    "comment" : {
+      "en" : "Links a reservation to the requested resource."
+    },
+    "attributes" : [ "object" ],
+    "id" : "70"
+  }, {
+    "range" : "15",
+    "domain" : "71",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "72"
+  }, {
+    "range" : "24",
+    "domain" : "45",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "73"
+  }, {
+    "range" : "20",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "74"
+  }, {
+    "range" : "20",
+    "domain" : "7",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "75"
+  }, {
+    "range" : "20",
+    "domain" : "19",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "76"
+  }, {
+    "range" : "20",
+    "domain" : "32",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "77"
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#retrievedFromSource",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "retrievedFromSource",
+      "en" : "retrieved from source"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Links a metadata record to the source from which the data were collected."
+    },
+    "attributes" : [ "object" ],
+    "id" : "78"
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#loanedTo",
+    "inverse" : "68",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "loanedTo",
+      "en" : "loaned to"
+    },
+    "domain" : "14",
+    "comment" : {
+      "en" : "Links a loan transaction to the member who borrowed the resource."
+    },
+    "attributes" : [ "object" ],
+    "id" : "79"
+  }, {
+    "range" : "20",
+    "domain" : "22",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "80"
+  }, {
+    "range" : "20",
+    "domain" : "5",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "81"
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#generatedInBatch",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "range" : "58",
+    "label" : {
+      "IRI-based" : "generatedInBatch",
+      "en" : "generated in batch"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Links a metadata record to the data acquisition batch that produced or refreshed it."
+    },
+    "attributes" : [ "object" ],
+    "id" : "82"
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#sourceUrl",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "range" : "55",
+    "label" : {
+      "IRI-based" : "sourceUrl",
+      "en" : "source URL"
+    },
+    "domain" : "32",
+    "attributes" : [ "datatype" ],
+    "id" : "83"
+  }, {
+    "range" : "20",
+    "domain" : "51",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "84"
+  }, {
+    "range" : "20",
+    "domain" : "58",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "85"
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#dueDate",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "range" : "87",
+    "label" : {
+      "IRI-based" : "dueDate",
+      "en" : "due date"
+    },
+    "domain" : "14",
+    "attributes" : [ "datatype" ],
+    "id" : "86"
+  }, {
+    "range" : "20",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "88"
+  }, {
+    "range" : "20",
+    "domain" : "62",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "89"
+  }, {
+    "range" : "20",
+    "domain" : "15",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "90"
+  }, {
+    "range" : "22",
+    "domain" : "36",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "91"
+  }, {
+    "range" : "2",
+    "domain" : "11",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "92"
+  }, {
+    "range" : "20",
+    "domain" : "12",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "93"
+  }, {
+    "range" : "22",
+    "domain" : "21",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "94"
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#interactionType",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "range" : "96",
+    "label" : {
+      "IRI-based" : "interactionType",
+      "en" : "interaction type"
+    },
+    "domain" : "62",
+    "attributes" : [ "datatype" ],
+    "id" : "95"
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#accessUrl",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "range" : "98",
+    "label" : {
+      "IRI-based" : "accessUrl",
+      "en" : "access URL"
+    },
+    "domain" : "30",
+    "attributes" : [ "datatype" ],
+    "id" : "97"
+  }, {
+    "iri" : "https://schema.org/url",
+    "baseIri" : "https://schema.org",
+    "range" : "40",
+    "label" : {
+      "IRI-based" : "url"
+    },
+    "domain" : "17",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "99"
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#loanedResource",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "loanedResource",
+      "en" : "loaned resource"
+    },
+    "domain" : "14",
+    "comment" : {
+      "en" : "Links a loan transaction to the borrowed resource."
+    },
+    "attributes" : [ "object" ],
+    "id" : "100"
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#hasStatus",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasStatus",
+      "en" : "has status"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "Links a resource to its current availability status."
+    },
+    "attributes" : [ "object" ],
+    "id" : "101"
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#name",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "range" : "56",
+    "label" : {
+      "IRI-based" : "name",
+      "en" : "name"
+    },
+    "domain" : "20",
+    "attributes" : [ "datatype" ],
+    "id" : "102"
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#locatedAt",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "locatedAt",
+      "en" : "located at"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "Links a physical resource to the branch where it is stored."
+    },
+    "attributes" : [ "object" ],
+    "id" : "103"
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#recommendedFor",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "recommendedFor",
+      "en" : "recommended for"
+    },
+    "domain" : "51",
+    "comment" : {
+      "en" : "Links a recommendation candidate to the target member."
+    },
+    "attributes" : [ "object" ],
+    "id" : "104"
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#publishedBy",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "range" : "36",
+    "label" : {
+      "IRI-based" : "publishedBy",
+      "en" : "published by"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "Links a resource to its publisher."
+    },
+    "attributes" : [ "object" ],
+    "id" : "105"
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#reservedBy",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "reservedBy",
+      "en" : "reserved by"
+    },
+    "domain" : "71",
+    "comment" : {
+      "en" : "Links a reservation to the member who requested a resource."
+    },
+    "attributes" : [ "object" ],
+    "id" : "106"
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#confidenceScore",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "range" : "108",
+    "label" : {
+      "IRI-based" : "confidenceScore",
+      "en" : "confidence score"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype" ],
+    "id" : "107"
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#processedBy",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "processedBy",
+      "en" : "processed by"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "Links a transaction to the librarian responsible for processing it."
+    },
+    "attributes" : [ "object" ],
+    "id" : "109"
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#recommendedResource",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "recommendedResource",
+      "en" : "recommended resource"
+    },
+    "domain" : "51",
+    "comment" : {
+      "en" : "Links a recommendation candidate to the resource proposed for the member."
+    },
+    "attributes" : [ "object" ],
+    "id" : "110"
+  }, {
+    "range" : "39",
+    "domain" : "30",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "111"
+  }, {
+    "range" : "11",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "112"
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#interactedWithResource",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "interactedWithResource",
+      "en" : "interacted with resource"
+    },
+    "domain" : "62",
+    "comment" : {
+      "en" : "Links an interaction event to the resource that was viewed or searched."
+    },
+    "attributes" : [ "object" ],
+    "id" : "113"
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#profileScore",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "range" : "57",
+    "label" : {
+      "IRI-based" : "profileScore",
+      "en" : "profile score"
+    },
+    "domain" : "51",
+    "attributes" : [ "datatype" ],
+    "id" : "114"
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#returnDate",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "range" : "53",
+    "label" : {
+      "IRI-based" : "returnDate",
+      "en" : "return date"
+    },
+    "domain" : "14",
+    "attributes" : [ "datatype" ],
+    "id" : "115"
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#hasInterestTopic",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "hasInterestTopic",
+      "en" : "has interest topic"
+    },
+    "domain" : "12",
+    "comment" : {
+      "en" : "Links a member profile to one or more topics representing inferred or observed interests."
+    },
+    "attributes" : [ "object" ],
+    "id" : "116"
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#profileOf",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "profileOf",
+      "en" : "profile of"
+    },
+    "domain" : "12",
+    "attributes" : [ "object" ],
+    "id" : "13"
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#topicOf",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "topicOf",
+      "en" : "topic of"
+    },
+    "domain" : "7",
+    "attributes" : [ "object" ],
+    "id" : "8"
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#describedBy",
+    "inverse" : "3",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "describedBy",
+      "en" : "described by"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "Links a resource to the metadata record from which it was populated or curated."
+    },
+    "attributes" : [ "object" ],
+    "id" : "117"
+  }, {
+    "iri" : "https://example.org/smart-library-ontology#retrievedAt",
+    "baseIri" : "https://example.org/smart-library-ontology",
+    "range" : "54",
+    "label" : {
+      "IRI-based" : "retrievedAt",
+      "en" : "retrieved at"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype" ],
+    "id" : "118"
+  } ]
+}

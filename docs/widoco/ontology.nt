@@ -1,0 +1,771 @@
+<https://example.org/smart-library-ontology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://example.org/smart-library-ontology> <http://purl.org/dc/elements/1.1/creator> "210316051 Kemal Mert Ceyhan; 190316073 Ahmet Burak Guvercin; 210316078 Khaled ALISMAIL"@en .
+<https://example.org/smart-library-ontology> <http://purl.org/dc/terms/created> "2026-04-27"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://example.org/smart-library-ontology> <http://purl.org/dc/terms/description> "Version 0.2.0 of the Smart Library Loan Ontology. This phase extends the original circulation model with data acquisition provenance, topical enrichment, member profile signals, and recommendation-ready analytics for a smart library environment."@en .
+<https://example.org/smart-library-ontology> <http://purl.org/dc/terms/modified> "2026-05-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://example.org/smart-library-ontology> <http://www.w3.org/2002/07/owl#versionInfo> "0.2.0 - Phase 2 extension with acquisition and personalization modules"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# http://www.w3.org/2001/XMLSchema#gYear
+<http://www.w3.org/2001/XMLSchema#gYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/subject
+<http://purl.org/dc/terms/subject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://example.org/smart-library-ontology#describedBy
+<https://example.org/smart-library-ontology#describedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://example.org/smart-library-ontology#describedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://example.org/smart-library-ontology#describesResource> .
+<https://example.org/smart-library-ontology#describedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/smart-library-ontology#LibraryResource> .
+<https://example.org/smart-library-ontology#describedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://example.org/smart-library-ontology#MetadataRecord> .
+<https://example.org/smart-library-ontology#describedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a resource to the metadata record from which it was populated or curated."@en .
+<https://example.org/smart-library-ontology#describedBy> <http://www.w3.org/2000/01/rdf-schema#label> "described by"@en .
+# 
+# https://example.org/smart-library-ontology#describesResource
+<https://example.org/smart-library-ontology#describesResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://example.org/smart-library-ontology#describesResource> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/smart-library-ontology#MetadataRecord> .
+<https://example.org/smart-library-ontology#describesResource> <http://www.w3.org/2000/01/rdf-schema#range> <https://example.org/smart-library-ontology#LibraryResource> .
+<https://example.org/smart-library-ontology#describesResource> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a metadata record to the resource it describes."@en .
+<https://example.org/smart-library-ontology#describesResource> <http://www.w3.org/2000/01/rdf-schema#label> "describes resource"@en .
+# 
+# https://example.org/smart-library-ontology#generatedInBatch
+<https://example.org/smart-library-ontology#generatedInBatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://example.org/smart-library-ontology#generatedInBatch> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/smart-library-ontology#MetadataRecord> .
+<https://example.org/smart-library-ontology#generatedInBatch> <http://www.w3.org/2000/01/rdf-schema#range> <https://example.org/smart-library-ontology#AcquisitionBatch> .
+<https://example.org/smart-library-ontology#generatedInBatch> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a metadata record to the data acquisition batch that produced or refreshed it."@en .
+<https://example.org/smart-library-ontology#generatedInBatch> <http://www.w3.org/2000/01/rdf-schema#label> "generated in batch"@en .
+# 
+# https://example.org/smart-library-ontology#hasInterestTopic
+<https://example.org/smart-library-ontology#hasInterestTopic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://example.org/smart-library-ontology#hasInterestTopic> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/smart-library-ontology#MemberProfile> .
+<https://example.org/smart-library-ontology#hasInterestTopic> <http://www.w3.org/2000/01/rdf-schema#range> <https://example.org/smart-library-ontology#Topic> .
+<https://example.org/smart-library-ontology#hasInterestTopic> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a member profile to one or more topics representing inferred or observed interests."@en .
+<https://example.org/smart-library-ontology#hasInterestTopic> <http://www.w3.org/2000/01/rdf-schema#label> "has interest topic"@en .
+# 
+# https://example.org/smart-library-ontology#hasLoan
+<https://example.org/smart-library-ontology#hasLoan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://example.org/smart-library-ontology#hasLoan> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/smart-library-ontology#Member> .
+<https://example.org/smart-library-ontology#hasLoan> <http://www.w3.org/2000/01/rdf-schema#range> <https://example.org/smart-library-ontology#Loan> .
+<https://example.org/smart-library-ontology#hasLoan> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a member to a loan transaction."@en .
+<https://example.org/smart-library-ontology#hasLoan> <http://www.w3.org/2000/01/rdf-schema#label> "has loan"@en .
+# 
+# https://example.org/smart-library-ontology#hasProfile
+<https://example.org/smart-library-ontology#hasProfile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://example.org/smart-library-ontology#hasProfile> <http://www.w3.org/2002/07/owl#inverseOf> <https://example.org/smart-library-ontology#profileOf> .
+<https://example.org/smart-library-ontology#hasProfile> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/smart-library-ontology#Member> .
+<https://example.org/smart-library-ontology#hasProfile> <http://www.w3.org/2000/01/rdf-schema#range> <https://example.org/smart-library-ontology#MemberProfile> .
+<https://example.org/smart-library-ontology#hasProfile> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a member to a semantic interest profile."@en .
+<https://example.org/smart-library-ontology#hasProfile> <http://www.w3.org/2000/01/rdf-schema#label> "has profile"@en .
+# 
+# https://example.org/smart-library-ontology#hasStatus
+<https://example.org/smart-library-ontology#hasStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://example.org/smart-library-ontology#hasStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/smart-library-ontology#LibraryResource> .
+<https://example.org/smart-library-ontology#hasStatus> <http://www.w3.org/2000/01/rdf-schema#range> <https://example.org/smart-library-ontology#ResourceStatus> .
+<https://example.org/smart-library-ontology#hasStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a resource to its current availability status."@en .
+<https://example.org/smart-library-ontology#hasStatus> <http://www.w3.org/2000/01/rdf-schema#label> "has status"@en .
+# 
+# https://example.org/smart-library-ontology#hasTopic
+<https://example.org/smart-library-ontology#hasTopic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://example.org/smart-library-ontology#hasTopic> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/subject> .
+<https://example.org/smart-library-ontology#hasTopic> <http://www.w3.org/2002/07/owl#inverseOf> <https://example.org/smart-library-ontology#topicOf> .
+<https://example.org/smart-library-ontology#hasTopic> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/smart-library-ontology#LibraryResource> .
+<https://example.org/smart-library-ontology#hasTopic> <http://www.w3.org/2000/01/rdf-schema#range> <https://example.org/smart-library-ontology#Topic> .
+<https://example.org/smart-library-ontology#hasTopic> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a resource to a semantic topic used for retrieval and recommendation."@en .
+<https://example.org/smart-library-ontology#hasTopic> <http://www.w3.org/2000/01/rdf-schema#label> "has topic"@en .
+# 
+# https://example.org/smart-library-ontology#interactedWithResource
+<https://example.org/smart-library-ontology#interactedWithResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://example.org/smart-library-ontology#interactedWithResource> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/smart-library-ontology#InteractionEvent> .
+<https://example.org/smart-library-ontology#interactedWithResource> <http://www.w3.org/2000/01/rdf-schema#range> <https://example.org/smart-library-ontology#LibraryResource> .
+<https://example.org/smart-library-ontology#interactedWithResource> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an interaction event to the resource that was viewed or searched."@en .
+<https://example.org/smart-library-ontology#interactedWithResource> <http://www.w3.org/2000/01/rdf-schema#label> "interacted with resource"@en .
+# 
+# https://example.org/smart-library-ontology#loanedResource
+<https://example.org/smart-library-ontology#loanedResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://example.org/smart-library-ontology#loanedResource> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/smart-library-ontology#Loan> .
+<https://example.org/smart-library-ontology#loanedResource> <http://www.w3.org/2000/01/rdf-schema#range> <https://example.org/smart-library-ontology#LibraryResource> .
+<https://example.org/smart-library-ontology#loanedResource> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a loan transaction to the borrowed resource."@en .
+<https://example.org/smart-library-ontology#loanedResource> <http://www.w3.org/2000/01/rdf-schema#label> "loaned resource"@en .
+# 
+# https://example.org/smart-library-ontology#loanedTo
+<https://example.org/smart-library-ontology#loanedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://example.org/smart-library-ontology#loanedTo> <http://www.w3.org/2002/07/owl#inverseOf> <https://example.org/smart-library-ontology#hasLoan> .
+<https://example.org/smart-library-ontology#loanedTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/smart-library-ontology#Loan> .
+<https://example.org/smart-library-ontology#loanedTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://example.org/smart-library-ontology#Member> .
+<https://example.org/smart-library-ontology#loanedTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a loan transaction to the member who borrowed the resource."@en .
+<https://example.org/smart-library-ontology#loanedTo> <http://www.w3.org/2000/01/rdf-schema#label> "loaned to"@en .
+# 
+# https://example.org/smart-library-ontology#locatedAt
+<https://example.org/smart-library-ontology#locatedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://example.org/smart-library-ontology#locatedAt> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/smart-library-ontology#LibraryResource> .
+<https://example.org/smart-library-ontology#locatedAt> <http://www.w3.org/2000/01/rdf-schema#range> <https://example.org/smart-library-ontology#LibraryBranch> .
+<https://example.org/smart-library-ontology#locatedAt> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a physical resource to the branch where it is stored."@en .
+<https://example.org/smart-library-ontology#locatedAt> <http://www.w3.org/2000/01/rdf-schema#label> "located at"@en .
+# 
+# https://example.org/smart-library-ontology#processedBy
+<https://example.org/smart-library-ontology#processedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://example.org/smart-library-ontology#processedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/smart-library-ontology#CirculationTransaction> .
+<https://example.org/smart-library-ontology#processedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://example.org/smart-library-ontology#Librarian> .
+<https://example.org/smart-library-ontology#processedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a transaction to the librarian responsible for processing it."@en .
+<https://example.org/smart-library-ontology#processedBy> <http://www.w3.org/2000/01/rdf-schema#label> "processed by"@en .
+# 
+# https://example.org/smart-library-ontology#profileOf
+<https://example.org/smart-library-ontology#profileOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://example.org/smart-library-ontology#profileOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/smart-library-ontology#MemberProfile> .
+<https://example.org/smart-library-ontology#profileOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://example.org/smart-library-ontology#Member> .
+<https://example.org/smart-library-ontology#profileOf> <http://www.w3.org/2000/01/rdf-schema#label> "profile of"@en .
+# 
+# https://example.org/smart-library-ontology#publishedBy
+<https://example.org/smart-library-ontology#publishedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://example.org/smart-library-ontology#publishedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/smart-library-ontology#LibraryResource> .
+<https://example.org/smart-library-ontology#publishedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://example.org/smart-library-ontology#Publisher> .
+<https://example.org/smart-library-ontology#publishedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a resource to its publisher."@en .
+<https://example.org/smart-library-ontology#publishedBy> <http://www.w3.org/2000/01/rdf-schema#label> "published by"@en .
+# 
+# https://example.org/smart-library-ontology#recommendedFor
+<https://example.org/smart-library-ontology#recommendedFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://example.org/smart-library-ontology#recommendedFor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/smart-library-ontology#Recommendation> .
+<https://example.org/smart-library-ontology#recommendedFor> <http://www.w3.org/2000/01/rdf-schema#range> <https://example.org/smart-library-ontology#Member> .
+<https://example.org/smart-library-ontology#recommendedFor> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a recommendation candidate to the target member."@en .
+<https://example.org/smart-library-ontology#recommendedFor> <http://www.w3.org/2000/01/rdf-schema#label> "recommended for"@en .
+# 
+# https://example.org/smart-library-ontology#recommendedResource
+<https://example.org/smart-library-ontology#recommendedResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://example.org/smart-library-ontology#recommendedResource> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/smart-library-ontology#Recommendation> .
+<https://example.org/smart-library-ontology#recommendedResource> <http://www.w3.org/2000/01/rdf-schema#range> <https://example.org/smart-library-ontology#LibraryResource> .
+<https://example.org/smart-library-ontology#recommendedResource> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a recommendation candidate to the resource proposed for the member."@en .
+<https://example.org/smart-library-ontology#recommendedResource> <http://www.w3.org/2000/01/rdf-schema#label> "recommended resource"@en .
+# 
+# https://example.org/smart-library-ontology#recordsMember
+<https://example.org/smart-library-ontology#recordsMember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://example.org/smart-library-ontology#recordsMember> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/smart-library-ontology#InteractionEvent> .
+<https://example.org/smart-library-ontology#recordsMember> <http://www.w3.org/2000/01/rdf-schema#range> <https://example.org/smart-library-ontology#Member> .
+<https://example.org/smart-library-ontology#recordsMember> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an interaction event to the member who performed it."@en .
+<https://example.org/smart-library-ontology#recordsMember> <http://www.w3.org/2000/01/rdf-schema#label> "records member"@en .
+# 
+# https://example.org/smart-library-ontology#reservedBy
+<https://example.org/smart-library-ontology#reservedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://example.org/smart-library-ontology#reservedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/smart-library-ontology#Reservation> .
+<https://example.org/smart-library-ontology#reservedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://example.org/smart-library-ontology#Member> .
+<https://example.org/smart-library-ontology#reservedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a reservation to the member who requested a resource."@en .
+<https://example.org/smart-library-ontology#reservedBy> <http://www.w3.org/2000/01/rdf-schema#label> "reserved by"@en .
+# 
+# https://example.org/smart-library-ontology#reservedResource
+<https://example.org/smart-library-ontology#reservedResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://example.org/smart-library-ontology#reservedResource> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/smart-library-ontology#Reservation> .
+<https://example.org/smart-library-ontology#reservedResource> <http://www.w3.org/2000/01/rdf-schema#range> <https://example.org/smart-library-ontology#LibraryResource> .
+<https://example.org/smart-library-ontology#reservedResource> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a reservation to the requested resource."@en .
+<https://example.org/smart-library-ontology#reservedResource> <http://www.w3.org/2000/01/rdf-schema#label> "reserved resource"@en .
+# 
+# https://example.org/smart-library-ontology#retrievedFromSource
+<https://example.org/smart-library-ontology#retrievedFromSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://example.org/smart-library-ontology#retrievedFromSource> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/smart-library-ontology#MetadataRecord> .
+<https://example.org/smart-library-ontology#retrievedFromSource> <http://www.w3.org/2000/01/rdf-schema#range> <https://example.org/smart-library-ontology#DataSource> .
+<https://example.org/smart-library-ontology#retrievedFromSource> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a metadata record to the source from which the data were collected."@en .
+<https://example.org/smart-library-ontology#retrievedFromSource> <http://www.w3.org/2000/01/rdf-schema#label> "retrieved from source"@en .
+# 
+# https://example.org/smart-library-ontology#topicOf
+<https://example.org/smart-library-ontology#topicOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://example.org/smart-library-ontology#topicOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/smart-library-ontology#Topic> .
+<https://example.org/smart-library-ontology#topicOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://example.org/smart-library-ontology#LibraryResource> .
+<https://example.org/smart-library-ontology#topicOf> <http://www.w3.org/2000/01/rdf-schema#label> "topic of"@en .
+# 
+# https://example.org/smart-library-ontology#writtenBy
+<https://example.org/smart-library-ontology#writtenBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://example.org/smart-library-ontology#writtenBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/smart-library-ontology#LibraryResource> .
+<https://example.org/smart-library-ontology#writtenBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://example.org/smart-library-ontology#Author> .
+<https://example.org/smart-library-ontology#writtenBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a resource to its author."@en .
+<https://example.org/smart-library-ontology#writtenBy> <http://www.w3.org/2000/01/rdf-schema#label> "written by"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# https://example.org/smart-library-ontology#accessUrl
+<https://example.org/smart-library-ontology#accessUrl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://example.org/smart-library-ontology#accessUrl> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://schema.org/url> .
+<https://schema.org/url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://example.org/smart-library-ontology#accessUrl> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/smart-library-ontology#EBook> .
+<https://example.org/smart-library-ontology#accessUrl> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://example.org/smart-library-ontology#accessUrl> <http://www.w3.org/2000/01/rdf-schema#label> "access URL"@en .
+# 
+# https://example.org/smart-library-ontology#branchAddress
+<https://example.org/smart-library-ontology#branchAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://example.org/smart-library-ontology#branchAddress> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/smart-library-ontology#LibraryBranch> .
+<https://example.org/smart-library-ontology#branchAddress> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://example.org/smart-library-ontology#branchAddress> <http://www.w3.org/2000/01/rdf-schema#label> "branch address"@en .
+# 
+# https://example.org/smart-library-ontology#confidenceScore
+<https://example.org/smart-library-ontology#confidenceScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://example.org/smart-library-ontology#confidenceScore> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/smart-library-ontology#MetadataRecord> .
+<https://example.org/smart-library-ontology#confidenceScore> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://example.org/smart-library-ontology#confidenceScore> <http://www.w3.org/2000/01/rdf-schema#label> "confidence score"@en .
+# 
+# https://example.org/smart-library-ontology#dueDate
+<https://example.org/smart-library-ontology#dueDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://example.org/smart-library-ontology#dueDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/smart-library-ontology#Loan> .
+<https://example.org/smart-library-ontology#dueDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://example.org/smart-library-ontology#dueDate> <http://www.w3.org/2000/01/rdf-schema#label> "due date"@en .
+# 
+# https://example.org/smart-library-ontology#email
+<https://example.org/smart-library-ontology#email> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://example.org/smart-library-ontology#email> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/smart-library-ontology#Person> .
+<https://example.org/smart-library-ontology#email> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://example.org/smart-library-ontology#email> <http://www.w3.org/2000/01/rdf-schema#label> "email"@en .
+# 
+# https://example.org/smart-library-ontology#identifier
+<https://example.org/smart-library-ontology#identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://example.org/smart-library-ontology#identifier> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/smart-library-ontology#LibraryEntity> .
+<https://example.org/smart-library-ontology#identifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://example.org/smart-library-ontology#identifier> <http://www.w3.org/2000/01/rdf-schema#label> "identifier"@en .
+# 
+# https://example.org/smart-library-ontology#interactionType
+<https://example.org/smart-library-ontology#interactionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://example.org/smart-library-ontology#interactionType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/smart-library-ontology#InteractionEvent> .
+<https://example.org/smart-library-ontology#interactionType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://example.org/smart-library-ontology#interactionType> <http://www.w3.org/2000/01/rdf-schema#label> "interaction type"@en .
+# 
+# https://example.org/smart-library-ontology#isbn
+<https://example.org/smart-library-ontology#isbn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://example.org/smart-library-ontology#isbn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/smart-library-ontology#Book> .
+<https://example.org/smart-library-ontology#isbn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://example.org/smart-library-ontology#isbn> <http://www.w3.org/2000/01/rdf-schema#label> "ISBN"@en .
+# 
+# https://example.org/smart-library-ontology#name
+<https://example.org/smart-library-ontology#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://example.org/smart-library-ontology#name> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/smart-library-ontology#LibraryEntity> .
+<https://example.org/smart-library-ontology#name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://example.org/smart-library-ontology#name> <http://www.w3.org/2000/01/rdf-schema#label> "name"@en .
+# 
+# https://example.org/smart-library-ontology#profileScore
+<https://example.org/smart-library-ontology#profileScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://example.org/smart-library-ontology#profileScore> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/smart-library-ontology#Recommendation> .
+<https://example.org/smart-library-ontology#profileScore> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://example.org/smart-library-ontology#profileScore> <http://www.w3.org/2000/01/rdf-schema#label> "profile score"@en .
+# 
+# https://example.org/smart-library-ontology#publicationYear
+<https://example.org/smart-library-ontology#publicationYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://example.org/smart-library-ontology#publicationYear> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/smart-library-ontology#LibraryResource> .
+<https://example.org/smart-library-ontology#publicationYear> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#gYear> .
+<https://example.org/smart-library-ontology#publicationYear> <http://www.w3.org/2000/01/rdf-schema#label> "publication year"@en .
+# 
+# https://example.org/smart-library-ontology#retrievedAt
+<https://example.org/smart-library-ontology#retrievedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://example.org/smart-library-ontology#retrievedAt> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/smart-library-ontology#MetadataRecord> .
+<https://example.org/smart-library-ontology#retrievedAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://example.org/smart-library-ontology#retrievedAt> <http://www.w3.org/2000/01/rdf-schema#label> "retrieved at"@en .
+# 
+# https://example.org/smart-library-ontology#returnDate
+<https://example.org/smart-library-ontology#returnDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://example.org/smart-library-ontology#returnDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/smart-library-ontology#Loan> .
+<https://example.org/smart-library-ontology#returnDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://example.org/smart-library-ontology#returnDate> <http://www.w3.org/2000/01/rdf-schema#label> "return date"@en .
+# 
+# https://example.org/smart-library-ontology#sourceUrl
+<https://example.org/smart-library-ontology#sourceUrl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://example.org/smart-library-ontology#sourceUrl> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://schema.org/url> .
+<https://example.org/smart-library-ontology#sourceUrl> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/smart-library-ontology#DataSource> .
+<https://example.org/smart-library-ontology#sourceUrl> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://example.org/smart-library-ontology#sourceUrl> <http://www.w3.org/2000/01/rdf-schema#label> "source URL"@en .
+# 
+# https://example.org/smart-library-ontology#startDate
+<https://example.org/smart-library-ontology#startDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://example.org/smart-library-ontology#startDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/smart-library-ontology#CirculationTransaction> .
+<https://example.org/smart-library-ontology#startDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://example.org/smart-library-ontology#startDate> <http://www.w3.org/2000/01/rdf-schema#label> "start date"@en .
+# 
+# https://example.org/smart-library-ontology#title
+<https://example.org/smart-library-ontology#title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://example.org/smart-library-ontology#title> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/title> .
+<https://example.org/smart-library-ontology#title> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/smart-library-ontology#LibraryResource> .
+<https://example.org/smart-library-ontology#title> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://example.org/smart-library-ontology#title> <http://www.w3.org/2000/01/rdf-schema#label> "title"@en .
+# 
+# https://schema.org/url
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://example.org/smart-library-ontology#AcquisitionBatch
+<https://example.org/smart-library-ontology#AcquisitionBatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://example.org/smart-library-ontology#AcquisitionBatch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://example.org/smart-library-ontology#LibraryEntity> .
+<https://example.org/smart-library-ontology#AcquisitionBatch> <http://www.w3.org/2000/01/rdf-schema#comment> "A bounded data collection and preprocessing run used to populate ontology instances."@en .
+<https://example.org/smart-library-ontology#AcquisitionBatch> <http://www.w3.org/2000/01/rdf-schema#label> "Acquisition Batch"@en .
+# 
+# https://example.org/smart-library-ontology#Author
+<https://example.org/smart-library-ontology#Author> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://example.org/smart-library-ontology#Author> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://example.org/smart-library-ontology#Creator> .
+<https://example.org/smart-library-ontology#Author> <http://www.w3.org/2000/01/rdf-schema#comment> "A creator who writes a book or article."@en .
+<https://example.org/smart-library-ontology#Author> <http://www.w3.org/2000/01/rdf-schema#label> "Author"@en .
+# 
+# https://example.org/smart-library-ontology#Book
+<https://example.org/smart-library-ontology#Book> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://example.org/smart-library-ontology#Book> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://example.org/smart-library-ontology#LibraryResource> .
+<https://example.org/smart-library-ontology#Book> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/Book> .
+<https://schema.org/Book> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://example.org/smart-library-ontology#Book> <http://www.w3.org/2000/01/rdf-schema#label> "Book"@en .
+# 
+# https://example.org/smart-library-ontology#CirculationTransaction
+<https://example.org/smart-library-ontology#CirculationTransaction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://example.org/smart-library-ontology#CirculationTransaction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://example.org/smart-library-ontology#LibraryEntity> .
+<https://example.org/smart-library-ontology#CirculationTransaction> <http://www.w3.org/2000/01/rdf-schema#comment> "An event-like entity representing a circulation action."@en .
+<https://example.org/smart-library-ontology#CirculationTransaction> <http://www.w3.org/2000/01/rdf-schema#label> "Circulation Transaction"@en .
+# 
+# https://example.org/smart-library-ontology#Creator
+<https://example.org/smart-library-ontology#Creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://example.org/smart-library-ontology#Creator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://example.org/smart-library-ontology#Person> .
+<https://example.org/smart-library-ontology#Creator> <http://www.w3.org/2000/01/rdf-schema#comment> "A person who contributes to the creation of a library resource."@en .
+<https://example.org/smart-library-ontology#Creator> <http://www.w3.org/2000/01/rdf-schema#label> "Creator"@en .
+# 
+# https://example.org/smart-library-ontology#DataSource
+<https://example.org/smart-library-ontology#DataSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://example.org/smart-library-ontology#DataSource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://example.org/smart-library-ontology#LibraryEntity> .
+<https://example.org/smart-library-ontology#DataSource> <http://www.w3.org/2000/01/rdf-schema#comment> "A source used during data acquisition, such as an API, catalog export, spreadsheet, or document collection."@en .
+<https://example.org/smart-library-ontology#DataSource> <http://www.w3.org/2000/01/rdf-schema#label> "Data Source"@en .
+# 
+# https://example.org/smart-library-ontology#EBook
+<https://example.org/smart-library-ontology#EBook> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://example.org/smart-library-ontology#EBook> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://example.org/smart-library-ontology#Book> .
+<https://example.org/smart-library-ontology#EBook> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/Book> .
+<https://example.org/smart-library-ontology#EBook> <http://www.w3.org/2002/07/owl#disjointWith> <https://example.org/smart-library-ontology#PrintedBook> .
+<https://example.org/smart-library-ontology#EBook> <http://www.w3.org/2000/01/rdf-schema#comment> "A digital book that can be accessed electronically."@en .
+<https://example.org/smart-library-ontology#EBook> <http://www.w3.org/2000/01/rdf-schema#label> "E-Book"@en .
+# 
+# https://example.org/smart-library-ontology#InteractionEvent
+<https://example.org/smart-library-ontology#InteractionEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://example.org/smart-library-ontology#InteractionEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://example.org/smart-library-ontology#LibraryEntity> .
+<https://example.org/smart-library-ontology#InteractionEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "An observed user interaction such as viewing, searching, bookmarking, or clicking a resource."@en .
+<https://example.org/smart-library-ontology#InteractionEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Interaction Event"@en .
+# 
+# https://example.org/smart-library-ontology#JournalArticle
+<https://example.org/smart-library-ontology#JournalArticle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://example.org/smart-library-ontology#JournalArticle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://example.org/smart-library-ontology#LibraryResource> .
+<https://example.org/smart-library-ontology#JournalArticle> <http://www.w3.org/2000/01/rdf-schema#label> "Journal Article"@en .
+# 
+# https://example.org/smart-library-ontology#Librarian
+<https://example.org/smart-library-ontology#Librarian> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://example.org/smart-library-ontology#Librarian> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://example.org/smart-library-ontology#Person> .
+<https://example.org/smart-library-ontology#Librarian> <http://www.w3.org/2002/07/owl#disjointWith> <https://example.org/smart-library-ontology#Member> .
+<https://example.org/smart-library-ontology#Librarian> <http://www.w3.org/2000/01/rdf-schema#comment> "A library staff member who manages loans, returns, and resources."@en .
+<https://example.org/smart-library-ontology#Librarian> <http://www.w3.org/2000/01/rdf-schema#label> "Librarian"@en .
+# 
+# https://example.org/smart-library-ontology#LibraryBranch
+<https://example.org/smart-library-ontology#LibraryBranch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://example.org/smart-library-ontology#LibraryBranch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://example.org/smart-library-ontology#Organization> .
+<https://example.org/smart-library-ontology#LibraryBranch> <http://www.w3.org/2000/01/rdf-schema#comment> "A physical branch that stores library resources and serves members."@en .
+<https://example.org/smart-library-ontology#LibraryBranch> <http://www.w3.org/2000/01/rdf-schema#label> "Library Branch"@en .
+# 
+# https://example.org/smart-library-ontology#LibraryEntity
+<https://example.org/smart-library-ontology#LibraryEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://example.org/smart-library-ontology#LibraryEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "Top-level class for entities represented in the smart library domain."@en .
+<https://example.org/smart-library-ontology#LibraryEntity> <http://www.w3.org/2000/01/rdf-schema#label> "Library Entity"@en .
+# 
+# https://example.org/smart-library-ontology#LibraryResource
+<https://example.org/smart-library-ontology#LibraryResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://example.org/smart-library-ontology#LibraryResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://example.org/smart-library-ontology#LibraryEntity> .
+<https://example.org/smart-library-ontology#LibraryResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/CreativeWork> .
+<https://schema.org/CreativeWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://example.org/smart-library-ontology#LibraryResource> <http://www.w3.org/2000/01/rdf-schema#comment> "A resource that can be catalogued, borrowed, reserved, or recommended."@en .
+<https://example.org/smart-library-ontology#LibraryResource> <http://www.w3.org/2000/01/rdf-schema#label> "Library Resource"@en .
+# 
+# https://example.org/smart-library-ontology#Loan
+<https://example.org/smart-library-ontology#Loan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://example.org/smart-library-ontology#Loan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://example.org/smart-library-ontology#CirculationTransaction> .
+<https://example.org/smart-library-ontology#Loan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#onClass> <https://example.org/smart-library-ontology#LibraryResource> .
+_:genid1 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <https://example.org/smart-library-ontology#loanedResource> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://example.org/smart-library-ontology#Loan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#onClass> <https://example.org/smart-library-ontology#Member> .
+_:genid2 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <https://example.org/smart-library-ontology#loanedTo> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://example.org/smart-library-ontology#Loan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#onClass> <https://example.org/smart-library-ontology#Librarian> .
+_:genid3 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <https://example.org/smart-library-ontology#processedBy> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://example.org/smart-library-ontology#Loan> <http://www.w3.org/2000/01/rdf-schema#comment> "A transaction in which a member borrows a resource for a defined period."@en .
+<https://example.org/smart-library-ontology#Loan> <http://www.w3.org/2000/01/rdf-schema#label> "Loan"@en .
+# 
+# https://example.org/smart-library-ontology#Member
+<https://example.org/smart-library-ontology#Member> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://example.org/smart-library-ontology#Member> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://example.org/smart-library-ontology#Person> .
+<https://example.org/smart-library-ontology#Member> <http://www.w3.org/2000/01/rdf-schema#comment> "A registered user who can borrow, reserve, and receive personalized recommendations for library resources."@en .
+<https://example.org/smart-library-ontology#Member> <http://www.w3.org/2000/01/rdf-schema#label> "Member"@en .
+# 
+# https://example.org/smart-library-ontology#MemberProfile
+<https://example.org/smart-library-ontology#MemberProfile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://example.org/smart-library-ontology#MemberProfile> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://example.org/smart-library-ontology#LibraryEntity> .
+<https://example.org/smart-library-ontology#MemberProfile> <http://www.w3.org/2000/01/rdf-schema#comment> "A lightweight semantic profile that stores a member's interest topics for personalization and recommendation."@en .
+<https://example.org/smart-library-ontology#MemberProfile> <http://www.w3.org/2000/01/rdf-schema#label> "Member Profile"@en .
+# 
+# https://example.org/smart-library-ontology#MetadataRecord
+<https://example.org/smart-library-ontology#MetadataRecord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://example.org/smart-library-ontology#MetadataRecord> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://example.org/smart-library-ontology#LibraryEntity> .
+<https://example.org/smart-library-ontology#MetadataRecord> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#onClass> <https://example.org/smart-library-ontology#DataSource> .
+_:genid4 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <https://example.org/smart-library-ontology#retrievedFromSource> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://example.org/smart-library-ontology#MetadataRecord> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#onClass> <https://example.org/smart-library-ontology#LibraryResource> .
+_:genid5 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://example.org/smart-library-ontology#describesResource> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://example.org/smart-library-ontology#MetadataRecord> <http://www.w3.org/2000/01/rdf-schema#comment> "A structured metadata record that documents where and when a resource description was acquired."@en .
+<https://example.org/smart-library-ontology#MetadataRecord> <http://www.w3.org/2000/01/rdf-schema#label> "Metadata Record"@en .
+# 
+# https://example.org/smart-library-ontology#Organization
+<https://example.org/smart-library-ontology#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://example.org/smart-library-ontology#Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://example.org/smart-library-ontology#LibraryEntity> .
+<https://example.org/smart-library-ontology#Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organization"@en .
+# 
+# https://example.org/smart-library-ontology#Person
+<https://example.org/smart-library-ontology#Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://example.org/smart-library-ontology#Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://example.org/smart-library-ontology#LibraryEntity> .
+<https://example.org/smart-library-ontology#Person> <http://www.w3.org/2000/01/rdf-schema#comment> "A human actor related to the library system."@en .
+<https://example.org/smart-library-ontology#Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person"@en .
+# 
+# https://example.org/smart-library-ontology#PrintedBook
+<https://example.org/smart-library-ontology#PrintedBook> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://example.org/smart-library-ontology#PrintedBook> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://example.org/smart-library-ontology#Book> .
+<https://example.org/smart-library-ontology#PrintedBook> <http://www.w3.org/2000/01/rdf-schema#comment> "A physical book stored at a branch."@en .
+<https://example.org/smart-library-ontology#PrintedBook> <http://www.w3.org/2000/01/rdf-schema#label> "Printed Book"@en .
+# 
+# https://example.org/smart-library-ontology#Publisher
+<https://example.org/smart-library-ontology#Publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://example.org/smart-library-ontology#Publisher> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://example.org/smart-library-ontology#Organization> .
+<https://example.org/smart-library-ontology#Publisher> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/Organization> .
+<https://schema.org/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://example.org/smart-library-ontology#Publisher> <http://www.w3.org/2000/01/rdf-schema#comment> "An organization that publishes a library resource."@en .
+<https://example.org/smart-library-ontology#Publisher> <http://www.w3.org/2000/01/rdf-schema#label> "Publisher"@en .
+# 
+# https://example.org/smart-library-ontology#Recommendation
+<https://example.org/smart-library-ontology#Recommendation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://example.org/smart-library-ontology#Recommendation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://example.org/smart-library-ontology#LibraryEntity> .
+<https://example.org/smart-library-ontology#Recommendation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#onClass> <https://example.org/smart-library-ontology#Member> .
+_:genid6 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://example.org/smart-library-ontology#recommendedFor> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://example.org/smart-library-ontology#Recommendation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#onClass> <https://example.org/smart-library-ontology#LibraryResource> .
+_:genid7 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://example.org/smart-library-ontology#recommendedResource> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://example.org/smart-library-ontology#Recommendation> <http://www.w3.org/2000/01/rdf-schema#comment> "A recommendation candidate connecting a member to a resource using topical or behavioral evidence."@en .
+<https://example.org/smart-library-ontology#Recommendation> <http://www.w3.org/2000/01/rdf-schema#label> "Recommendation"@en .
+# 
+# https://example.org/smart-library-ontology#Reservation
+<https://example.org/smart-library-ontology#Reservation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://example.org/smart-library-ontology#Reservation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://example.org/smart-library-ontology#CirculationTransaction> .
+<https://example.org/smart-library-ontology#Reservation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#onClass> <https://example.org/smart-library-ontology#Librarian> .
+_:genid8 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://example.org/smart-library-ontology#processedBy> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://example.org/smart-library-ontology#Reservation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#onClass> <https://example.org/smart-library-ontology#Member> .
+_:genid9 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://example.org/smart-library-ontology#reservedBy> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://example.org/smart-library-ontology#Reservation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#onClass> <https://example.org/smart-library-ontology#LibraryResource> .
+_:genid10 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://example.org/smart-library-ontology#reservedResource> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://example.org/smart-library-ontology#Reservation> <http://www.w3.org/2000/01/rdf-schema#comment> "A transaction in which a member requests a resource before borrowing it."@en .
+<https://example.org/smart-library-ontology#Reservation> <http://www.w3.org/2000/01/rdf-schema#label> "Reservation"@en .
+# 
+# https://example.org/smart-library-ontology#ResourceStatus
+<https://example.org/smart-library-ontology#ResourceStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://example.org/smart-library-ontology#ResourceStatus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://example.org/smart-library-ontology#LibraryEntity> .
+<https://example.org/smart-library-ontology#ResourceStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Controlled status values for library resources."@en .
+<https://example.org/smart-library-ontology#ResourceStatus> <http://www.w3.org/2000/01/rdf-schema#label> "Resource Status"@en .
+# 
+# https://example.org/smart-library-ontology#Topic
+<https://example.org/smart-library-ontology#Topic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://example.org/smart-library-ontology#Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://example.org/smart-library-ontology#LibraryEntity> .
+<https://example.org/smart-library-ontology#Topic> <http://www.w3.org/2000/01/rdf-schema#comment> "A semantic subject or keyword used to connect resources, user interests, and recommendations."@en .
+<https://example.org/smart-library-ontology#Topic> <http://www.w3.org/2000/01/rdf-schema#label> "Topic"@en .
+# 
+# https://schema.org/Book
+# 
+# https://schema.org/CreativeWork
+# 
+# https://schema.org/Organization
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://example.org/smart-library-ontology
+<https://example.org/smart-library-ontology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/smart-library-ontology> <http://purl.org/dc/elements/1.1/title> "Smart Library Loan Ontology"@en .
+# 
+# https://example.org/smart-library-ontology#AcquisitionBatch_2026_05_Phase2
+<https://example.org/smart-library-ontology#AcquisitionBatch_2026_05_Phase2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/smart-library-ontology#AcquisitionBatch_2026_05_Phase2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://example.org/smart-library-ontology#AcquisitionBatch> .
+<https://example.org/smart-library-ontology#AcquisitionBatch_2026_05_Phase2> <https://example.org/smart-library-ontology#identifier> "BATCH-2026-05-P2" .
+<https://example.org/smart-library-ontology#AcquisitionBatch_2026_05_Phase2> <https://example.org/smart-library-ontology#name> "Phase 2 metadata integration batch" .
+# 
+# https://example.org/smart-library-ontology#Author_Tom_Gruber
+<https://example.org/smart-library-ontology#Author_Tom_Gruber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/smart-library-ontology#Author_Tom_Gruber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://example.org/smart-library-ontology#Author> .
+<https://example.org/smart-library-ontology#Author_Tom_Gruber> <https://example.org/smart-library-ontology#identifier> "A-3001" .
+<https://example.org/smart-library-ontology#Author_Tom_Gruber> <https://example.org/smart-library-ontology#name> "Tom Gruber" .
+# 
+# https://example.org/smart-library-ontology#Available
+<https://example.org/smart-library-ontology#Available> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/smart-library-ontology#Available> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://example.org/smart-library-ontology#ResourceStatus> .
+<https://example.org/smart-library-ontology#Available> <https://example.org/smart-library-ontology#name> "Available" .
+<https://example.org/smart-library-ontology#Available> <http://www.w3.org/2000/01/rdf-schema#label> "Available"@en .
+# 
+# https://example.org/smart-library-ontology#Book_OntologyDesign
+<https://example.org/smart-library-ontology#Book_OntologyDesign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/smart-library-ontology#Book_OntologyDesign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://example.org/smart-library-ontology#PrintedBook> .
+<https://example.org/smart-library-ontology#Book_OntologyDesign> <https://example.org/smart-library-ontology#describedBy> <https://example.org/smart-library-ontology#MetadataRecord_B5001> .
+<https://example.org/smart-library-ontology#MetadataRecord_B5001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/smart-library-ontology#Book_OntologyDesign> <https://example.org/smart-library-ontology#hasStatus> <https://example.org/smart-library-ontology#OnLoan> .
+<https://example.org/smart-library-ontology#OnLoan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/smart-library-ontology#Book_OntologyDesign> <https://example.org/smart-library-ontology#hasTopic> <https://example.org/smart-library-ontology#Topic_OntologyEngineering> .
+<https://example.org/smart-library-ontology#Topic_OntologyEngineering> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/smart-library-ontology#Book_OntologyDesign> <https://example.org/smart-library-ontology#hasTopic> <https://example.org/smart-library-ontology#Topic_SemanticWeb> .
+<https://example.org/smart-library-ontology#Topic_SemanticWeb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/smart-library-ontology#Book_OntologyDesign> <https://example.org/smart-library-ontology#locatedAt> <https://example.org/smart-library-ontology#CentralBranch> .
+<https://example.org/smart-library-ontology#CentralBranch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/smart-library-ontology#Book_OntologyDesign> <https://example.org/smart-library-ontology#publishedBy> <https://example.org/smart-library-ontology#Publisher_MITPress> .
+<https://example.org/smart-library-ontology#Publisher_MITPress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/smart-library-ontology#Book_OntologyDesign> <https://example.org/smart-library-ontology#writtenBy> <https://example.org/smart-library-ontology#Author_Tom_Gruber> .
+<https://example.org/smart-library-ontology#Book_OntologyDesign> <https://example.org/smart-library-ontology#identifier> "B-5001" .
+<https://example.org/smart-library-ontology#Book_OntologyDesign> <https://example.org/smart-library-ontology#isbn> "978-0-000-00001-1" .
+<https://example.org/smart-library-ontology#Book_OntologyDesign> <https://example.org/smart-library-ontology#publicationYear> "2024"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<https://example.org/smart-library-ontology#Book_OntologyDesign> <https://example.org/smart-library-ontology#title> "Ontology Design Principles" .
+# 
+# https://example.org/smart-library-ontology#CentralBranch
+<https://example.org/smart-library-ontology#CentralBranch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://example.org/smart-library-ontology#LibraryBranch> .
+<https://example.org/smart-library-ontology#CentralBranch> <https://example.org/smart-library-ontology#branchAddress> "Main Campus, Library Building" .
+<https://example.org/smart-library-ontology#CentralBranch> <https://example.org/smart-library-ontology#identifier> "BR-001" .
+<https://example.org/smart-library-ontology#CentralBranch> <https://example.org/smart-library-ontology#name> "Central Library Branch" .
+# 
+# https://example.org/smart-library-ontology#DataSource_DepartmentSeedSheet
+<https://example.org/smart-library-ontology#DataSource_DepartmentSeedSheet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/smart-library-ontology#DataSource_DepartmentSeedSheet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://example.org/smart-library-ontology#DataSource> .
+<https://example.org/smart-library-ontology#DataSource_DepartmentSeedSheet> <https://example.org/smart-library-ontology#identifier> "SRC-003" .
+<https://example.org/smart-library-ontology#DataSource_DepartmentSeedSheet> <https://example.org/smart-library-ontology#name> "Department Seed Spreadsheet" .
+<https://example.org/smart-library-ontology#DataSource_DepartmentSeedSheet> <https://example.org/smart-library-ontology#sourceUrl> "https://example.org/internal/seed-sheet"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+# 
+# https://example.org/smart-library-ontology#DataSource_GoogleBooksAPI
+<https://example.org/smart-library-ontology#DataSource_GoogleBooksAPI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/smart-library-ontology#DataSource_GoogleBooksAPI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://example.org/smart-library-ontology#DataSource> .
+<https://example.org/smart-library-ontology#DataSource_GoogleBooksAPI> <https://example.org/smart-library-ontology#identifier> "SRC-002" .
+<https://example.org/smart-library-ontology#DataSource_GoogleBooksAPI> <https://example.org/smart-library-ontology#name> "Google Books API" .
+<https://example.org/smart-library-ontology#DataSource_GoogleBooksAPI> <https://example.org/smart-library-ontology#sourceUrl> "https://developers.google.com/books"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+# 
+# https://example.org/smart-library-ontology#DataSource_OpenLibraryAPI
+<https://example.org/smart-library-ontology#DataSource_OpenLibraryAPI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/smart-library-ontology#DataSource_OpenLibraryAPI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://example.org/smart-library-ontology#DataSource> .
+<https://example.org/smart-library-ontology#DataSource_OpenLibraryAPI> <https://example.org/smart-library-ontology#identifier> "SRC-001" .
+<https://example.org/smart-library-ontology#DataSource_OpenLibraryAPI> <https://example.org/smart-library-ontology#name> "Open Library API" .
+<https://example.org/smart-library-ontology#DataSource_OpenLibraryAPI> <https://example.org/smart-library-ontology#sourceUrl> "https://openlibrary.org/developers/api"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+# 
+# https://example.org/smart-library-ontology#EBook_KnowledgeGraphs
+<https://example.org/smart-library-ontology#EBook_KnowledgeGraphs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/smart-library-ontology#EBook_KnowledgeGraphs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://example.org/smart-library-ontology#EBook> .
+<https://example.org/smart-library-ontology#EBook_KnowledgeGraphs> <https://example.org/smart-library-ontology#describedBy> <https://example.org/smart-library-ontology#MetadataRecord_EB5002> .
+<https://example.org/smart-library-ontology#MetadataRecord_EB5002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/smart-library-ontology#EBook_KnowledgeGraphs> <https://example.org/smart-library-ontology#hasStatus> <https://example.org/smart-library-ontology#Available> .
+<https://example.org/smart-library-ontology#EBook_KnowledgeGraphs> <https://example.org/smart-library-ontology#hasTopic> <https://example.org/smart-library-ontology#Topic_KnowledgeGraphs> .
+<https://example.org/smart-library-ontology#Topic_KnowledgeGraphs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/smart-library-ontology#EBook_KnowledgeGraphs> <https://example.org/smart-library-ontology#hasTopic> <https://example.org/smart-library-ontology#Topic_SemanticWeb> .
+<https://example.org/smart-library-ontology#EBook_KnowledgeGraphs> <https://example.org/smart-library-ontology#publishedBy> <https://example.org/smart-library-ontology#Publisher_MITPress> .
+<https://example.org/smart-library-ontology#EBook_KnowledgeGraphs> <https://example.org/smart-library-ontology#accessUrl> "https://example.org/ebooks/knowledge-graphs"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://example.org/smart-library-ontology#EBook_KnowledgeGraphs> <https://example.org/smart-library-ontology#identifier> "EB-5002" .
+<https://example.org/smart-library-ontology#EBook_KnowledgeGraphs> <https://example.org/smart-library-ontology#isbn> "978-0-000-00002-8" .
+<https://example.org/smart-library-ontology#EBook_KnowledgeGraphs> <https://example.org/smart-library-ontology#publicationYear> "2025"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<https://example.org/smart-library-ontology#EBook_KnowledgeGraphs> <https://example.org/smart-library-ontology#title> "Introduction to Knowledge Graphs" .
+# 
+# https://example.org/smart-library-ontology#Interaction_Search_001
+<https://example.org/smart-library-ontology#Interaction_Search_001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/smart-library-ontology#Interaction_Search_001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://example.org/smart-library-ontology#InteractionEvent> .
+<https://example.org/smart-library-ontology#Interaction_Search_001> <https://example.org/smart-library-ontology#interactedWithResource> <https://example.org/smart-library-ontology#Book_OntologyDesign> .
+<https://example.org/smart-library-ontology#Interaction_Search_001> <https://example.org/smart-library-ontology#recordsMember> <https://example.org/smart-library-ontology#Member_Aylin_Demir> .
+<https://example.org/smart-library-ontology#Member_Aylin_Demir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/smart-library-ontology#Interaction_Search_001> <https://example.org/smart-library-ontology#identifier> "INT-002" .
+<https://example.org/smart-library-ontology#Interaction_Search_001> <https://example.org/smart-library-ontology#interactionType> "search" .
+<https://example.org/smart-library-ontology#Interaction_Search_001> <https://example.org/smart-library-ontology#name> "Semantic web topic search" .
+# 
+# https://example.org/smart-library-ontology#Interaction_View_001
+<https://example.org/smart-library-ontology#Interaction_View_001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/smart-library-ontology#Interaction_View_001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://example.org/smart-library-ontology#InteractionEvent> .
+<https://example.org/smart-library-ontology#Interaction_View_001> <https://example.org/smart-library-ontology#interactedWithResource> <https://example.org/smart-library-ontology#EBook_KnowledgeGraphs> .
+<https://example.org/smart-library-ontology#Interaction_View_001> <https://example.org/smart-library-ontology#recordsMember> <https://example.org/smart-library-ontology#Member_Aylin_Demir> .
+<https://example.org/smart-library-ontology#Interaction_View_001> <https://example.org/smart-library-ontology#identifier> "INT-001" .
+<https://example.org/smart-library-ontology#Interaction_View_001> <https://example.org/smart-library-ontology#interactionType> "view" .
+<https://example.org/smart-library-ontology#Interaction_View_001> <https://example.org/smart-library-ontology#name> "E-book detail view" .
+# 
+# https://example.org/smart-library-ontology#Librarian_Emre_Kaya
+<https://example.org/smart-library-ontology#Librarian_Emre_Kaya> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/smart-library-ontology#Librarian_Emre_Kaya> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://example.org/smart-library-ontology#Librarian> .
+<https://example.org/smart-library-ontology#Librarian_Emre_Kaya> <https://example.org/smart-library-ontology#email> "emre.kaya@example.edu" .
+<https://example.org/smart-library-ontology#Librarian_Emre_Kaya> <https://example.org/smart-library-ontology#identifier> "L-2001" .
+<https://example.org/smart-library-ontology#Librarian_Emre_Kaya> <https://example.org/smart-library-ontology#name> "Emre Kaya" .
+# 
+# https://example.org/smart-library-ontology#Loan_001
+<https://example.org/smart-library-ontology#Loan_001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/smart-library-ontology#Loan_001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://example.org/smart-library-ontology#Loan> .
+<https://example.org/smart-library-ontology#Loan_001> <https://example.org/smart-library-ontology#loanedResource> <https://example.org/smart-library-ontology#Book_OntologyDesign> .
+<https://example.org/smart-library-ontology#Loan_001> <https://example.org/smart-library-ontology#loanedTo> <https://example.org/smart-library-ontology#Member_Aylin_Demir> .
+<https://example.org/smart-library-ontology#Loan_001> <https://example.org/smart-library-ontology#processedBy> <https://example.org/smart-library-ontology#Librarian_Emre_Kaya> .
+<https://example.org/smart-library-ontology#Loan_001> <https://example.org/smart-library-ontology#dueDate> "2026-05-04"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://example.org/smart-library-ontology#Loan_001> <https://example.org/smart-library-ontology#identifier> "LN-0001" .
+<https://example.org/smart-library-ontology#Loan_001> <https://example.org/smart-library-ontology#startDate> "2026-04-20"^^<http://www.w3.org/2001/XMLSchema#date> .
+# 
+# https://example.org/smart-library-ontology#Member_Aylin_Demir
+<https://example.org/smart-library-ontology#Member_Aylin_Demir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://example.org/smart-library-ontology#Member> .
+<https://example.org/smart-library-ontology#Member_Aylin_Demir> <https://example.org/smart-library-ontology#hasProfile> <https://example.org/smart-library-ontology#Profile_Aylin_Demir> .
+<https://example.org/smart-library-ontology#Profile_Aylin_Demir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/smart-library-ontology#Member_Aylin_Demir> <https://example.org/smart-library-ontology#email> "aylin.demir@example.edu" .
+<https://example.org/smart-library-ontology#Member_Aylin_Demir> <https://example.org/smart-library-ontology#identifier> "M-1001" .
+<https://example.org/smart-library-ontology#Member_Aylin_Demir> <https://example.org/smart-library-ontology#name> "Aylin Demir" .
+# 
+# https://example.org/smart-library-ontology#MetadataRecord_B5001
+<https://example.org/smart-library-ontology#MetadataRecord_B5001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://example.org/smart-library-ontology#MetadataRecord> .
+<https://example.org/smart-library-ontology#MetadataRecord_B5001> <https://example.org/smart-library-ontology#describesResource> <https://example.org/smart-library-ontology#Book_OntologyDesign> .
+<https://example.org/smart-library-ontology#MetadataRecord_B5001> <https://example.org/smart-library-ontology#generatedInBatch> <https://example.org/smart-library-ontology#AcquisitionBatch_2026_05_Phase2> .
+<https://example.org/smart-library-ontology#MetadataRecord_B5001> <https://example.org/smart-library-ontology#retrievedFromSource> <https://example.org/smart-library-ontology#DataSource_DepartmentSeedSheet> .
+<https://example.org/smart-library-ontology#MetadataRecord_B5001> <https://example.org/smart-library-ontology#retrievedFromSource> <https://example.org/smart-library-ontology#DataSource_OpenLibraryAPI> .
+<https://example.org/smart-library-ontology#MetadataRecord_B5001> <https://example.org/smart-library-ontology#confidenceScore> "0.95"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://example.org/smart-library-ontology#MetadataRecord_B5001> <https://example.org/smart-library-ontology#identifier> "MR-5001" .
+<https://example.org/smart-library-ontology#MetadataRecord_B5001> <https://example.org/smart-library-ontology#name> "Metadata record for Ontology Design Principles" .
+<https://example.org/smart-library-ontology#MetadataRecord_B5001> <https://example.org/smart-library-ontology#retrievedAt> "2026-05-10T10:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# https://example.org/smart-library-ontology#MetadataRecord_EB5002
+<https://example.org/smart-library-ontology#MetadataRecord_EB5002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://example.org/smart-library-ontology#MetadataRecord> .
+<https://example.org/smart-library-ontology#MetadataRecord_EB5002> <https://example.org/smart-library-ontology#describesResource> <https://example.org/smart-library-ontology#EBook_KnowledgeGraphs> .
+<https://example.org/smart-library-ontology#MetadataRecord_EB5002> <https://example.org/smart-library-ontology#generatedInBatch> <https://example.org/smart-library-ontology#AcquisitionBatch_2026_05_Phase2> .
+<https://example.org/smart-library-ontology#MetadataRecord_EB5002> <https://example.org/smart-library-ontology#retrievedFromSource> <https://example.org/smart-library-ontology#DataSource_DepartmentSeedSheet> .
+<https://example.org/smart-library-ontology#MetadataRecord_EB5002> <https://example.org/smart-library-ontology#retrievedFromSource> <https://example.org/smart-library-ontology#DataSource_GoogleBooksAPI> .
+<https://example.org/smart-library-ontology#MetadataRecord_EB5002> <https://example.org/smart-library-ontology#confidenceScore> "0.92"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://example.org/smart-library-ontology#MetadataRecord_EB5002> <https://example.org/smart-library-ontology#identifier> "MR-5002" .
+<https://example.org/smart-library-ontology#MetadataRecord_EB5002> <https://example.org/smart-library-ontology#name> "Metadata record for Introduction to Knowledge Graphs" .
+<https://example.org/smart-library-ontology#MetadataRecord_EB5002> <https://example.org/smart-library-ontology#retrievedAt> "2026-05-10T10:15:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# https://example.org/smart-library-ontology#OnLoan
+<https://example.org/smart-library-ontology#OnLoan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://example.org/smart-library-ontology#ResourceStatus> .
+<https://example.org/smart-library-ontology#OnLoan> <https://example.org/smart-library-ontology#name> "On loan" .
+<https://example.org/smart-library-ontology#OnLoan> <http://www.w3.org/2000/01/rdf-schema#label> "On Loan"@en .
+# 
+# https://example.org/smart-library-ontology#Profile_Aylin_Demir
+<https://example.org/smart-library-ontology#Profile_Aylin_Demir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://example.org/smart-library-ontology#MemberProfile> .
+<https://example.org/smart-library-ontology#Profile_Aylin_Demir> <https://example.org/smart-library-ontology#hasInterestTopic> <https://example.org/smart-library-ontology#Topic_KnowledgeGraphs> .
+<https://example.org/smart-library-ontology#Profile_Aylin_Demir> <https://example.org/smart-library-ontology#hasInterestTopic> <https://example.org/smart-library-ontology#Topic_SemanticWeb> .
+<https://example.org/smart-library-ontology#Profile_Aylin_Demir> <https://example.org/smart-library-ontology#profileOf> <https://example.org/smart-library-ontology#Member_Aylin_Demir> .
+<https://example.org/smart-library-ontology#Profile_Aylin_Demir> <https://example.org/smart-library-ontology#identifier> "PRO-1001" .
+<https://example.org/smart-library-ontology#Profile_Aylin_Demir> <https://example.org/smart-library-ontology#name> "Aylin Demir semantic interest profile" .
+# 
+# https://example.org/smart-library-ontology#Publisher_MITPress
+<https://example.org/smart-library-ontology#Publisher_MITPress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://example.org/smart-library-ontology#Publisher> .
+<https://example.org/smart-library-ontology#Publisher_MITPress> <https://example.org/smart-library-ontology#identifier> "P-4001" .
+<https://example.org/smart-library-ontology#Publisher_MITPress> <https://example.org/smart-library-ontology#name> "MIT Press" .
+# 
+# https://example.org/smart-library-ontology#Recommendation_001
+<https://example.org/smart-library-ontology#Recommendation_001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/smart-library-ontology#Recommendation_001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://example.org/smart-library-ontology#Recommendation> .
+<https://example.org/smart-library-ontology#Recommendation_001> <https://example.org/smart-library-ontology#recommendedFor> <https://example.org/smart-library-ontology#Member_Aylin_Demir> .
+<https://example.org/smart-library-ontology#Recommendation_001> <https://example.org/smart-library-ontology#recommendedResource> <https://example.org/smart-library-ontology#EBook_KnowledgeGraphs> .
+<https://example.org/smart-library-ontology#Recommendation_001> <https://example.org/smart-library-ontology#identifier> "REC-0001" .
+<https://example.org/smart-library-ontology#Recommendation_001> <https://example.org/smart-library-ontology#name> "Knowledge graph recommendation for Aylin" .
+<https://example.org/smart-library-ontology#Recommendation_001> <https://example.org/smart-library-ontology#profileScore> "0.93"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# https://example.org/smart-library-ontology#Reservation_001
+<https://example.org/smart-library-ontology#Reservation_001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/smart-library-ontology#Reservation_001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://example.org/smart-library-ontology#Reservation> .
+<https://example.org/smart-library-ontology#Reservation_001> <https://example.org/smart-library-ontology#processedBy> <https://example.org/smart-library-ontology#Librarian_Emre_Kaya> .
+<https://example.org/smart-library-ontology#Reservation_001> <https://example.org/smart-library-ontology#reservedBy> <https://example.org/smart-library-ontology#Member_Aylin_Demir> .
+<https://example.org/smart-library-ontology#Reservation_001> <https://example.org/smart-library-ontology#reservedResource> <https://example.org/smart-library-ontology#EBook_KnowledgeGraphs> .
+<https://example.org/smart-library-ontology#Reservation_001> <https://example.org/smart-library-ontology#identifier> "RS-0001" .
+<https://example.org/smart-library-ontology#Reservation_001> <https://example.org/smart-library-ontology#startDate> "2026-04-25"^^<http://www.w3.org/2001/XMLSchema#date> .
+# 
+# https://example.org/smart-library-ontology#Reserved
+<https://example.org/smart-library-ontology#Reserved> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/smart-library-ontology#Reserved> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://example.org/smart-library-ontology#ResourceStatus> .
+<https://example.org/smart-library-ontology#Reserved> <https://example.org/smart-library-ontology#name> "Reserved" .
+<https://example.org/smart-library-ontology#Reserved> <http://www.w3.org/2000/01/rdf-schema#label> "Reserved"@en .
+# 
+# https://example.org/smart-library-ontology#Topic_KnowledgeGraphs
+<https://example.org/smart-library-ontology#Topic_KnowledgeGraphs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://example.org/smart-library-ontology#Topic> .
+<https://example.org/smart-library-ontology#Topic_KnowledgeGraphs> <https://example.org/smart-library-ontology#identifier> "TOP-002" .
+<https://example.org/smart-library-ontology#Topic_KnowledgeGraphs> <https://example.org/smart-library-ontology#name> "Knowledge Graphs" .
+# 
+# https://example.org/smart-library-ontology#Topic_OntologyEngineering
+<https://example.org/smart-library-ontology#Topic_OntologyEngineering> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://example.org/smart-library-ontology#Topic> .
+<https://example.org/smart-library-ontology#Topic_OntologyEngineering> <https://example.org/smart-library-ontology#identifier> "TOP-001" .
+<https://example.org/smart-library-ontology#Topic_OntologyEngineering> <https://example.org/smart-library-ontology#name> "Ontology Engineering" .
+# 
+# https://example.org/smart-library-ontology#Topic_SemanticWeb
+<https://example.org/smart-library-ontology#Topic_SemanticWeb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://example.org/smart-library-ontology#Topic> .
+<https://example.org/smart-library-ontology#Topic_SemanticWeb> <https://example.org/smart-library-ontology#identifier> "TOP-003" .
+<https://example.org/smart-library-ontology#Topic_SemanticWeb> <https://example.org/smart-library-ontology#name> "Semantic Web" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

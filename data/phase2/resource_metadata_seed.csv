@@ -1,0 +1,3 @@
+resource_id,title,resource_type,isbn,publication_year,publisher,status,branch,source_name,source_url,topic_1,topic_2,access_url
+B-5001,Ontology Design Principles,PrintedBook,978-0-000-00001-1,2024,MIT Press,OnLoan,Central Library Branch,Open Library API,https://openlibrary.org/developers/api,Ontology Engineering,Semantic Web,
+EB-5002,Introduction to Knowledge Graphs,EBook,978-0-000-00002-8,2025,MIT Press,Available,,Google Books API,https://developers.google.com/books,Knowledge Graphs,Semantic Web,https://example.org/ebooks/knowledge-graphs

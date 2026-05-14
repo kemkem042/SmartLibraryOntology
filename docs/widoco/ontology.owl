@@ -1,0 +1,1325 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://example.org/smart-library-ontology#"
+     xml:base="https://example.org/smart-library-ontology"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:smart-library-ontology="https://example.org/smart-library-ontology#">
+    <owl:Ontology rdf:about="https://example.org/smart-library-ontology">
+        <dc:creator xml:lang="en">210316051 Kemal Mert Ceyhan; 190316073 Ahmet Burak Guvercin; 210316078 Khaled ALISMAIL</dc:creator>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-27</terms:created>
+        <terms:description xml:lang="en">Version 0.2.0 of the Smart Library Loan Ontology. This phase extends the original circulation model with data acquisition provenance, topical enrichment, member profile signals, and recommendation-ready analytics for a smart library environment.</terms:description>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-14</terms:modified>
+        <owl:versionInfo xml:lang="en">0.2.0 - Phase 2 extension with acquisition and personalization modules</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#gYear -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#gYear"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/subject -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/subject"/>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#describedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://example.org/smart-library-ontology#describedBy">
+        <owl:inverseOf rdf:resource="https://example.org/smart-library-ontology#describesResource"/>
+        <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#LibraryResource"/>
+        <rdfs:range rdf:resource="https://example.org/smart-library-ontology#MetadataRecord"/>
+        <rdfs:comment xml:lang="en">Links a resource to the metadata record from which it was populated or curated.</rdfs:comment>
+        <rdfs:label xml:lang="en">described by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#describesResource -->
+
+
+    <owl:ObjectProperty rdf:about="https://example.org/smart-library-ontology#describesResource">
+        <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#MetadataRecord"/>
+        <rdfs:range rdf:resource="https://example.org/smart-library-ontology#LibraryResource"/>
+        <rdfs:comment xml:lang="en">Links a metadata record to the resource it describes.</rdfs:comment>
+        <rdfs:label xml:lang="en">describes resource</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#generatedInBatch -->
+
+
+    <owl:ObjectProperty rdf:about="https://example.org/smart-library-ontology#generatedInBatch">
+        <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#MetadataRecord"/>
+        <rdfs:range rdf:resource="https://example.org/smart-library-ontology#AcquisitionBatch"/>
+        <rdfs:comment xml:lang="en">Links a metadata record to the data acquisition batch that produced or refreshed it.</rdfs:comment>
+        <rdfs:label xml:lang="en">generated in batch</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#hasInterestTopic -->
+
+
+    <owl:ObjectProperty rdf:about="https://example.org/smart-library-ontology#hasInterestTopic">
+        <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#MemberProfile"/>
+        <rdfs:range rdf:resource="https://example.org/smart-library-ontology#Topic"/>
+        <rdfs:comment xml:lang="en">Links a member profile to one or more topics representing inferred or observed interests.</rdfs:comment>
+        <rdfs:label xml:lang="en">has interest topic</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#hasLoan -->
+
+
+    <owl:ObjectProperty rdf:about="https://example.org/smart-library-ontology#hasLoan">
+        <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#Member"/>
+        <rdfs:range rdf:resource="https://example.org/smart-library-ontology#Loan"/>
+        <rdfs:comment xml:lang="en">Links a member to a loan transaction.</rdfs:comment>
+        <rdfs:label xml:lang="en">has loan</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#hasProfile -->
+
+
+    <owl:ObjectProperty rdf:about="https://example.org/smart-library-ontology#hasProfile">
+        <owl:inverseOf rdf:resource="https://example.org/smart-library-ontology#profileOf"/>
+        <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#Member"/>
+        <rdfs:range rdf:resource="https://example.org/smart-library-ontology#MemberProfile"/>
+        <rdfs:comment xml:lang="en">Links a member to a semantic interest profile.</rdfs:comment>
+        <rdfs:label xml:lang="en">has profile</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#hasStatus -->
+
+
+    <owl:ObjectProperty rdf:about="https://example.org/smart-library-ontology#hasStatus">
+        <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#LibraryResource"/>
+        <rdfs:range rdf:resource="https://example.org/smart-library-ontology#ResourceStatus"/>
+        <rdfs:comment xml:lang="en">Links a resource to its current availability status.</rdfs:comment>
+        <rdfs:label xml:lang="en">has status</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#hasTopic -->
+
+
+    <owl:ObjectProperty rdf:about="https://example.org/smart-library-ontology#hasTopic">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/subject"/>
+        <owl:inverseOf rdf:resource="https://example.org/smart-library-ontology#topicOf"/>
+        <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#LibraryResource"/>
+        <rdfs:range rdf:resource="https://example.org/smart-library-ontology#Topic"/>
+        <rdfs:comment xml:lang="en">Links a resource to a semantic topic used for retrieval and recommendation.</rdfs:comment>
+        <rdfs:label xml:lang="en">has topic</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#interactedWithResource -->
+
+
+    <owl:ObjectProperty rdf:about="https://example.org/smart-library-ontology#interactedWithResource">
+        <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#InteractionEvent"/>
+        <rdfs:range rdf:resource="https://example.org/smart-library-ontology#LibraryResource"/>
+        <rdfs:comment xml:lang="en">Links an interaction event to the resource that was viewed or searched.</rdfs:comment>
+        <rdfs:label xml:lang="en">interacted with resource</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#loanedResource -->
+
+
+    <owl:ObjectProperty rdf:about="https://example.org/smart-library-ontology#loanedResource">
+        <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#Loan"/>
+        <rdfs:range rdf:resource="https://example.org/smart-library-ontology#LibraryResource"/>
+        <rdfs:comment xml:lang="en">Links a loan transaction to the borrowed resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">loaned resource</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#loanedTo -->
+
+
+    <owl:ObjectProperty rdf:about="https://example.org/smart-library-ontology#loanedTo">
+        <owl:inverseOf rdf:resource="https://example.org/smart-library-ontology#hasLoan"/>
+        <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#Loan"/>
+        <rdfs:range rdf:resource="https://example.org/smart-library-ontology#Member"/>
+        <rdfs:comment xml:lang="en">Links a loan transaction to the member who borrowed the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">loaned to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#locatedAt -->
+
+
+    <owl:ObjectProperty rdf:about="https://example.org/smart-library-ontology#locatedAt">
+        <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#LibraryResource"/>
+        <rdfs:range rdf:resource="https://example.org/smart-library-ontology#LibraryBranch"/>
+        <rdfs:comment xml:lang="en">Links a physical resource to the branch where it is stored.</rdfs:comment>
+        <rdfs:label xml:lang="en">located at</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#processedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://example.org/smart-library-ontology#processedBy">
+        <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#CirculationTransaction"/>
+        <rdfs:range rdf:resource="https://example.org/smart-library-ontology#Librarian"/>
+        <rdfs:comment xml:lang="en">Links a transaction to the librarian responsible for processing it.</rdfs:comment>
+        <rdfs:label xml:lang="en">processed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#profileOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://example.org/smart-library-ontology#profileOf">
+        <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#MemberProfile"/>
+        <rdfs:range rdf:resource="https://example.org/smart-library-ontology#Member"/>
+        <rdfs:label xml:lang="en">profile of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#publishedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://example.org/smart-library-ontology#publishedBy">
+        <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#LibraryResource"/>
+        <rdfs:range rdf:resource="https://example.org/smart-library-ontology#Publisher"/>
+        <rdfs:comment xml:lang="en">Links a resource to its publisher.</rdfs:comment>
+        <rdfs:label xml:lang="en">published by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#recommendedFor -->
+
+
+    <owl:ObjectProperty rdf:about="https://example.org/smart-library-ontology#recommendedFor">
+        <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#Recommendation"/>
+        <rdfs:range rdf:resource="https://example.org/smart-library-ontology#Member"/>
+        <rdfs:comment xml:lang="en">Links a recommendation candidate to the target member.</rdfs:comment>
+        <rdfs:label xml:lang="en">recommended for</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#recommendedResource -->
+
+
+    <owl:ObjectProperty rdf:about="https://example.org/smart-library-ontology#recommendedResource">
+        <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#Recommendation"/>
+        <rdfs:range rdf:resource="https://example.org/smart-library-ontology#LibraryResource"/>
+        <rdfs:comment xml:lang="en">Links a recommendation candidate to the resource proposed for the member.</rdfs:comment>
+        <rdfs:label xml:lang="en">recommended resource</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#recordsMember -->
+
+
+    <owl:ObjectProperty rdf:about="https://example.org/smart-library-ontology#recordsMember">
+        <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#InteractionEvent"/>
+        <rdfs:range rdf:resource="https://example.org/smart-library-ontology#Member"/>
+        <rdfs:comment xml:lang="en">Links an interaction event to the member who performed it.</rdfs:comment>
+        <rdfs:label xml:lang="en">records member</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#reservedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://example.org/smart-library-ontology#reservedBy">
+        <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#Reservation"/>
+        <rdfs:range rdf:resource="https://example.org/smart-library-ontology#Member"/>
+        <rdfs:comment xml:lang="en">Links a reservation to the member who requested a resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">reserved by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#reservedResource -->
+
+
+    <owl:ObjectProperty rdf:about="https://example.org/smart-library-ontology#reservedResource">
+        <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#Reservation"/>
+        <rdfs:range rdf:resource="https://example.org/smart-library-ontology#LibraryResource"/>
+        <rdfs:comment xml:lang="en">Links a reservation to the requested resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">reserved resource</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#retrievedFromSource -->
+
+
+    <owl:ObjectProperty rdf:about="https://example.org/smart-library-ontology#retrievedFromSource">
+        <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#MetadataRecord"/>
+        <rdfs:range rdf:resource="https://example.org/smart-library-ontology#DataSource"/>
+        <rdfs:comment xml:lang="en">Links a metadata record to the source from which the data were collected.</rdfs:comment>
+        <rdfs:label xml:lang="en">retrieved from source</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#topicOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://example.org/smart-library-ontology#topicOf">
+        <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#Topic"/>
+        <rdfs:range rdf:resource="https://example.org/smart-library-ontology#LibraryResource"/>
+        <rdfs:label xml:lang="en">topic of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#writtenBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://example.org/smart-library-ontology#writtenBy">
+        <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#LibraryResource"/>
+        <rdfs:range rdf:resource="https://example.org/smart-library-ontology#Author"/>
+        <rdfs:comment xml:lang="en">Links a resource to its author.</rdfs:comment>
+        <rdfs:label xml:lang="en">written by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#accessUrl -->
+
+
+    <owl:DatatypeProperty rdf:about="https://example.org/smart-library-ontology#accessUrl">
+        <rdfs:subPropertyOf rdf:resource="https://schema.org/url"/>
+        <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#EBook"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:label xml:lang="en">access URL</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#branchAddress -->
+
+
+    <owl:DatatypeProperty rdf:about="https://example.org/smart-library-ontology#branchAddress">
+        <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#LibraryBranch"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">branch address</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#confidenceScore -->
+
+
+    <owl:DatatypeProperty rdf:about="https://example.org/smart-library-ontology#confidenceScore">
+        <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#MetadataRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="en">confidence score</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#dueDate -->
+
+
+    <owl:DatatypeProperty rdf:about="https://example.org/smart-library-ontology#dueDate">
+        <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#Loan"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:label xml:lang="en">due date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#email -->
+
+
+    <owl:DatatypeProperty rdf:about="https://example.org/smart-library-ontology#email">
+        <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">email</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#identifier -->
+
+
+    <owl:DatatypeProperty rdf:about="https://example.org/smart-library-ontology#identifier">
+        <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#LibraryEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">identifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#interactionType -->
+
+
+    <owl:DatatypeProperty rdf:about="https://example.org/smart-library-ontology#interactionType">
+        <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#InteractionEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">interaction type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#isbn -->
+
+
+    <owl:DatatypeProperty rdf:about="https://example.org/smart-library-ontology#isbn">
+        <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#Book"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">ISBN</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#name -->
+
+
+    <owl:DatatypeProperty rdf:about="https://example.org/smart-library-ontology#name">
+        <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#LibraryEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#profileScore -->
+
+
+    <owl:DatatypeProperty rdf:about="https://example.org/smart-library-ontology#profileScore">
+        <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#Recommendation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="en">profile score</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#publicationYear -->
+
+
+    <owl:DatatypeProperty rdf:about="https://example.org/smart-library-ontology#publicationYear">
+        <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#LibraryResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
+        <rdfs:label xml:lang="en">publication year</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#retrievedAt -->
+
+
+    <owl:DatatypeProperty rdf:about="https://example.org/smart-library-ontology#retrievedAt">
+        <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#MetadataRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">retrieved at</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#returnDate -->
+
+
+    <owl:DatatypeProperty rdf:about="https://example.org/smart-library-ontology#returnDate">
+        <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#Loan"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:label xml:lang="en">return date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#sourceUrl -->
+
+
+    <owl:DatatypeProperty rdf:about="https://example.org/smart-library-ontology#sourceUrl">
+        <rdfs:subPropertyOf rdf:resource="https://schema.org/url"/>
+        <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#DataSource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:label xml:lang="en">source URL</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#startDate -->
+
+
+    <owl:DatatypeProperty rdf:about="https://example.org/smart-library-ontology#startDate">
+        <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#CirculationTransaction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:label xml:lang="en">start date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#title -->
+
+
+    <owl:DatatypeProperty rdf:about="https://example.org/smart-library-ontology#title">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+        <rdfs:domain rdf:resource="https://example.org/smart-library-ontology#LibraryResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">title</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/url -->
+
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/url"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://example.org/smart-library-ontology#AcquisitionBatch -->
+
+
+    <owl:Class rdf:about="https://example.org/smart-library-ontology#AcquisitionBatch">
+        <rdfs:subClassOf rdf:resource="https://example.org/smart-library-ontology#LibraryEntity"/>
+        <rdfs:comment xml:lang="en">A bounded data collection and preprocessing run used to populate ontology instances.</rdfs:comment>
+        <rdfs:label xml:lang="en">Acquisition Batch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#Author -->
+
+
+    <owl:Class rdf:about="https://example.org/smart-library-ontology#Author">
+        <rdfs:subClassOf rdf:resource="https://example.org/smart-library-ontology#Creator"/>
+        <rdfs:comment xml:lang="en">A creator who writes a book or article.</rdfs:comment>
+        <rdfs:label xml:lang="en">Author</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#Book -->
+
+
+    <owl:Class rdf:about="https://example.org/smart-library-ontology#Book">
+        <rdfs:subClassOf rdf:resource="https://example.org/smart-library-ontology#LibraryResource"/>
+        <rdfs:subClassOf rdf:resource="https://schema.org/Book"/>
+        <rdfs:label xml:lang="en">Book</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#CirculationTransaction -->
+
+
+    <owl:Class rdf:about="https://example.org/smart-library-ontology#CirculationTransaction">
+        <rdfs:subClassOf rdf:resource="https://example.org/smart-library-ontology#LibraryEntity"/>
+        <rdfs:comment xml:lang="en">An event-like entity representing a circulation action.</rdfs:comment>
+        <rdfs:label xml:lang="en">Circulation Transaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#Creator -->
+
+
+    <owl:Class rdf:about="https://example.org/smart-library-ontology#Creator">
+        <rdfs:subClassOf rdf:resource="https://example.org/smart-library-ontology#Person"/>
+        <rdfs:comment xml:lang="en">A person who contributes to the creation of a library resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">Creator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#DataSource -->
+
+
+    <owl:Class rdf:about="https://example.org/smart-library-ontology#DataSource">
+        <rdfs:subClassOf rdf:resource="https://example.org/smart-library-ontology#LibraryEntity"/>
+        <rdfs:comment xml:lang="en">A source used during data acquisition, such as an API, catalog export, spreadsheet, or document collection.</rdfs:comment>
+        <rdfs:label xml:lang="en">Data Source</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#EBook -->
+
+
+    <owl:Class rdf:about="https://example.org/smart-library-ontology#EBook">
+        <rdfs:subClassOf rdf:resource="https://example.org/smart-library-ontology#Book"/>
+        <rdfs:subClassOf rdf:resource="https://schema.org/Book"/>
+        <owl:disjointWith rdf:resource="https://example.org/smart-library-ontology#PrintedBook"/>
+        <rdfs:comment xml:lang="en">A digital book that can be accessed electronically.</rdfs:comment>
+        <rdfs:label xml:lang="en">E-Book</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#InteractionEvent -->
+
+
+    <owl:Class rdf:about="https://example.org/smart-library-ontology#InteractionEvent">
+        <rdfs:subClassOf rdf:resource="https://example.org/smart-library-ontology#LibraryEntity"/>
+        <rdfs:comment xml:lang="en">An observed user interaction such as viewing, searching, bookmarking, or clicking a resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">Interaction Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#JournalArticle -->
+
+
+    <owl:Class rdf:about="https://example.org/smart-library-ontology#JournalArticle">
+        <rdfs:subClassOf rdf:resource="https://example.org/smart-library-ontology#LibraryResource"/>
+        <rdfs:label xml:lang="en">Journal Article</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#Librarian -->
+
+
+    <owl:Class rdf:about="https://example.org/smart-library-ontology#Librarian">
+        <rdfs:subClassOf rdf:resource="https://example.org/smart-library-ontology#Person"/>
+        <owl:disjointWith rdf:resource="https://example.org/smart-library-ontology#Member"/>
+        <rdfs:comment xml:lang="en">A library staff member who manages loans, returns, and resources.</rdfs:comment>
+        <rdfs:label xml:lang="en">Librarian</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#LibraryBranch -->
+
+
+    <owl:Class rdf:about="https://example.org/smart-library-ontology#LibraryBranch">
+        <rdfs:subClassOf rdf:resource="https://example.org/smart-library-ontology#Organization"/>
+        <rdfs:comment xml:lang="en">A physical branch that stores library resources and serves members.</rdfs:comment>
+        <rdfs:label xml:lang="en">Library Branch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#LibraryEntity -->
+
+
+    <owl:Class rdf:about="https://example.org/smart-library-ontology#LibraryEntity">
+        <rdfs:comment xml:lang="en">Top-level class for entities represented in the smart library domain.</rdfs:comment>
+        <rdfs:label xml:lang="en">Library Entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#LibraryResource -->
+
+
+    <owl:Class rdf:about="https://example.org/smart-library-ontology#LibraryResource">
+        <rdfs:subClassOf rdf:resource="https://example.org/smart-library-ontology#LibraryEntity"/>
+        <rdfs:subClassOf rdf:resource="https://schema.org/CreativeWork"/>
+        <rdfs:comment xml:lang="en">A resource that can be catalogued, borrowed, reserved, or recommended.</rdfs:comment>
+        <rdfs:label xml:lang="en">Library Resource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#Loan -->
+
+
+    <owl:Class rdf:about="https://example.org/smart-library-ontology#Loan">
+        <rdfs:subClassOf rdf:resource="https://example.org/smart-library-ontology#CirculationTransaction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/smart-library-ontology#loanedResource"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://example.org/smart-library-ontology#LibraryResource"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/smart-library-ontology#loanedTo"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://example.org/smart-library-ontology#Member"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/smart-library-ontology#processedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://example.org/smart-library-ontology#Librarian"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A transaction in which a member borrows a resource for a defined period.</rdfs:comment>
+        <rdfs:label xml:lang="en">Loan</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#Member -->
+
+
+    <owl:Class rdf:about="https://example.org/smart-library-ontology#Member">
+        <rdfs:subClassOf rdf:resource="https://example.org/smart-library-ontology#Person"/>
+        <rdfs:comment xml:lang="en">A registered user who can borrow, reserve, and receive personalized recommendations for library resources.</rdfs:comment>
+        <rdfs:label xml:lang="en">Member</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#MemberProfile -->
+
+
+    <owl:Class rdf:about="https://example.org/smart-library-ontology#MemberProfile">
+        <rdfs:subClassOf rdf:resource="https://example.org/smart-library-ontology#LibraryEntity"/>
+        <rdfs:comment xml:lang="en">A lightweight semantic profile that stores a member&apos;s interest topics for personalization and recommendation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Member Profile</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#MetadataRecord -->
+
+
+    <owl:Class rdf:about="https://example.org/smart-library-ontology#MetadataRecord">
+        <rdfs:subClassOf rdf:resource="https://example.org/smart-library-ontology#LibraryEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/smart-library-ontology#retrievedFromSource"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://example.org/smart-library-ontology#DataSource"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/smart-library-ontology#describesResource"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://example.org/smart-library-ontology#LibraryResource"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A structured metadata record that documents where and when a resource description was acquired.</rdfs:comment>
+        <rdfs:label xml:lang="en">Metadata Record</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#Organization -->
+
+
+    <owl:Class rdf:about="https://example.org/smart-library-ontology#Organization">
+        <rdfs:subClassOf rdf:resource="https://example.org/smart-library-ontology#LibraryEntity"/>
+        <rdfs:label xml:lang="en">Organization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#Person -->
+
+
+    <owl:Class rdf:about="https://example.org/smart-library-ontology#Person">
+        <rdfs:subClassOf rdf:resource="https://example.org/smart-library-ontology#LibraryEntity"/>
+        <rdfs:comment xml:lang="en">A human actor related to the library system.</rdfs:comment>
+        <rdfs:label xml:lang="en">Person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#PrintedBook -->
+
+
+    <owl:Class rdf:about="https://example.org/smart-library-ontology#PrintedBook">
+        <rdfs:subClassOf rdf:resource="https://example.org/smart-library-ontology#Book"/>
+        <rdfs:comment xml:lang="en">A physical book stored at a branch.</rdfs:comment>
+        <rdfs:label xml:lang="en">Printed Book</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#Publisher -->
+
+
+    <owl:Class rdf:about="https://example.org/smart-library-ontology#Publisher">
+        <rdfs:subClassOf rdf:resource="https://example.org/smart-library-ontology#Organization"/>
+        <rdfs:subClassOf rdf:resource="https://schema.org/Organization"/>
+        <rdfs:comment xml:lang="en">An organization that publishes a library resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">Publisher</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#Recommendation -->
+
+
+    <owl:Class rdf:about="https://example.org/smart-library-ontology#Recommendation">
+        <rdfs:subClassOf rdf:resource="https://example.org/smart-library-ontology#LibraryEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/smart-library-ontology#recommendedFor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://example.org/smart-library-ontology#Member"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/smart-library-ontology#recommendedResource"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://example.org/smart-library-ontology#LibraryResource"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A recommendation candidate connecting a member to a resource using topical or behavioral evidence.</rdfs:comment>
+        <rdfs:label xml:lang="en">Recommendation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#Reservation -->
+
+
+    <owl:Class rdf:about="https://example.org/smart-library-ontology#Reservation">
+        <rdfs:subClassOf rdf:resource="https://example.org/smart-library-ontology#CirculationTransaction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/smart-library-ontology#processedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://example.org/smart-library-ontology#Librarian"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/smart-library-ontology#reservedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://example.org/smart-library-ontology#Member"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/smart-library-ontology#reservedResource"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://example.org/smart-library-ontology#LibraryResource"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A transaction in which a member requests a resource before borrowing it.</rdfs:comment>
+        <rdfs:label xml:lang="en">Reservation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#ResourceStatus -->
+
+
+    <owl:Class rdf:about="https://example.org/smart-library-ontology#ResourceStatus">
+        <rdfs:subClassOf rdf:resource="https://example.org/smart-library-ontology#LibraryEntity"/>
+        <rdfs:comment xml:lang="en">Controlled status values for library resources.</rdfs:comment>
+        <rdfs:label xml:lang="en">Resource Status</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#Topic -->
+
+
+    <owl:Class rdf:about="https://example.org/smart-library-ontology#Topic">
+        <rdfs:subClassOf rdf:resource="https://example.org/smart-library-ontology#LibraryEntity"/>
+        <rdfs:comment xml:lang="en">A semantic subject or keyword used to connect resources, user interests, and recommendations.</rdfs:comment>
+        <rdfs:label xml:lang="en">Topic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/Book -->
+
+
+    <owl:Class rdf:about="https://schema.org/Book"/>
+    
+
+
+    <!-- https://schema.org/CreativeWork -->
+
+
+    <owl:Class rdf:about="https://schema.org/CreativeWork"/>
+    
+
+
+    <!-- https://schema.org/Organization -->
+
+
+    <owl:Class rdf:about="https://schema.org/Organization"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://example.org/smart-library-ontology -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/smart-library-ontology">
+        <dc:title xml:lang="en">Smart Library Loan Ontology</dc:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#AcquisitionBatch_2026_05_Phase2 -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/smart-library-ontology#AcquisitionBatch_2026_05_Phase2">
+        <rdf:type rdf:resource="https://example.org/smart-library-ontology#AcquisitionBatch"/>
+        <identifier>BATCH-2026-05-P2</identifier>
+        <name>Phase 2 metadata integration batch</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#Author_Tom_Gruber -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/smart-library-ontology#Author_Tom_Gruber">
+        <rdf:type rdf:resource="https://example.org/smart-library-ontology#Author"/>
+        <identifier>A-3001</identifier>
+        <name>Tom Gruber</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#Available -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/smart-library-ontology#Available">
+        <rdf:type rdf:resource="https://example.org/smart-library-ontology#ResourceStatus"/>
+        <name>Available</name>
+        <rdfs:label xml:lang="en">Available</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#Book_OntologyDesign -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/smart-library-ontology#Book_OntologyDesign">
+        <rdf:type rdf:resource="https://example.org/smart-library-ontology#PrintedBook"/>
+        <describedBy rdf:resource="https://example.org/smart-library-ontology#MetadataRecord_B5001"/>
+        <hasStatus rdf:resource="https://example.org/smart-library-ontology#OnLoan"/>
+        <hasTopic rdf:resource="https://example.org/smart-library-ontology#Topic_OntologyEngineering"/>
+        <hasTopic rdf:resource="https://example.org/smart-library-ontology#Topic_SemanticWeb"/>
+        <locatedAt rdf:resource="https://example.org/smart-library-ontology#CentralBranch"/>
+        <publishedBy rdf:resource="https://example.org/smart-library-ontology#Publisher_MITPress"/>
+        <writtenBy rdf:resource="https://example.org/smart-library-ontology#Author_Tom_Gruber"/>
+        <identifier>B-5001</identifier>
+        <isbn>978-0-000-00001-1</isbn>
+        <publicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2024</publicationYear>
+        <title>Ontology Design Principles</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#CentralBranch -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/smart-library-ontology#CentralBranch">
+        <rdf:type rdf:resource="https://example.org/smart-library-ontology#LibraryBranch"/>
+        <branchAddress>Main Campus, Library Building</branchAddress>
+        <identifier>BR-001</identifier>
+        <name>Central Library Branch</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#DataSource_DepartmentSeedSheet -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/smart-library-ontology#DataSource_DepartmentSeedSheet">
+        <rdf:type rdf:resource="https://example.org/smart-library-ontology#DataSource"/>
+        <identifier>SRC-003</identifier>
+        <name>Department Seed Spreadsheet</name>
+        <sourceUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/internal/seed-sheet</sourceUrl>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#DataSource_GoogleBooksAPI -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/smart-library-ontology#DataSource_GoogleBooksAPI">
+        <rdf:type rdf:resource="https://example.org/smart-library-ontology#DataSource"/>
+        <identifier>SRC-002</identifier>
+        <name>Google Books API</name>
+        <sourceUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://developers.google.com/books</sourceUrl>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#DataSource_OpenLibraryAPI -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/smart-library-ontology#DataSource_OpenLibraryAPI">
+        <rdf:type rdf:resource="https://example.org/smart-library-ontology#DataSource"/>
+        <identifier>SRC-001</identifier>
+        <name>Open Library API</name>
+        <sourceUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://openlibrary.org/developers/api</sourceUrl>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#EBook_KnowledgeGraphs -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/smart-library-ontology#EBook_KnowledgeGraphs">
+        <rdf:type rdf:resource="https://example.org/smart-library-ontology#EBook"/>
+        <describedBy rdf:resource="https://example.org/smart-library-ontology#MetadataRecord_EB5002"/>
+        <hasStatus rdf:resource="https://example.org/smart-library-ontology#Available"/>
+        <hasTopic rdf:resource="https://example.org/smart-library-ontology#Topic_KnowledgeGraphs"/>
+        <hasTopic rdf:resource="https://example.org/smart-library-ontology#Topic_SemanticWeb"/>
+        <publishedBy rdf:resource="https://example.org/smart-library-ontology#Publisher_MITPress"/>
+        <accessUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/ebooks/knowledge-graphs</accessUrl>
+        <identifier>EB-5002</identifier>
+        <isbn>978-0-000-00002-8</isbn>
+        <publicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2025</publicationYear>
+        <title>Introduction to Knowledge Graphs</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#Interaction_Search_001 -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/smart-library-ontology#Interaction_Search_001">
+        <rdf:type rdf:resource="https://example.org/smart-library-ontology#InteractionEvent"/>
+        <interactedWithResource rdf:resource="https://example.org/smart-library-ontology#Book_OntologyDesign"/>
+        <recordsMember rdf:resource="https://example.org/smart-library-ontology#Member_Aylin_Demir"/>
+        <identifier>INT-002</identifier>
+        <interactionType>search</interactionType>
+        <name>Semantic web topic search</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#Interaction_View_001 -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/smart-library-ontology#Interaction_View_001">
+        <rdf:type rdf:resource="https://example.org/smart-library-ontology#InteractionEvent"/>
+        <interactedWithResource rdf:resource="https://example.org/smart-library-ontology#EBook_KnowledgeGraphs"/>
+        <recordsMember rdf:resource="https://example.org/smart-library-ontology#Member_Aylin_Demir"/>
+        <identifier>INT-001</identifier>
+        <interactionType>view</interactionType>
+        <name>E-book detail view</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#Librarian_Emre_Kaya -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/smart-library-ontology#Librarian_Emre_Kaya">
+        <rdf:type rdf:resource="https://example.org/smart-library-ontology#Librarian"/>
+        <email>emre.kaya@example.edu</email>
+        <identifier>L-2001</identifier>
+        <name>Emre Kaya</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#Loan_001 -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/smart-library-ontology#Loan_001">
+        <rdf:type rdf:resource="https://example.org/smart-library-ontology#Loan"/>
+        <loanedResource rdf:resource="https://example.org/smart-library-ontology#Book_OntologyDesign"/>
+        <loanedTo rdf:resource="https://example.org/smart-library-ontology#Member_Aylin_Demir"/>
+        <processedBy rdf:resource="https://example.org/smart-library-ontology#Librarian_Emre_Kaya"/>
+        <dueDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-04</dueDate>
+        <identifier>LN-0001</identifier>
+        <startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-20</startDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#Member_Aylin_Demir -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/smart-library-ontology#Member_Aylin_Demir">
+        <rdf:type rdf:resource="https://example.org/smart-library-ontology#Member"/>
+        <hasProfile rdf:resource="https://example.org/smart-library-ontology#Profile_Aylin_Demir"/>
+        <email>aylin.demir@example.edu</email>
+        <identifier>M-1001</identifier>
+        <name>Aylin Demir</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#MetadataRecord_B5001 -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/smart-library-ontology#MetadataRecord_B5001">
+        <rdf:type rdf:resource="https://example.org/smart-library-ontology#MetadataRecord"/>
+        <describesResource rdf:resource="https://example.org/smart-library-ontology#Book_OntologyDesign"/>
+        <generatedInBatch rdf:resource="https://example.org/smart-library-ontology#AcquisitionBatch_2026_05_Phase2"/>
+        <retrievedFromSource rdf:resource="https://example.org/smart-library-ontology#DataSource_DepartmentSeedSheet"/>
+        <retrievedFromSource rdf:resource="https://example.org/smart-library-ontology#DataSource_OpenLibraryAPI"/>
+        <confidenceScore rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.95</confidenceScore>
+        <identifier>MR-5001</identifier>
+        <name>Metadata record for Ontology Design Principles</name>
+        <retrievedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-05-10T10:00:00</retrievedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#MetadataRecord_EB5002 -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/smart-library-ontology#MetadataRecord_EB5002">
+        <rdf:type rdf:resource="https://example.org/smart-library-ontology#MetadataRecord"/>
+        <describesResource rdf:resource="https://example.org/smart-library-ontology#EBook_KnowledgeGraphs"/>
+        <generatedInBatch rdf:resource="https://example.org/smart-library-ontology#AcquisitionBatch_2026_05_Phase2"/>
+        <retrievedFromSource rdf:resource="https://example.org/smart-library-ontology#DataSource_DepartmentSeedSheet"/>
+        <retrievedFromSource rdf:resource="https://example.org/smart-library-ontology#DataSource_GoogleBooksAPI"/>
+        <confidenceScore rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.92</confidenceScore>
+        <identifier>MR-5002</identifier>
+        <name>Metadata record for Introduction to Knowledge Graphs</name>
+        <retrievedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-05-10T10:15:00</retrievedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#OnLoan -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/smart-library-ontology#OnLoan">
+        <rdf:type rdf:resource="https://example.org/smart-library-ontology#ResourceStatus"/>
+        <name>On loan</name>
+        <rdfs:label xml:lang="en">On Loan</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#Profile_Aylin_Demir -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/smart-library-ontology#Profile_Aylin_Demir">
+        <rdf:type rdf:resource="https://example.org/smart-library-ontology#MemberProfile"/>
+        <hasInterestTopic rdf:resource="https://example.org/smart-library-ontology#Topic_KnowledgeGraphs"/>
+        <hasInterestTopic rdf:resource="https://example.org/smart-library-ontology#Topic_SemanticWeb"/>
+        <profileOf rdf:resource="https://example.org/smart-library-ontology#Member_Aylin_Demir"/>
+        <identifier>PRO-1001</identifier>
+        <name>Aylin Demir semantic interest profile</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#Publisher_MITPress -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/smart-library-ontology#Publisher_MITPress">
+        <rdf:type rdf:resource="https://example.org/smart-library-ontology#Publisher"/>
+        <identifier>P-4001</identifier>
+        <name>MIT Press</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#Recommendation_001 -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/smart-library-ontology#Recommendation_001">
+        <rdf:type rdf:resource="https://example.org/smart-library-ontology#Recommendation"/>
+        <recommendedFor rdf:resource="https://example.org/smart-library-ontology#Member_Aylin_Demir"/>
+        <recommendedResource rdf:resource="https://example.org/smart-library-ontology#EBook_KnowledgeGraphs"/>
+        <identifier>REC-0001</identifier>
+        <name>Knowledge graph recommendation for Aylin</name>
+        <profileScore rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.93</profileScore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#Reservation_001 -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/smart-library-ontology#Reservation_001">
+        <rdf:type rdf:resource="https://example.org/smart-library-ontology#Reservation"/>
+        <processedBy rdf:resource="https://example.org/smart-library-ontology#Librarian_Emre_Kaya"/>
+        <reservedBy rdf:resource="https://example.org/smart-library-ontology#Member_Aylin_Demir"/>
+        <reservedResource rdf:resource="https://example.org/smart-library-ontology#EBook_KnowledgeGraphs"/>
+        <identifier>RS-0001</identifier>
+        <startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-25</startDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#Reserved -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/smart-library-ontology#Reserved">
+        <rdf:type rdf:resource="https://example.org/smart-library-ontology#ResourceStatus"/>
+        <name>Reserved</name>
+        <rdfs:label xml:lang="en">Reserved</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#Topic_KnowledgeGraphs -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/smart-library-ontology#Topic_KnowledgeGraphs">
+        <rdf:type rdf:resource="https://example.org/smart-library-ontology#Topic"/>
+        <identifier>TOP-002</identifier>
+        <name>Knowledge Graphs</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#Topic_OntologyEngineering -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/smart-library-ontology#Topic_OntologyEngineering">
+        <rdf:type rdf:resource="https://example.org/smart-library-ontology#Topic"/>
+        <identifier>TOP-001</identifier>
+        <name>Ontology Engineering</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/smart-library-ontology#Topic_SemanticWeb -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/smart-library-ontology#Topic_SemanticWeb">
+        <rdf:type rdf:resource="https://example.org/smart-library-ontology#Topic"/>
+        <identifier>TOP-003</identifier>
+        <name>Semantic Web</name>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
