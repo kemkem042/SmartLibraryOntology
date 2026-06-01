@@ -2,8 +2,8 @@
 
 ## Name & email
 - Kemal Mert Ceyhan - kemal2002mert@gmail.com
-- Ahmet Burak Guvercin - to be confirmed by team
-- Khaled ALISMAIL - to be confirmed by team
+- Ahmet Burak Guvercin
+- Khaled ALISMAIL
 
 ## Executive Summary
 This project develops a Smart Library Loan Ontology for modeling circulation knowledge in a semantically structured way. The ontology represents members, librarians, resources, publishers, branches, loans, reservations, and resource statuses in OWL/RDF, and it is extended in Phase 2 with provenance-aware acquisition concepts, semantic topics, and lightweight personalization structures. The main objective is to move from a small conceptual ontology toward a more operational knowledge graph artifact that can support querying, validation, and future recommendation scenarios. The project uses Protégé-style ontology engineering principles, RDF modeling, SPARQL querying, and SHACL validation. Phase 2 additionally introduces a data acquisition perspective by documenting public API sources, local seed tables, preprocessing logic, and ontology population mappings. The project is also informed by recent research on ontology-driven automation and personalized semantic systems. The final outcome is an updated ontology version, supporting documentation, an expanded query set, SHACL shapes, and a report that explains how semantic modeling, data acquisition, and future LLM or predictive extensions can work together in a smart-library context.
@@ -72,6 +72,9 @@ The Dublin Core Metadata Initiative. (2026). *DCMI metadata terms*. https://www.
 ## Appendix
 
 ### Repository artifacts
+- GitHub repository: `https://github.com/kemkem042/SmartLibraryOntology`
+- Widoco documentation: `https://kemkem042.github.io/SmartLibraryOntology/widoco/`
+- Documentation landing page: `https://kemkem042.github.io/SmartLibraryOntology/`
 - Ontology: `ontology/smart-library.ttl`
 - RDF/XML export: `ontology/smart-library.owl`
 - Queries: `queries/competency-questions.rq`

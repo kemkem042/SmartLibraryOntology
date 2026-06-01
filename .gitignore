@@ -1,0 +1,9 @@
+.DS_Store
+__pycache__/
+*.pyc
+
+# Local temporary assets
+tmp/
+scratch/
+presentation/build/node_modules/
+presentation/out/

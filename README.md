@@ -5,8 +5,16 @@
 - 190316073 Ahmet Burak Güvercin
 - 210316078 Khaled ALISMAIL
 
+## Repository Links
+- GitHub Repository: `https://github.com/kemkem042/SmartLibraryOntology`
+- Documentation entry page: `https://kemkem042.github.io/SmartLibraryOntology/`
+- Widoco documentation: `https://kemkem042.github.io/SmartLibraryOntology/widoco/`
+
 ## Project Overview
 This repository contains the Phase 1 and Phase 2 deliverables for the Knowledge Engineering and Ontologies course project. The selected domain is a **Smart Library Loan System**. The ontology models how library resources, members, librarians, loans, reservations, authors, publishers, branch locations, metadata sources, semantic topics, and recommendation-ready user signals relate to one another.
+
+## Project Objective
+The objective of the project is to design a semantic knowledge model for a smart library environment, populate it with representative data, validate the resulting knowledge graph, and demonstrate how the graph can support explainable retrieval, provenance-aware metadata management, and future natural-language access.
 
 ## Purpose
 The purpose of this ontology is to provide a clear semantic model for representing and querying library circulation knowledge. It can support questions such as:
@@ -16,6 +24,12 @@ The purpose of this ontology is to provide a clear semantic model for representi
 - Which librarian processed a loan or reservation?
 - Where is a printed book located?
 - Which resources were written by a specific author?
+
+## Dataset Sources
+- Open Library API for bibliographic enrichment of printed resources
+- Google Books API for digital-resource metadata enrichment
+- Local curated seed tables under `data/phase2/`
+- Project specification and ontology design documents for conceptual scoping
 
 ## Scope
 The initial version focused on a small-scale but meaningful part of the library domain. Phase 2 extends that model with provenance-aware metadata acquisition and lightweight personalization support.
@@ -51,16 +65,44 @@ SmartLibraryOntology/
 │   ├── smart-library.ttl
 │   └── smart-library.owl
 ├── docs/
+│   ├── index.html
 │   ├── data-acquisition-v2.md
 │   ├── design-decisions.md
+│   ├── llm-integration-v2.md
 │   ├── mandatory-paper-review-v2.md
+│   ├── presentation/
+│   │   ├── SmartLibraryOntology_Final_Presentation.pptx
+│   │   └── SmartLibraryOntology_Final_Presentation.pdf
 │   ├── reports/
+│   │   ├── SmartLibraryOntology_Project_Report_v2.docx
+│   │   ├── SmartLibraryOntology_Project_Report_v2.pdf
 │   │   └── project-report-v2.md
 │   ├── research-integration-v2.md
+│   ├── Ontology_Requirements_Specification_v2.docx
+│   ├── Ontology_Requirements_Specification_v2.pdf
 │   ├── specification-draft.md
-│   └── specification-v2.md
+│   ├── specification-v2.md
+│   └── widoco/
+├── presentation/
+│   ├── SmartLibraryOntology_Final_Presentation.pptx
+│   └── SmartLibraryOntology_Final_Presentation.pdf
+├── results/
+│   ├── sparql/
+│   └── validation/
 ├── shapes/
 │   └── smart-library.shacl.ttl
+├── scripts/
+│   ├── build_presentation_pdf.py
+│   ├── generate_phase2_documents.py
+│   └── generate_results_and_pdfs.py
+├── submission/
+│   ├── SmartLibraryOntology_Final_Presentation.pptx
+│   ├── SmartLibraryOntology_Final_Presentation.pdf
+│   ├── Ontology_Requirements_Specification_v2.docx
+│   ├── Ontology_Requirements_Specification_v2.pdf
+│   ├── SmartLibraryOntology_Project_Report_v2.docx
+│   ├── SmartLibraryOntology_Project_Report_v2.pdf
+│   └── SUBMISSION_GUIDE.md
 └── queries/
     └── competency-questions.rq
 ```
@@ -171,6 +213,14 @@ The ontology is designed to answer the following Phase 2 competency questions:
 4. Run SPARQL queries to test the competency questions.
 5. Use `shapes/smart-library.shacl.ttl` to validate the core constraints.
 
+## Installation / Setup
+1. Clone the repository.
+2. Open the ontology in Protégé.
+3. Load the Turtle or RDF/XML file into your preferred RDF environment.
+4. Execute the SPARQL queries in `queries/competency-questions.rq`.
+5. Validate the graph with `shapes/smart-library.shacl.ttl`.
+6. Open `docs/index.html` or the Widoco pages for web documentation.
+
 ## Version
 Current ontology version: `0.2.0`
 
@@ -187,11 +237,19 @@ The file `queries/competency-questions.rq` contains updated SPARQL queries for r
 - `docs/research-integration-v2.md`
 - `docs/mandatory-paper-review-v2.md`
 - `docs/data-acquisition-v2.md`
+- `docs/llm-integration-v2.md`
 - `docs/specification-v2.md`
 - `docs/reports/project-report-v2.md`
 - `docs/reports/SmartLibraryOntology_Project_Report_v2.docx`
+- `docs/reports/SmartLibraryOntology_Project_Report_v2.pdf`
 - `docs/Ontology_Requirements_Specification_v2.docx`
+- `docs/Ontology_Requirements_Specification_v2.pdf`
 
 ## Widoco Documentation
 Widoco output for the latest ontology version is available under:
 - `docs/widoco/index.html`
+
+## Reproducibility Artifacts
+- SPARQL outputs: `results/sparql/`
+- SHACL validation outputs: `results/validation/`
+- Final submission bundle: `submission/`
